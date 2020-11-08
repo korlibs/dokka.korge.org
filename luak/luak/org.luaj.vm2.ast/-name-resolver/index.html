@@ -1,0 +1,424 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NameResolver</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+    <link href="../../../styles/style.css" rel="Stylesheet">
+    <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+    <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+    <link href="../../../styles/main.css" rel="Stylesheet">
+    <script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/main.js" async="async"></script>
+    <script>var pathToRoot = "../../../";</script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="logo"></div>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+        <div id="searchBar"></div>
+        <script type="text/javascript" src="../../../scripts/pages.js"></script>
+        <script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div id="content" pageIds="org.luaj.vm2.ast/NameResolver///PointingToDeclaration//1759768606">
+          <div class="breadcrumbs"><a href="../../index.html">luak</a>/<a href="../index.html">org.luaj.vm2.ast</a>/<a href="index.html">NameResolver</a></div>
+          <div class="cover ">
+            <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":luak:dokkaHtml/commonMain">common</button></div>
+            <h1 class="cover"><span>Name</span><wbr></wbr><span>Resolver</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">class <a href="index.html">NameResolver</a> : <a href="../-visitor/index.html">Visitor</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Visitor that resolves names to scopes. Each Name is resolved to a NamedVarible, possibly in a NameScope if it is a local, or in no named scope if it is a global.</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="%5Borg.luaj.vm2.ast%2FNameResolver%2FNameResolver%2F%23%2FPointingToDeclaration%2F%5D%2FConstructors%2F1759768606" anchor-label="NameResolver" id="%5Borg.luaj.vm2.ast%2FNameResolver%2FNameResolver%2F%23%2FPointingToDeclaration%2F%5D%2FConstructors%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-name-resolver.html">NameResolver</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Borg.luaj.vm2.ast%2FNameResolver%2FNameResolver%2F%23%2FPointingToDeclaration%2F%5D%2FConstructors%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">fun <a href="-name-resolver.html">NameResolver</a>()<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" anchor-label="equals" id="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../org.luaj.vm2.server/-launcher/index.html#%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606">equals</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">open operator fun <a href="../../org.luaj.vm2.server/-launcher/index.html#%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606">equals</a>(other: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" anchor-label="hashCode" id="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../org.luaj.vm2.server/-launcher/index.html#%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606">hashCode</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">open fun <a href="../../org.luaj.vm2.server/-launcher/index.html#%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606">hashCode</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" anchor-label="toString" id="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../org.luaj.vm2.server/-launcher/index.html#%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606">toString</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">open fun <a href="../../org.luaj.vm2.server/-launcher/index.html#%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606">toString</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Borg.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Block%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Exp.NameExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.FuncBody%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.NameScope%3F%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.ParList%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Assign%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.FuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.GenericFor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.LocalAssign%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.LocalFuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.NumericFor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23kotlin.String%3F%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Chunk%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.AnonFuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.BinopExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.Constant%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.FieldExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.FuncCall%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.IndexExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.MethodCall%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.ParensExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.UnopExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.VarargsExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.FuncArgs%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Name%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Break%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.FuncCallStat%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Goto%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.IfThenElse%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Label%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.RepeatUntil%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Return%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.WhileDo%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.TableConstructor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.TableField%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" anchor-label="visit" id="%5Borg.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Block%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Exp.NameExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.FuncBody%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.NameScope%3F%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.ParList%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Assign%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.FuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.GenericFor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.LocalAssign%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.LocalFuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.NumericFor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23kotlin.String%3F%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Chunk%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.AnonFuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.BinopExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.Constant%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.FieldExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.FuncCall%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.IndexExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.MethodCall%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.ParensExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.UnopExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.VarargsExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.FuncArgs%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Name%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Break%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.FuncCallStat%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Goto%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.IfThenElse%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Label%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.RepeatUntil%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Return%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.WhileDo%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.TableConstructor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.TableField%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="visit.html">visit</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Borg.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Block%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Exp.NameExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.FuncBody%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.NameScope%3F%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.ParList%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Assign%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.FuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.GenericFor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.LocalAssign%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.LocalFuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FNameResolver%2Fvisit%2F%23org.luaj.vm2.ast.Stat.NumericFor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23kotlin.String%3F%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Chunk%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.AnonFuncDef%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.BinopExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.Constant%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.FieldExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.FuncCall%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.IndexExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.MethodCall%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.ParensExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.UnopExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Exp.VarargsExp%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.FuncArgs%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Name%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Break%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.FuncCallStat%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Goto%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.IfThenElse%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Label%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.RepeatUntil%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.Return%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.Stat.WhileDo%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.TableConstructor%2FPointingToDeclaration%2F%2C+org.luaj.vm2.ast%2FVisitor%2Fvisit%2F%23org.luaj.vm2.ast.TableField%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(block: <a href="../-block/index.html">Block</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(exp: <a href="../-exp/-name-exp/index.html">Exp.NameExp</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(body: <a href="../-func-body/index.html">FuncBody</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(scope: <a href="../-name-scope/index.html">NameScope</a>?)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(pars: <a href="../-par-list/index.html">ParList</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(stat: <a href="../-stat/-assign/index.html">Stat.Assign</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(stat: <a href="../-stat/-func-def/index.html">Stat.FuncDef</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(stat: <a href="../-stat/-generic-for/index.html">Stat.GenericFor</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(stat: <a href="../-stat/-local-assign/index.html">Stat.LocalAssign</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(stat: <a href="../-stat/-local-func-def/index.html">Stat.LocalFuncDef</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="visit.html">visit</a>(stat: <a href="../-stat/-numeric-for/index.html">Stat.NumericFor</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(name: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(chunk: <a href="../-chunk/index.html">Chunk</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-anon-func-def/index.html">Exp.AnonFuncDef</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-binop-exp/index.html">Exp.BinopExp</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-constant/index.html">Exp.Constant</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-field-exp/index.html">Exp.FieldExp</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-func-call/index.html">Exp.FuncCall</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-index-exp/index.html">Exp.IndexExp</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-method-call/index.html">Exp.MethodCall</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-parens-exp/index.html">Exp.ParensExp</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-unop-exp/index.html">Exp.UnopExp</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(exp: <a href="../-exp/-varargs-exp/index.html">Exp.VarargsExp</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(args: <a href="../-func-args/index.html">FuncArgs</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(name: <a href="../-name/index.html">Name</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(breakstat: <a href="../-stat/-break/index.html">Stat.Break</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(stat: <a href="../-stat/-func-call-stat/index.html">Stat.FuncCallStat</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(gotostat: <a href="../-stat/-goto/index.html">Stat.Goto</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(stat: <a href="../-stat/-if-then-else/index.html">Stat.IfThenElse</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(label: <a href="../-stat/-label/index.html">Stat.Label</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(stat: <a href="../-stat/-repeat-until/index.html">Stat.RepeatUntil</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(stat: <a href="../-stat/-return/index.html">Stat.Return</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(stat: <a href="../-stat/-while-do/index.html">Stat.WhileDo</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(table: <a href="../-table-constructor/index.html">TableConstructor</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open fun <a href="../-visitor/visit.html">visit</a>(field: <a href="../-table-field/index.html">TableField</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitExps%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Exp%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" anchor-label="visitExps" id="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitExps%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Exp%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-visitor/visit-exps.html">visitExps</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitExps%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Exp%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">open fun <a href="../-visitor/visit-exps.html">visitExps</a>(exps: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-exp/index.html">Exp</a>&gt;?)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitNames%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Name%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" anchor-label="visitNames" id="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitNames%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Name%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-visitor/visit-names.html">visitNames</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitNames%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Name%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">open fun <a href="../-visitor/visit-names.html">visitNames</a>(names: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-name/index.html">Name</a>&gt;?)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitVars%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Exp.VarExp%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" anchor-label="visitVars" id="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitVars%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Exp.VarExp%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606" data-filterable-set=":luak:dokkaHtml/commonMain"></a>
+                <div class="table-row" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-visitor/visit-vars.html">visitVars</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Borg.luaj.vm2.ast%2FVisitor%2FvisitVars%2F%23kotlin.collections.List%5Borg.luaj.vm2.ast.Exp.VarExp%5D%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F1759768606"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag common-like">common</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":luak:dokkaHtml/commonMain" data-filterable-set=":luak:dokkaHtml/commonMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtml/commonMain"><div class="symbol monospace">open fun <a href="../-visitor/visit-vars.html">visitVars</a>(vars: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../-exp/-var-exp/index.html">Exp.VarExp</a>&gt;?)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#container"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.3337 9.66683H0.666992L6.00033 3.66683L11.3337 9.66683Z" fill="black"/>
+    <path d="M0.666992 0.333496H11.3337V1.66683H0.666992V0.333496Z" fill="black"/>
+</svg></a></span><span>© 2020 Copyright</span><span class="pull-right"><span>Sponsored and developed by dokka</span><a href="https://github.com/Kotlin/dokka"><span class="padded-icon"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0H2.3949L4.84076 2.44586L0 7.28662L0.713376 8L5.55414 3.15924L8 5.6051V0Z" fill="black"/>
+</svg></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
