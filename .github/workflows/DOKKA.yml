@@ -1,0 +1,55 @@
+name: DOKKA
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Commit, branch or tag'
+        required: true
+        type: string
+        default: 'main'
+      forced_version:
+        description: 'Version'
+        required: true
+        type: string
+
+jobs:
+  sync-dokka:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      CI: true
+      FORCED_VERSION: ${{ inputs.forced_version }}
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: korlibs/korge
+          path: korge
+          ref: ${{ inputs.ref }}
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+
+      - uses: actions/checkout@v3
+        with:
+          repository: korlibs/dokka.korge.org
+          path: dokka.korge.org
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+
+      - name: Generate dokka
+        run: cd korge && ./gradlew -Dorg.gradle.jvmargs=-Xmx6g -Dorg.gradle.workers.max=2 dokkaHtmlMultiModule
+        #run: cd korge && ./gradlew -Dorg.gradle.workers.max=1 dokkaHtmlMultiModule
+        #run: cd korge && ./gradlew dokkaCopy
+      - name: Copy documentation
+        #run: cp -rf ./korge/build/dokka-all/ ./dokka.korge.org/
+        run: cp -rf ./korge/build/dokka/htmlMultiModule/ ./dokka.korge.org/
+      #- name: Demo
+      #  run: echo Hello > ./dokka.korge.org/demo.txt
+
+      # https://github.com/actions-js/push#readme
+      - name: Commit & Push changes
+        uses: actions-js/push@5f565701a8b9f9aa6b7efc25f28994eabfcf5312
+        with:
+          directory: ./dokka.korge.org
+          github_token: ${{ secrets.GITHUB_TOKEN }}
