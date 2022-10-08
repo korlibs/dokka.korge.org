@@ -15,8 +15,8 @@ on:
 
 jobs:
   sync-dokka:
-    runs-on: macos-11
-    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
     env:
       CI: true
       FORCED_VERSION: ${{ inputs.forced_version }}
