@@ -38,9 +38,12 @@ jobs:
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
       - name: Generate dokka
-        run: cd korge && ./gradlew dokkaCopy
+        run: cd korge && ./gradlew -Dorg.gradle.jvmargs=-Xmx6g -Dorg.gradle.workers.max=2 dokkaHtmlMultiModule
+        #run: cd korge && ./gradlew -Dorg.gradle.workers.max=1 dokkaHtmlMultiModule
+        #run: cd korge && ./gradlew dokkaCopy
       - name: Copy documentation
-        run: cp -rf ./korge/build/dokka-all/ ./dokka.korge.org/
+        #run: cp -rf ./korge/build/dokka-all/ ./dokka.korge.org/
+        run: cp -rf ./korge/build/dokka/htmlMultiModule/ ./dokka.korge.org/
       #- name: Demo
       #  run: echo Hello > ./dokka.korge.org/demo.txt
 
