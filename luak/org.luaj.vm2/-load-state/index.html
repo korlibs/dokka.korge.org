@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>LoadState</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>korlibs</span>            </a>    </div>
+    <div>3.2.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":luak:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="luak::org.luaj.vm2/LoadState///PointingToDeclaration//-2029569216">
+  <div class="breadcrumbs"><a href="../../index.html">luak</a><span class="delimiter">/</span><a href="../index.html">org.luaj.vm2</a><span class="delimiter">/</span><a href="index.html">LoadState</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Load</span><wbr><span><span>State</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">LoadState</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Class to undump compiled lua bytecode into a <a href="../-prototype/index.html">Prototype</a> instances.</p><p class="paragraph">The <a href="index.html">LoadState</a> class provides the default <a href="../-globals/-undumper/index.html">Globals.Undumper</a> which is used to undump a string of bytes that represent a lua binary file using either the C-based lua compiler, or luaj's <a href="../../org.luaj.vm2.compiler/-lua-c/index.html">org.luaj.vm2.compiler.LuaC</a> compiler.</p><p class="paragraph">The canonical method to load and execute code is done indirectly using the Globals:</p><pre> `Globals globals = JsePlatform.standardGlobals();
+LuaValue chunk = globasl.load("print('hello, world')", "main.lua");
+chunk.call();
+` *  </pre><p class="paragraph">This should work regardless of which <a href="../-globals/-compiler/index.html">Globals.Compiler</a> or <a href="../-globals/-undumper/index.html">Globals.Undumper</a> have been installed.</p><p class="paragraph">By default, when using org.luaj.vm2.lib.jse.JsePlatform or org.luaj.vm2.lib.jme.JmePlatform to construct globals, the <a href="index.html">LoadState</a> default undumper is installed as the default <a href="../-globals/-undumper/index.html">Globals.Undumper</a>.</p><p class="paragraph">A lua binary file is created via the <a href="../../org.luaj.vm2.compiler/-dump-state/index.html">org.luaj.vm2.compiler.DumpState</a> class :</p><pre> `Globals globals = JsePlatform.standardGlobals();
+Prototype p = globals.compilePrototype(new StringReader("print('hello, world')"), "main.lua");
+ByteArrayOutputStream o = new ByteArrayOutputStream();
+org.luaj.vm2.compiler.DumpState.dump(p, o, false);
+byte[] lua_binary_file_bytes = o.toByteArray();
+` *  </pre><p class="paragraph">The <a href="index.html">LoadState</a>'s default undumper .instance may be used directly to undump these bytes:</p><pre> `Prototypep = LoadState.instance.undump(new ByteArrayInputStream(lua_binary_file_bytes), "main.lua");
+LuaClosure c = new LuaClosure(p, globals);
+c.call();
+` *  </pre><p class="paragraph">More commonly, the <a href="../-globals/-undumper/index.html">Globals.Undumper</a> may be used to undump them:</p><pre> `Prototype p = globals.loadPrototype(new ByteArrayInputStream(lua_binary_file_bytes), "main.lua", "b");
+LuaClosure c = new LuaClosure(p, globals);
+c.call();
+` *  </pre></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">See also</h2>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="See also">
+          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-globals/-compiler/index.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>Globals.</span><wbr><span>Compiler</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-globals/-undumper/index.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>Globals.</span><wbr><span>Undumper</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-lua-closure/index.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>LuaClosure</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-lua-function/index.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>Lua</span><wbr><span><span>Function</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../../org.luaj.vm2.compiler/-lua-c/index.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>compiler.</span><wbr><span>LuaC</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>luajc.</span><wbr><span>LuaJC</span></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-globals/load.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>Globals</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div>        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="1308475150%2FClasslikes%2F-2029569216" anchor-label="Companion" id="1308475150%2FClasslikes%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1308475150%2FClasslikes%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-376913199%2FFunctions%2F-2029569216" anchor-label="loadFunction" id="-376913199%2FFunctions%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="load-function.html"><span>load</span><wbr><span><span>Function</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-376913199%2FFunctions%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-function.html"><span class="token function">loadFunction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="../-lua-string/index.html">LuaString</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-prototype/index.html">Prototype</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Load a function prototype from the input stream</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2022910144%2FFunctions%2F-2029569216" anchor-label="loadHeader" id="-2022910144%2FFunctions%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="load-header.html"><span>load</span><wbr><span><span>Header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2022910144%2FFunctions%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-header.html"><span class="token function">loadHeader</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Load the lua chunk header values.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="262498057%2FProperties%2F-2029569216" anchor-label="is" id="262498057%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is.html"><span><span>is</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262498057%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="262498057%2FProperties%2F-2029569216" anchor-label="is" id="262498057%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="is.html">is</a><span class="token operator">: </span><a href="../../org.luaj.vm2.io/-lua-bin-input/index.html">LuaBinInput</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="262498057%2FProperties%2F-2029569216" anchor-label="is" id="262498057%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><p class="paragraph">input stream from which we are loading</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

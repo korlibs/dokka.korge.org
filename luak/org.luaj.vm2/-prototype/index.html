@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Prototype</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>korlibs</span>            </a>    </div>
+    <div>3.2.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":luak:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="luak::org.luaj.vm2/Prototype///PointingToDeclaration//-2029569216">
+  <div class="breadcrumbs"><a href="../../index.html">luak</a><span class="delimiter">/</span><a href="../index.html">org.luaj.vm2</a><span class="delimiter">/</span><a href="index.html">Prototype</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Prototype</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Prototype</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Prototype representing compiled lua code.</p><p class="paragraph">This is both a straight translation of the corresponding C type, and the main data structure for execution of compiled lua bytecode.</p><p class="paragraph">Generally, the <a href="index.html">Prototype</a> is not constructed directly is an intermediate result as lua code is loaded using <a href="../-globals/load.html">Globals.load</a>:</p><pre> `Globals globals = JsePlatform.standardGlobals();
+globals.load( new StringReader("print 'hello'"), "main.lua" ).call();
+` *  </pre><p class="paragraph">To create a <a href="index.html">Prototype</a> directly, a compiler such as <a href="../../org.luaj.vm2.compiler/-lua-c/index.html">org.luaj.vm2.compiler.LuaC</a> may be used:</p><pre> `InputStream is = new ByteArrayInputStream("print('hello,world')".getBytes());
+Prototype p = LuaC.instance.compile(is, "script");
+`</pre> *<p class="paragraph">To simplify loading, the <a href="../-globals/compile-prototype.html">Globals.compilePrototype</a> method may be used:</p><pre> `Prototype p = globals.compileProtoytpe(is, "script");
+`</pre> *<p class="paragraph">It may also be loaded from a java.io.Reader via <a href="../-globals/compile-prototype.html">Globals.compilePrototype</a>:</p><pre> `Prototype p = globals.compileProtoytpe(new StringReader(script), "script");
+`</pre> *<p class="paragraph">To un-dump a binary file known to be a binary lua file that has been dumped to a string, the <a href="../-globals/-undumper/index.html">Globals.Undumper</a> interface may be used:</p><pre> `FileInputStream lua_binary_file = new FileInputStream("foo.lc");  // Known to be compiled lua.
+Prototype p = globals.undumper.undump(lua_binary_file, "foo.lua");
+`</pre> *<p class="paragraph">To execute the code represented by the <a href="index.html">Prototype</a> it must be supplied to the constructor of a <a href="../-lua-closure/index.html">LuaClosure</a>:</p><pre> `Globals globals = JsePlatform.standardGlobals();
+LuaClosure f = new LuaClosure(p, globals);
+f.call();
+`</pre> *<p class="paragraph">To simplify the debugging of prototype values, the contents may be printed using <a href="../-print/-companion/print.html">Print.print</a>:</p><pre> `Print.print(p);
+`</pre> *</div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">See also</h2>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="See also">
+          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-lua-closure/index.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>LuaClosure</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-globals/compiler.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>Globals</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-print/-companion/print.html"><span>org.</span><wbr><span>luaj.</span><wbr><span>vm2.</span><wbr><span>Print.</span><wbr><span>Companion</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div>        </div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="1499541966%2FConstructors%2F-2029569216" anchor-label="Prototype" id="1499541966%2FConstructors%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-prototype.html"><span><span>Prototype</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1499541966%2FConstructors%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-prototype.html"><span class="token function">Prototype</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="696631788%2FConstructors%2F-2029569216" anchor-label="Prototype" id="696631788%2FConstructors%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-prototype.html"><span><span>Prototype</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="696631788%2FConstructors%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-prototype.html"><span class="token function">Prototype</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">n_upvalues<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1822096937%2FClasslikes%2F-2029569216" anchor-label="Companion" id="-1822096937%2FClasslikes%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1822096937%2FClasslikes%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-330837227%2FFunctions%2F-2029569216" anchor-label="getlocalname" id="-330837227%2FFunctions%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="getlocalname.html"><span><span>getlocalname</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-330837227%2FFunctions%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="getlocalname.html"><span class="token function">getlocalname</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">number<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">pc<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-lua-string/index.html">LuaString</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Get the name of a local variable.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-46034919%2FFunctions%2F-2029569216" anchor-label="shortsource" id="-46034919%2FFunctions%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="shortsource.html"><span><span>shortsource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-46034919%2FFunctions%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="shortsource.html"><span class="token function">shortsource</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1914589282%2FFunctions%2F-2029569216" anchor-label="toString" id="-1914589282%2FFunctions%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1914589282%2FFunctions%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1060043331%2FProperties%2F-2029569216" anchor-label="code" id="-1060043331%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="code.html"><span><span>code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1060043331%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="-1060043331%2FProperties%2F-2029569216" anchor-label="code" id="-1060043331%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="code.html">code</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-53767540%2FProperties%2F-2029569216" anchor-label="is_vararg" id="-53767540%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="is_vararg.html"><span><span>is_vararg</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-53767540%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="-53767540%2FProperties%2F-2029569216" anchor-label="is_vararg" id="-53767540%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="is_vararg.html">is_vararg</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1104507269%2FProperties%2F-2029569216" anchor-label="k" id="1104507269%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="k.html"><span><span>k</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1104507269%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="1104507269%2FProperties%2F-2029569216" anchor-label="k" id="1104507269%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="k.html">k</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-lua-value/index.html">LuaValue</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1484672015%2FProperties%2F-2029569216" anchor-label="lastlinedefined" id="-1484672015%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="lastlinedefined.html"><span><span>lastlinedefined</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1484672015%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="-1484672015%2FProperties%2F-2029569216" anchor-label="lastlinedefined" id="-1484672015%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="lastlinedefined.html">lastlinedefined</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1522502181%2FProperties%2F-2029569216" anchor-label="linedefined" id="-1522502181%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="linedefined.html"><span><span>linedefined</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1522502181%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="-1522502181%2FProperties%2F-2029569216" anchor-label="linedefined" id="-1522502181%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="linedefined.html">linedefined</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="486117416%2FProperties%2F-2029569216" anchor-label="lineinfo" id="486117416%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="lineinfo.html"><span><span>lineinfo</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="486117416%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="486117416%2FProperties%2F-2029569216" anchor-label="lineinfo" id="486117416%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="lineinfo.html">lineinfo</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1039378076%2FProperties%2F-2029569216" anchor-label="locvars" id="-1039378076%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="locvars.html"><span><span>locvars</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1039378076%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="-1039378076%2FProperties%2F-2029569216" anchor-label="locvars" id="-1039378076%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="locvars.html">locvars</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-loc-vars/index.html">LocVars</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="307096581%2FProperties%2F-2029569216" anchor-label="maxstacksize" id="307096581%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="maxstacksize.html"><span><span>maxstacksize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="307096581%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="307096581%2FProperties%2F-2029569216" anchor-label="maxstacksize" id="307096581%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="maxstacksize.html">maxstacksize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="383991172%2FProperties%2F-2029569216" anchor-label="numparams" id="383991172%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="numparams.html"><span><span>numparams</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="383991172%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="383991172%2FProperties%2F-2029569216" anchor-label="numparams" id="383991172%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="numparams.html">numparams</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1259606304%2FProperties%2F-2029569216" anchor-label="p" id="1259606304%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="p.html"><span><span>p</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1259606304%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="1259606304%2FProperties%2F-2029569216" anchor-label="p" id="1259606304%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="p.html">p</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Prototype</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="344972303%2FProperties%2F-2029569216" anchor-label="source" id="344972303%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="source.html"><span><span>source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="344972303%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="344972303%2FProperties%2F-2029569216" anchor-label="source" id="344972303%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="source.html">source</a><span class="token operator">: </span><a href="../-lua-string/index.html">LuaString</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-953181267%2FProperties%2F-2029569216" anchor-label="upvalues" id="-953181267%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="upvalues.html"><span><span>upvalues</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-953181267%2FProperties%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><a data-name="-953181267%2FProperties%2F-2029569216" anchor-label="upvalues" id="-953181267%2FProperties%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation">JvmField</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="upvalues.html">upvalues</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-upvaldesc/index.html">Upvaldesc</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
