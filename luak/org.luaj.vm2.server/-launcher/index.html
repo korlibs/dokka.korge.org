@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Launcher</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>korlibs</span>            </a>    </div>
+    <div>3.2.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":luak:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":luak:dokkaHtmlPartial/jvmAndroidMain">jvmAndroid</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="luak::org.luaj.vm2.server/Launcher///PointingToDeclaration//-2029569216">
+  <div class="breadcrumbs"><a href="../../index.html">luak</a><span class="delimiter">/</span><a href="../index.html">org.luaj.vm2.server</a><span class="delimiter">/</span><a href="index.html">Launcher</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Launcher</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Launcher</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Interface to launch lua scripts using the LuajClassLoader. </p><p><i>Note: This class is experimental and subject to change in future versions.</i></p> * <p> This interface is purposely genericized to defer class loading so that luaj classes can come from the class loader. </p> * <p> The implementation should be acquired using LuajClassLoader.NewLauncher or LuajClassLoader.NewLauncher which ensure that the classes are loaded to give each Launcher instance a pristine set of Globals, including the shared metatables.</p><h4 class="">Since</h4><p class="paragraph">luaj 3.0.1 </p><p></p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">See also</h2>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="See also">
+          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>Luaj</span><wbr><span>Class</span><wbr><span><span>Loader</span></span></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>Luaj</span><wbr><span>Class</span><wbr><span>Loader.</span><wbr><span>New</span><wbr><span><span>Launcher</span></span></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>Default</span><wbr><span><span>Launcher</span></span></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div>        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-476783691%2FFunctions%2F-2029569216" anchor-label="launch" id="-476783691%2FFunctions%2F-2029569216" data-filterable-set=":luak:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="launch.html"><span><span>launch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476783691%2FFunctions%2F-2029569216"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":luak:dokkaHtmlPartial/commonMain" data-filterable-set=":luak:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":luak:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":luak:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="launch.html"><span class="token function">launch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">script<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">arg<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Launch a script contained in a String.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="launch.html"><span class="token function">launch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">script<span class="token operator">: </span><a href="../../org.luaj.vm2.io/-lua-bin-input/index.html">LuaBinInput</a><span class="token punctuation">, </span></span><span class="parameter ">arg<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Launch a script from an InputStream.</p></div><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="launch.html"><span class="token function">launch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">script<span class="token operator">: </span><a href="../../org.luaj.vm2.io/-lua-reader/index.html">LuaReader</a><span class="token punctuation">, </span></span><span class="parameter ">arg<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Launch a script from a Reader.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="741521783%2FInheritors%2F-1639680544" anchor-label="DefaultLauncher" id="741521783%2FInheritors%2F-1639680544" data-filterable-set=":luak:dokkaHtmlPartial/jvmAndroidMain"></a>
+        <div class="table-row" data-filterable-current=":luak:dokkaHtmlPartial/jvmAndroidMain" data-filterable-set=":luak:dokkaHtmlPartial/jvmAndroidMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-default-launcher/index.html">DefaultLauncher</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="741521783%2FInheritors%2F-1639680544"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

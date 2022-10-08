@@ -1,0 +1,1077 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>WDateTime</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>korlibs</span>            </a>    </div>
+    <div>3.2.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":klock:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="klock::com.soywiz.klock.wrapped/WDateTime///PointingToDeclaration//-1075198897">
+  <div class="breadcrumbs"><a href="../../index.html">klock</a><span class="delimiter">/</span><a href="../index.html">com.soywiz.klock.wrapped</a><span class="delimiter">/</span><a href="index.html">WDateTime</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>WDate</span><wbr><span><span>Time</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">WDateTime</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>value<span class="token operator">: </span><a href="../../com.soywiz.klock/-date-time/index.html">DateTime</a></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">WDateTime</a><span class="token operator">&gt; </span>, <a href="../../com.soywiz.klock.internal/-serializable/index.html">Serializable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Wrapped Version, that is not inline. You can use <a href="value.html">value</a> to get the wrapped value class.</p><p class="paragraph">Represents a Date in UTC (GMT+00) with millisecond precision.</p><p class="paragraph">It is internally represented as an inlined double, thus doesn't allocate in any target including JS. It can represent without loss dates between (-(2 ** 52) and (2 ** 52)):</p><ul><li><p class="paragraph">Thu Aug 10 -140744 07:15:45 GMT-0014 (Central European Summer Time)</p></li><li><p class="paragraph">Wed May 23 144683 18:29:30 GMT+0200 (Central European Summer Time)</p></li></ul></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="785994041%2FConstructors%2F-1075198897" anchor-label="WDateTime" id="785994041%2FConstructors%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-w-date-time.html"><span>WDate</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="785994041%2FConstructors%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-w-date-time.html"><span class="token function">WDateTime</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../../com.soywiz.klock/-date-time/index.html">DateTime</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1679015751%2FClasslikes%2F-1075198897" anchor-label="Companion" id="-1679015751%2FClasslikes%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1679015751%2FClasslikes%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-971909921%2FFunctions%2F-1075198897" anchor-label="add" id="-971909921%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="add.html"><span><span>add</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-971909921%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add.html"><span class="token function">add</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dateSpan<span class="token operator">: </span><a href="../-w-month-span/index.html">WMonthSpan</a><span class="token punctuation">, </span></span><span class="parameter ">timeSpan<span class="token operator">: </span><a href="../-w-time-span/index.html">WTimeSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Constructs a new <a href="index.html">WDateTime</a> after adding <a href="add.html">dateSpan</a> and <a href="add.html">timeSpan</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="add.html"><span class="token function">add</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">deltaMonths<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">deltaMilliseconds<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Constructs a new <a href="index.html">WDateTime</a> after adding <a href="add.html">deltaMonths</a> and <a href="add.html">deltaMilliseconds</a></p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-276471497%2FFunctions%2F-1075198897" anchor-label="compareTo" id="-276471497%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="compare-to.html"><span>compare</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-276471497%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="compare-to.html"><span class="token function">compareTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">WDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2005630041%2FFunctions%2F-1075198897" anchor-label="copyDayOfMonth" id="2005630041%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="copy-day-of-month.html"><span>copy</span><wbr><span>Day</span><wbr><span>Of</span><wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2005630041%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="copy-day-of-month.html"><span class="token function">copyDayOfMonth</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;year<span class="token operator">: </span><a href="../-w-year/index.html">WYear</a><span class="token operator"> = </span>this.year<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;month<span class="token operator">: </span><a href="../index.html#1335187792%2FClasslikes%2F-1075198897">WMonth</a><span class="token operator"> = </span>this.month<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;dayOfMonth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.dayOfMonth<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;hours<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.hours<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;minutes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.minutes<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;seconds<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.seconds<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;milliseconds<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.milliseconds</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-263946886%2FFunctions%2F-1075198897" anchor-label="endOfDayOfWeek" id="-263946886%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-day-of-week.html"><span>end</span><wbr><span>Of</span><wbr><span>Day</span><wbr><span>Of</span><wbr><span><span>Week</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263946886%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="end-of-day-of-week.html"><span class="token function">endOfDayOfWeek</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">day<span class="token operator">: </span><a href="../index.html#-391453431%2FClasslikes%2F-1075198897">WDayOfWeek</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1206332641%2FFunctions%2F-1075198897" anchor-label="format" id="1206332641%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="format.html"><span><span>format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1206332641%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="format.html"><span class="token function">format</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">format<span class="token operator">: </span><a href="../../com.soywiz.klock/-date-format/index.html">DateFormat</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="format.html"><span class="token function">format</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">format<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Converts this date to String using <a href="format.html">format</a> for representing it</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-917563225%2FFunctions%2F-1075198897" anchor-label="minus" id="-917563225%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="minus.html"><span><span>minus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-917563225%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delta<span class="token operator">: </span><a href="../index.html#-484001331%2FClasslikes%2F-1075198897">WDateTimeSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">WDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-w-time-span/index.html">WTimeSpan</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delta<span class="token operator">: </span><a href="../-w-month-span/index.html">WMonthSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="minus.html"><span class="token function">minus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delta<span class="token operator">: </span><a href="../-w-time-span/index.html">WTimeSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1944557504%2FFunctions%2F-1075198897" anchor-label="plus" id="-1944557504%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="plus.html"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1944557504%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delta<span class="token operator">: </span><a href="../index.html#-484001331%2FClasslikes%2F-1075198897">WDateTimeSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delta<span class="token operator">: </span><a href="../-w-month-span/index.html">WMonthSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delta<span class="token operator">: </span><a href="../-w-time-span/index.html">WTimeSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-567379967%2FFunctions%2F-1075198897" anchor-label="startOfDayOfWeek" id="-567379967%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-day-of-week.html"><span>start</span><wbr><span>Of</span><wbr><span>Day</span><wbr><span>Of</span><wbr><span><span>Week</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-567379967%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="start-of-day-of-week.html"><span class="token function">startOfDayOfWeek</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">day<span class="token operator">: </span><a href="../index.html#-391453431%2FClasslikes%2F-1075198897">WDayOfWeek</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="372982501%2FFunctions%2F-1075198897" anchor-label="toOffset" id="372982501%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-offset.html"><span>to</span><wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="372982501%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-offset.html"><span class="token function">toOffset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="../-w-time-span/index.html">WTimeSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.soywiz.klock/-date-time-tz/index.html">DateTimeTz</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-offset.html"><span class="token function">toOffset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="../-w-timezone-offset/index.html">WTimezoneOffset</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.soywiz.klock/-date-time-tz/index.html">DateTimeTz</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns this date with a local offset. Components might change because of the <a href="to-offset.html">offset</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-750291241%2FFunctions%2F-1075198897" anchor-label="toOffsetUnadjusted" id="-750291241%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-offset-unadjusted.html"><span>to</span><wbr><span>Offset</span><wbr><span><span>Unadjusted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-750291241%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-offset-unadjusted.html"><span class="token function">toOffsetUnadjusted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="../-w-time-span/index.html">WTimeSpan</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.soywiz.klock/-date-time-tz/index.html">DateTimeTz</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-offset-unadjusted.html"><span class="token function">toOffsetUnadjusted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="../-w-timezone-offset/index.html">WTimezoneOffset</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.soywiz.klock/-date-time-tz/index.html">DateTimeTz</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Returns a new local date that will match these components but with a different <a href="to-offset-unadjusted.html">offset</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1309834511%2FFunctions%2F-1075198897" anchor-label="toString" id="-1309834511%2FFunctions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1309834511%2FFunctions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Converts this date to String using the <a href="../../com.soywiz.klock/-date-format/-companion/-d-e-f-a-u-l-t_-f-o-r-m-a-t.html">DateFormat.DEFAULT_FORMAT</a> for representing it</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">format<span class="token operator">: </span><a href="../../com.soywiz.klock/-date-format/index.html">DateFormat</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">format<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Converts this date to String using <a href="to-string.html">format</a> for representing it</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-490403078%2FProperties%2F-1075198897" anchor-label="date" id="-490403078%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="date.html"><span><span>date</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-490403078%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-490403078%2FProperties%2F-1075198897" anchor-label="date" id="-490403078%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="date.html">date</a><span class="token operator">: </span><a href="../-w-date/index.html">WDate</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1848784293%2FProperties%2F-1075198897" anchor-label="dateDayEnd" id="-1848784293%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="date-day-end.html"><span>date</span><wbr><span>Day</span><wbr><span><span>End</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1848784293%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1848784293%2FProperties%2F-1075198897" anchor-label="dateDayEnd" id="-1848784293%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="date-day-end.html">dateDayEnd</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1848784293%2FProperties%2F-1075198897" anchor-label="dateDayEnd" id="-1848784293%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns a <a href="index.html">WDateTime</a> of this day with the hour at 23:59:59.999</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-129015180%2FProperties%2F-1075198897" anchor-label="dateDayStart" id="-129015180%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="date-day-start.html"><span>date</span><wbr><span>Day</span><wbr><span><span>Start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-129015180%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-129015180%2FProperties%2F-1075198897" anchor-label="dateDayStart" id="-129015180%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="date-day-start.html">dateDayStart</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-129015180%2FProperties%2F-1075198897" anchor-label="dateDayStart" id="-129015180%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns a <a href="index.html">WDateTime</a> of this day with the hour at 00:00:00</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1609767835%2FProperties%2F-1075198897" anchor-label="dayOfMonth" id="1609767835%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="day-of-month.html"><span>day</span><wbr><span>Of</span><wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1609767835%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1609767835%2FProperties%2F-1075198897" anchor-label="dayOfMonth" id="1609767835%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="day-of-month.html">dayOfMonth</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1609767835%2FProperties%2F-1075198897" anchor-label="dayOfMonth" id="1609767835%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="day-of-month.html">dayOfMonth</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="695636011%2FProperties%2F-1075198897" anchor-label="dayOfWeek" id="695636011%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="day-of-week.html"><span>day</span><wbr><span>Of</span><wbr><span><span>Week</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="695636011%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="695636011%2FProperties%2F-1075198897" anchor-label="dayOfWeek" id="695636011%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="day-of-week.html">dayOfWeek</a><span class="token operator">: </span><a href="../index.html#-391453431%2FClasslikes%2F-1075198897">WDayOfWeek</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="695636011%2FProperties%2F-1075198897" anchor-label="dayOfWeek" id="695636011%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="day-of-week.html">dayOfWeek</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1680003168%2FProperties%2F-1075198897" anchor-label="dayOfWeekInt" id="-1680003168%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="day-of-week-int.html"><span>day</span><wbr><span>Of</span><wbr><span>Week</span><wbr><span><span>Int</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1680003168%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1680003168%2FProperties%2F-1075198897" anchor-label="dayOfWeekInt" id="-1680003168%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="day-of-week-int.html">dayOfWeekInt</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1680003168%2FProperties%2F-1075198897" anchor-label="dayOfWeekInt" id="-1680003168%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="day-of-week.html">dayOfWeek</a> part as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1547478014%2FProperties%2F-1075198897" anchor-label="dayOfYear" id="-1547478014%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="day-of-year.html"><span>day</span><wbr><span>Of</span><wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1547478014%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1547478014%2FProperties%2F-1075198897" anchor-label="dayOfYear" id="-1547478014%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="day-of-year.html">dayOfYear</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1547478014%2FProperties%2F-1075198897" anchor-label="dayOfYear" id="-1547478014%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="day-of-year.html">dayOfYear</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1657241214%2FProperties%2F-1075198897" anchor-label="endOfDay" id="1657241214%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-day.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1657241214%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1657241214%2FProperties%2F-1075198897" anchor-label="endOfDay" id="1657241214%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-day.html">endOfDay</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1024711452%2FProperties%2F-1075198897" anchor-label="endOfHour" id="1024711452%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-hour.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Hour</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1024711452%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1024711452%2FProperties%2F-1075198897" anchor-label="endOfHour" id="1024711452%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-hour.html">endOfHour</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-404045791%2FProperties%2F-1075198897" anchor-label="endOfIsoWeek" id="-404045791%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-iso-week.html"><span>end</span><wbr><span>Of</span><wbr><span>Iso</span><wbr><span><span>Week</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-404045791%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-404045791%2FProperties%2F-1075198897" anchor-label="endOfIsoWeek" id="-404045791%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-iso-week.html">endOfIsoWeek</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="673225772%2FProperties%2F-1075198897" anchor-label="endOfMinute" id="673225772%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-minute.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Minute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="673225772%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="673225772%2FProperties%2F-1075198897" anchor-label="endOfMinute" id="673225772%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-minute.html">endOfMinute</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1900649254%2FProperties%2F-1075198897" anchor-label="endOfMonth" id="-1900649254%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-month.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1900649254%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1900649254%2FProperties%2F-1075198897" anchor-label="endOfMonth" id="-1900649254%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-month.html">endOfMonth</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-831866130%2FProperties%2F-1075198897" anchor-label="endOfQuarter" id="-831866130%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-quarter.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Quarter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-831866130%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-831866130%2FProperties%2F-1075198897" anchor-label="endOfQuarter" id="-831866130%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-quarter.html">endOfQuarter</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-573707828%2FProperties%2F-1075198897" anchor-label="endOfSecond" id="-573707828%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-second.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Second</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-573707828%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-573707828%2FProperties%2F-1075198897" anchor-label="endOfSecond" id="-573707828%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-second.html">endOfSecond</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1634360564%2FProperties%2F-1075198897" anchor-label="endOfWeek" id="-1634360564%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-week.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Week</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1634360564%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1634360564%2FProperties%2F-1075198897" anchor-label="endOfWeek" id="-1634360564%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-week.html">endOfWeek</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="417492707%2FProperties%2F-1075198897" anchor-label="endOfYear" id="417492707%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="end-of-year.html"><span>end</span><wbr><span>Of</span><wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="417492707%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="417492707%2FProperties%2F-1075198897" anchor-label="endOfYear" id="417492707%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="end-of-year.html">endOfYear</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-231241277%2FProperties%2F-1075198897" anchor-label="hours" id="-231241277%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="hours.html"><span><span>hours</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-231241277%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-231241277%2FProperties%2F-1075198897" anchor-label="hours" id="-231241277%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="hours.html">hours</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-231241277%2FProperties%2F-1075198897" anchor-label="hours" id="-231241277%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="hours.html">hours</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="719605991%2FProperties%2F-1075198897" anchor-label="local" id="719605991%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="local.html"><span><span>local</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="719605991%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="719605991%2FProperties%2F-1075198897" anchor-label="local" id="719605991%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="local.html">local</a><span class="token operator">: </span><a href="../index.html#733523857%2FClasslikes%2F-1075198897">WDateTimeTz</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="719605991%2FProperties%2F-1075198897" anchor-label="local" id="719605991%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns this date with the local offset of this device. Components might change because of the offset.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1166481428%2FProperties%2F-1075198897" anchor-label="localOffset" id="1166481428%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="local-offset.html"><span>local</span><wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1166481428%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1166481428%2FProperties%2F-1075198897" anchor-label="localOffset" id="1166481428%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="local-offset.html">localOffset</a><span class="token operator">: </span><a href="../-w-timezone-offset/index.html">WTimezoneOffset</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1166481428%2FProperties%2F-1075198897" anchor-label="localOffset" id="1166481428%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The local offset for this date for the timezone of the device</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1942818784%2FProperties%2F-1075198897" anchor-label="localUnadjusted" id="-1942818784%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="local-unadjusted.html"><span>local</span><wbr><span><span>Unadjusted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1942818784%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1942818784%2FProperties%2F-1075198897" anchor-label="localUnadjusted" id="-1942818784%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="local-unadjusted.html">localUnadjusted</a><span class="token operator">: </span><a href="../index.html#733523857%2FClasslikes%2F-1075198897">WDateTimeTz</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1942818784%2FProperties%2F-1075198897" anchor-label="localUnadjusted" id="-1942818784%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns a new local date that will match these components.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="876305942%2FProperties%2F-1075198897" anchor-label="milliseconds" id="876305942%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="milliseconds.html"><span><span>milliseconds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="876305942%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="876305942%2FProperties%2F-1075198897" anchor-label="milliseconds" id="876305942%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="milliseconds.html">milliseconds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="876305942%2FProperties%2F-1075198897" anchor-label="milliseconds" id="876305942%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="milliseconds.html">milliseconds</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1593222323%2FProperties%2F-1075198897" anchor-label="minutes" id="1593222323%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="minutes.html"><span><span>minutes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1593222323%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1593222323%2FProperties%2F-1075198897" anchor-label="minutes" id="1593222323%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="minutes.html">minutes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1593222323%2FProperties%2F-1075198897" anchor-label="minutes" id="1593222323%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="minutes.html">minutes</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1104461966%2FProperties%2F-1075198897" anchor-label="month" id="-1104461966%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="month.html"><span><span>month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1104461966%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1104461966%2FProperties%2F-1075198897" anchor-label="month" id="-1104461966%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="month.html">month</a><span class="token operator">: </span><a href="../index.html#1335187792%2FClasslikes%2F-1075198897">WMonth</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1104461966%2FProperties%2F-1075198897" anchor-label="month" id="-1104461966%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="../index.html#1335187792%2FClasslikes%2F-1075198897">WMonth</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-390654856%2FProperties%2F-1075198897" anchor-label="month0" id="-390654856%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="month0.html"><span><span>month0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-390654856%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-390654856%2FProperties%2F-1075198897" anchor-label="month0" id="-390654856%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="month0.html">month0</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-390654856%2FProperties%2F-1075198897" anchor-label="month0" id="-390654856%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="../index.html#1335187792%2FClasslikes%2F-1075198897">WMonth</a> part as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a> where January is represented as 0</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-359635049%2FProperties%2F-1075198897" anchor-label="month1" id="-359635049%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="month1.html"><span><span>month1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-359635049%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-359635049%2FProperties%2F-1075198897" anchor-label="month1" id="-359635049%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="month1.html">month1</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-359635049%2FProperties%2F-1075198897" anchor-label="month1" id="-359635049%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="../index.html#1335187792%2FClasslikes%2F-1075198897">WMonth</a> part as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a> where January is represented as 1</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-200061050%2FProperties%2F-1075198897" anchor-label="quarter" id="-200061050%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="quarter.html"><span><span>quarter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-200061050%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-200061050%2FProperties%2F-1075198897" anchor-label="quarter" id="-200061050%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="quarter.html">quarter</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-200061050%2FProperties%2F-1075198897" anchor-label="quarter" id="-200061050%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns the quarter 1, 2, 3 or 4</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1592986387%2FProperties%2F-1075198897" anchor-label="seconds" id="1592986387%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="seconds.html"><span><span>seconds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1592986387%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1592986387%2FProperties%2F-1075198897" anchor-label="seconds" id="1592986387%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="seconds.html">seconds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1592986387%2FProperties%2F-1075198897" anchor-label="seconds" id="1592986387%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="seconds.html">seconds</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-792374011%2FProperties%2F-1075198897" anchor-label="startOfDay" id="-792374011%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-day.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Day</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-792374011%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-792374011%2FProperties%2F-1075198897" anchor-label="startOfDay" id="-792374011%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-day.html">startOfDay</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1898916491%2FProperties%2F-1075198897" anchor-label="startOfHour" id="-1898916491%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-hour.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Hour</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1898916491%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1898916491%2FProperties%2F-1075198897" anchor-label="startOfHour" id="-1898916491%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-hour.html">startOfHour</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-562300120%2FProperties%2F-1075198897" anchor-label="startOfIsoWeek" id="-562300120%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-iso-week.html"><span>start</span><wbr><span>Of</span><wbr><span>Iso</span><wbr><span><span>Week</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-562300120%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-562300120%2FProperties%2F-1075198897" anchor-label="startOfIsoWeek" id="-562300120%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-iso-week.html">startOfIsoWeek</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-24615867%2FProperties%2F-1075198897" anchor-label="startOfMinute" id="-24615867%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-minute.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Minute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-24615867%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-24615867%2FProperties%2F-1075198897" anchor-label="startOfMinute" id="-24615867%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-minute.html">startOfMinute</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1956165025%2FProperties%2F-1075198897" anchor-label="startOfMonth" id="1956165025%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-month.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1956165025%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1956165025%2FProperties%2F-1075198897" anchor-label="startOfMonth" id="1956165025%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-month.html">startOfMonth</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-990120459%2FProperties%2F-1075198897" anchor-label="startOfQuarter" id="-990120459%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-quarter.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Quarter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-990120459%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-990120459%2FProperties%2F-1075198897" anchor-label="startOfQuarter" id="-990120459%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-quarter.html">startOfQuarter</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1271549467%2FProperties%2F-1075198897" anchor-label="startOfSecond" id="-1271549467%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-second.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Second</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1271549467%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-1271549467%2FProperties%2F-1075198897" anchor-label="startOfSecond" id="-1271549467%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-second.html">startOfSecond</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-263021211%2FProperties%2F-1075198897" anchor-label="startOfWeek" id="-263021211%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-week.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Week</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263021211%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-263021211%2FProperties%2F-1075198897" anchor-label="startOfWeek" id="-263021211%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-week.html">startOfWeek</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1788832060%2FProperties%2F-1075198897" anchor-label="startOfYear" id="1788832060%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="start-of-year.html"><span>start</span><wbr><span>Of</span><wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1788832060%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1788832060%2FProperties%2F-1075198897" anchor-label="startOfYear" id="1788832060%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="start-of-year.html">startOfYear</a><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1830033595%2FProperties%2F-1075198897" anchor-label="time" id="1830033595%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="time.html"><span><span>time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1830033595%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1830033595%2FProperties%2F-1075198897" anchor-label="time" id="1830033595%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="time.html">time</a><span class="token operator">: </span><a href="../-w-time/index.html">WTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="804262889%2FProperties%2F-1075198897" anchor-label="unixMillisDouble" id="804262889%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unix-millis-double.html"><span>unix</span><wbr><span>Millis</span><wbr><span><span>Double</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="804262889%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="804262889%2FProperties%2F-1075198897" anchor-label="unixMillisDouble" id="804262889%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="unix-millis-double.html">unixMillisDouble</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="804262889%2FProperties%2F-1075198897" anchor-label="unixMillisDouble" id="804262889%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Number of milliseconds since UNIX <a href="-companion/-e-p-o-c-h.html">EPOCH</a> as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1794024158%2FProperties%2F-1075198897" anchor-label="unixMillisLong" id="1794024158%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unix-millis-long.html"><span>unix</span><wbr><span>Millis</span><wbr><span><span>Long</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1794024158%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="1794024158%2FProperties%2F-1075198897" anchor-label="unixMillisLong" id="1794024158%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="unix-millis-long.html">unixMillisLong</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1794024158%2FProperties%2F-1075198897" anchor-label="unixMillisLong" id="1794024158%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Number of milliseconds since UNIX <a href="-companion/-e-p-o-c-h.html">EPOCH</a> as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="614118926%2FProperties%2F-1075198897" anchor-label="utc" id="614118926%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="utc.html"><span><span>utc</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="614118926%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="614118926%2FProperties%2F-1075198897" anchor-label="utc" id="614118926%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="utc.html">utc</a><span class="token operator">: </span><a href="../index.html#733523857%2FClasslikes%2F-1075198897">WDateTimeTz</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="614118926%2FProperties%2F-1075198897" anchor-label="utc" id="614118926%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Returns this date with a 0 offset. Components are equal.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-738078303%2FProperties%2F-1075198897" anchor-label="value" id="-738078303%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="value.html"><span><span>value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-738078303%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-738078303%2FProperties%2F-1075198897" anchor-label="value" id="-738078303%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="value.html">value</a><span class="token operator">: </span><a href="../../com.soywiz.klock/-date-time/index.html">DateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-526655157%2FProperties%2F-1075198897" anchor-label="year" id="-526655157%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="year.html"><span><span>year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-526655157%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-526655157%2FProperties%2F-1075198897" anchor-label="year" id="-526655157%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="year.html">year</a><span class="token operator">: </span><a href="../-w-year/index.html">WYear</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-526655157%2FProperties%2F-1075198897" anchor-label="year" id="-526655157%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="../-w-year/index.html">WYear</a> part</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2071513728%2FProperties%2F-1075198897" anchor-label="yearInt" id="2071513728%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="year-int.html"><span>year</span><wbr><span><span>Int</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2071513728%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="2071513728%2FProperties%2F-1075198897" anchor-label="yearInt" id="2071513728%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="year-int.html">yearInt</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="2071513728%2FProperties%2F-1075198897" anchor-label="yearInt" id="2071513728%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">The <a href="../-w-year/index.html">WYear</a> part as <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-672405361%2FProperties%2F-1075198897" anchor-label="yearMonth" id="-672405361%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="year-month.html"><span>year</span><wbr><span><span>Month</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-672405361%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-672405361%2FProperties%2F-1075198897" anchor-label="yearMonth" id="-672405361%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="year-month.html">yearMonth</a><span class="token operator">: </span><a href="../-w-year-month/index.html">WYearMonth</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-672405361%2FProperties%2F-1075198897" anchor-label="yearMonth" id="-672405361%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Represents a couple of <a href="../-w-year/index.html">WYear</a> and <a href="../index.html#1335187792%2FClasslikes%2F-1075198897">WMonth</a> that has leap information and thus allows to get the number of days of that month</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-664232125%2FProperties%2F-1075198897" anchor-label="yearOneMillis" id="-664232125%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="year-one-millis.html"><span>year</span><wbr><span>One</span><wbr><span><span>Millis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-664232125%2FProperties%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><a data-name="-664232125%2FProperties%2F-1075198897" anchor-label="yearOneMillis" id="-664232125%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="year-one-millis.html">yearOneMillis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-664232125%2FProperties%2F-1075198897" anchor-label="yearOneMillis" id="-664232125%2FProperties%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a><p class="paragraph">Number of milliseconds since the 00:00:00 UTC, Monday, 1 January 1</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="-319538997%2FExtensions%2F-1075198897" anchor-label="clamp" id="-319538997%2FExtensions%2F-1075198897" data-filterable-set=":klock:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../clamp.html"><span><span>clamp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-319538997%2FExtensions%2F-1075198897"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":klock:dokkaHtmlPartial/commonMain" data-filterable-set=":klock:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":klock:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":klock:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">WDateTime</a><span class="token punctuation">.</span><a href="../clamp.html"><span class="token function">clamp</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">min<span class="token operator">: </span><a href="index.html">WDateTime</a><span class="token punctuation">, </span></span><span class="parameter ">max<span class="token operator">: </span><a href="index.html">WDateTime</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">WDateTime</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

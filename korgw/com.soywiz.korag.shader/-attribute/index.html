@@ -1,0 +1,478 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Attribute</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>korlibs</span>            </a>    </div>
+    <div>3.2.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korgw:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="korgw::com.soywiz.korag.shader/Attribute///PointingToDeclaration//-445217689">
+  <div class="breadcrumbs"><a href="../../index.html">korgw</a><span class="delimiter">/</span><a href="../index.html">com.soywiz.korag.shader</a><span class="delimiter">/</span><a href="index.html">Attribute</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Attribute</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">Attribute</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>type<span class="token operator">: </span><a href="../-var-type/index.html">VarType</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>normalized<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>active<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>precision<span class="token operator">: </span><a href="../-precision/index.html">Precision</a><span class="token operator"> = </span>Precision.DEFAULT<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>divisor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>fixedLocation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../-variable/index.html">Variable</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="943388721%2FConstructors%2F-445217689" anchor-label="Attribute" id="943388721%2FConstructors%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-attribute.html"><span><span>Attribute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="943388721%2FConstructors%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-attribute.html"><span class="token function">Attribute</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;type<span class="token operator">: </span><a href="../-var-type/index.html">VarType</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;normalized<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;precision<span class="token operator">: </span><a href="../-precision/index.html">Precision</a><span class="token operator"> = </span>Precision.DEFAULT</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1014852698%2FConstructors%2F-445217689" anchor-label="Attribute" id="1014852698%2FConstructors%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-attribute.html"><span><span>Attribute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1014852698%2FConstructors%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-attribute.html"><span class="token function">Attribute</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;type<span class="token operator">: </span><a href="../-var-type/index.html">VarType</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;normalized<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;active<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;precision<span class="token operator">: </span><a href="../-precision/index.html">Precision</a><span class="token operator"> = </span>Precision.DEFAULT<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;divisor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;fixedLocation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="279865569%2FFunctions%2F-445217689" anchor-label="copy" id="279865569%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="copy.html"><span><span>copy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="279865569%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>this.name<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;type<span class="token operator">: </span><a href="../-var-type/index.html">VarType</a><span class="token operator"> = </span>this.type<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;normalized<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.normalized<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>this.offset<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;active<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.active<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;precision<span class="token operator">: </span><a href="../-precision/index.html">Precision</a><span class="token operator"> = </span>this.precision<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;divisor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.divisor</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Attribute</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="651485393%2FFunctions%2F-445217689" anchor-label="equals" id="651485393%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="equals.html"><span><span>equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="651485393%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="equals.html"><span class="token function">equals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1297815307%2FFunctions%2F-445217689" anchor-label="hashCode" id="-1297815307%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="hash-code.html"><span>hash</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1297815307%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="hash-code.html"><span class="token function">hashCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1600427535%2FFunctions%2F-445217689" anchor-label="inactived" id="-1600427535%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="inactived.html"><span><span>inactived</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1600427535%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="inactived.html"><span class="token function">inactived</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Attribute</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="203606168%2FFunctions%2F-445217689" anchor-label="mequals" id="203606168%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/mequals.html"><span><span>mequals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="203606168%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-variable/mequals.html">T</a><span class="token operator"> : </span><a href="../-variable/index.html">Variable</a><span class="token operator">&gt; </span><a href="../-variable/mequals.html"><span class="token function">mequals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1216701806%2FFunctions%2F-445217689" anchor-label="mhashcode" id="1216701806%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/mhashcode.html"><span><span>mhashcode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1216701806%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-variable/mhashcode.html"><span class="token function">mhashcode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1475981372%2FFunctions%2F-445217689" anchor-label="toString" id="-1475981372%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1475981372%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="667149457%2FFunctions%2F-445217689" anchor-label="toStringEx" id="667149457%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string-ex.html"><span>to</span><wbr><span>String</span><wbr><span><span>Ex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="667149457%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="to-string-ex.html"><span class="token function">toStringEx</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1456717584%2FFunctions%2F-445217689" anchor-label="withDivisor" id="1456717584%2FFunctions%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="with-divisor.html"><span>with</span><wbr><span><span>Divisor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1456717584%2FFunctions%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="with-divisor.html"><span class="token function">withDivisor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">divisor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Attribute</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="594494762%2FProperties%2F-445217689" anchor-label="active" id="594494762%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="active.html"><span><span>active</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="594494762%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="594494762%2FProperties%2F-445217689" anchor-label="active" id="594494762%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="active.html">active</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-805676722%2FProperties%2F-445217689" anchor-label="arrayCount" id="-805676722%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/array-count.html"><span>array</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-805676722%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="-805676722%2FProperties%2F-445217689" anchor-label="arrayCount" id="-805676722%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-variable/array-count.html">arrayCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-216579174%2FProperties%2F-445217689" anchor-label="data" id="-216579174%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/data.html"><span><span>data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-216579174%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="-216579174%2FProperties%2F-445217689" anchor-label="data" id="-216579174%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-variable/data.html">data</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="672238988%2FProperties%2F-445217689" anchor-label="divisor" id="672238988%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="divisor.html"><span><span>divisor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="672238988%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="672238988%2FProperties%2F-445217689" anchor-label="divisor" id="672238988%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="divisor.html">divisor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1547379446%2FProperties%2F-445217689" anchor-label="elementCount" id="-1547379446%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-operand/element-count.html"><span>element</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1547379446%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="-1547379446%2FProperties%2F-445217689" anchor-label="elementCount" id="-1547379446%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-operand/element-count.html">elementCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1411871617%2FProperties%2F-445217689" anchor-label="fixedLocation" id="1411871617%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="fixed-location.html"><span>fixed</span><wbr><span><span>Location</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1411871617%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="1411871617%2FProperties%2F-445217689" anchor-label="fixedLocation" id="1411871617%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="fixed-location.html">fixedLocation</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1357831433%2FProperties%2F-445217689" anchor-label="id" id="1357831433%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1357831433%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="1357831433%2FProperties%2F-445217689" anchor-label="id" id="1357831433%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-variable/id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1964962286%2FProperties%2F-445217689" anchor-label="indexNames" id="1964962286%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/index-names.html"><span>index</span><wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1964962286%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="1964962286%2FProperties%2F-445217689" anchor-label="indexNames" id="1964962286%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-variable/index-names.html">indexNames</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="107218905%2FProperties%2F-445217689" anchor-label="name" id="107218905%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="107218905%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="107218905%2FProperties%2F-445217689" anchor-label="name" id="107218905%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-variable/name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-148254503%2FProperties%2F-445217689" anchor-label="normalized" id="-148254503%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="normalized.html"><span><span>normalized</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-148254503%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="-148254503%2FProperties%2F-445217689" anchor-label="normalized" id="-148254503%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="normalized.html">normalized</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1118451651%2FProperties%2F-445217689" anchor-label="offset" id="-1118451651%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="offset.html"><span><span>offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1118451651%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="-1118451651%2FProperties%2F-445217689" anchor-label="offset" id="-1118451651%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="offset.html">offset</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="879423768%2FProperties%2F-445217689" anchor-label="precision" id="879423768%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-variable/precision.html"><span><span>precision</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="879423768%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="879423768%2FProperties%2F-445217689" anchor-label="precision" id="879423768%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-variable/precision.html">precision</a><span class="token operator">: </span><a href="../-precision/index.html">Precision</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1181390045%2FProperties%2F-445217689" anchor-label="type" id="-1181390045%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-operand/type.html"><span><span>type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1181390045%2FProperties%2F-445217689"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":korgw:dokkaHtmlPartial/commonMain" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korgw:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":korgw:dokkaHtmlPartial/commonMain"><a data-name="-1181390045%2FProperties%2F-445217689" anchor-label="type" id="-1181390045%2FProperties%2F-445217689" data-filterable-set=":korgw:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-operand/type.html">type</a><span class="token operator">: </span><a href="../-var-type/index.html">VarType</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

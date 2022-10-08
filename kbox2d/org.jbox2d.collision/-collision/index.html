@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Collision</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>korlibs</span>            </a>    </div>
+    <div>3.2.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":kbox2d:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="kbox2d::org.jbox2d.collision/Collision///PointingToDeclaration//1809942881">
+  <div class="breadcrumbs"><a href="../../index.html">kbox2d</a><span class="delimiter">/</span><a href="../index.html">org.jbox2d.collision</a><span class="delimiter">/</span><a href="index.html">Collision</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Collision</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Collision</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pool<span class="token operator">: </span><a href="../../org.jbox2d.pooling/-i-world-pool/index.html">IWorldPool</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Functions used for computing contact points, distance queries, and TOI queries. Collision methods are non-static for pooling speed, retrieve a collision object from the SingletonPool. Should not be finalructed.</p><h4 class="">Author</h4><p class="paragraph">Daniel Murphy</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-816280786%2FConstructors%2F1809942881" anchor-label="Collision" id="-816280786%2FConstructors%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-collision.html"><span><span>Collision</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-816280786%2FConstructors%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-collision.html"><span class="token function">Collision</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pool<span class="token operator">: </span><a href="../../org.jbox2d.pooling/-i-world-pool/index.html">IWorldPool</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-942283469%2FClasslikes%2F1809942881" anchor-label="ClipVertex" id="-942283469%2FClasslikes%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-clip-vertex/index.html"><span>Clip</span><wbr><span><span>Vertex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-942283469%2FClasslikes%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-clip-vertex/index.html">ClipVertex</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Used for computing contact manifolds.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1908164529%2FClasslikes%2F1809942881" anchor-label="Companion" id="-1908164529%2FClasslikes%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1908164529%2FClasslikes%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1225566718%2FClasslikes%2F1809942881" anchor-label="EdgeResults" id="-1225566718%2FClasslikes%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-edge-results/index.html"><span>Edge</span><wbr><span><span>Results</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1225566718%2FClasslikes%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-edge-results/index.html">EdgeResults</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Java-specific class for returning edge results</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1162550778%2FClasslikes%2F1809942881" anchor-label="PointState" id="-1162550778%2FClasslikes%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-point-state/index.html"><span>Point</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1162550778%2FClasslikes%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-point-state/index.html">PointState</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-point-state/index.html">Collision.PointState</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This is used for determining the state of contact points.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1809714828%2FFunctions%2F1809942881" anchor-label="collideCircles" id="1809714828%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collide-circles.html"><span>collide</span><wbr><span><span>Circles</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1809714828%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="collide-circles.html"><span class="token function">collideCircles</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;manifold<span class="token operator">: </span><a href="../-manifold/index.html">Manifold</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;circle1<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-circle-shape/index.html">CircleShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfA<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;circle2<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-circle-shape/index.html">CircleShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfB<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Compute the collision manifold between two circles.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="717864096%2FFunctions%2F1809942881" anchor-label="collideEdgeAndCircle" id="717864096%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collide-edge-and-circle.html"><span>collide</span><wbr><span>Edge</span><wbr><span>And</span><wbr><span><span>Circle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="717864096%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="collide-edge-and-circle.html"><span class="token function">collideEdgeAndCircle</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;manifold<span class="token operator">: </span><a href="../-manifold/index.html">Manifold</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;edgeA<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-edge-shape/index.html">EdgeShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfA<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;circleB<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-circle-shape/index.html">CircleShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfB<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1628186368%2FFunctions%2F1809942881" anchor-label="collideEdgeAndPolygon" id="1628186368%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collide-edge-and-polygon.html"><span>collide</span><wbr><span>Edge</span><wbr><span>And</span><wbr><span><span>Polygon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1628186368%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="collide-edge-and-polygon.html"><span class="token function">collideEdgeAndPolygon</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;manifold<span class="token operator">: </span><a href="../-manifold/index.html">Manifold</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;edgeA<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-edge-shape/index.html">EdgeShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfA<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;polygonB<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfB<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1004412076%2FFunctions%2F1809942881" anchor-label="collidePolygonAndCircle" id="-1004412076%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collide-polygon-and-circle.html"><span>collide</span><wbr><span>Polygon</span><wbr><span>And</span><wbr><span><span>Circle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1004412076%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="collide-polygon-and-circle.html"><span class="token function">collidePolygonAndCircle</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;manifold<span class="token operator">: </span><a href="../-manifold/index.html">Manifold</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;polygon<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfA<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;circle<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-circle-shape/index.html">CircleShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfB<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Compute the collision manifold between a polygon and a circle.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2126036524%2FFunctions%2F1809942881" anchor-label="collidePolygons" id="-2126036524%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collide-polygons.html"><span>collide</span><wbr><span><span>Polygons</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2126036524%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="collide-polygons.html"><span class="token function">collidePolygons</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;manifold<span class="token operator">: </span><a href="../-manifold/index.html">Manifold</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;polyA<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfA<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;polyB<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfB<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Compute the collision manifold between two polygons.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1010573122%2FFunctions%2F1809942881" anchor-label="findIncidentEdge" id="-1010573122%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="find-incident-edge.html"><span>find</span><wbr><span>Incident</span><wbr><span><span>Edge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1010573122%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-incident-edge.html"><span class="token function">findIncidentEdge</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-clip-vertex/index.html">Collision.ClipVertex</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;poly1<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xf1<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;edge1<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;poly2<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xf2<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1156874023%2FFunctions%2F1809942881" anchor-label="findMaxSeparation" id="1156874023%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="find-max-separation.html"><span>find</span><wbr><span>Max</span><wbr><span><span>Separation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1156874023%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="find-max-separation.html"><span class="token function">findMaxSeparation</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;results<span class="token operator">: </span><a href="-edge-results/index.html">Collision.EdgeResults</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;poly1<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xf1<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;poly2<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-polygon-shape/index.html">PolygonShape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xf2<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Find the max separation between poly1 and poly2 using edge normals from poly1.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2018153666%2FFunctions%2F1809942881" anchor-label="testOverlap" id="-2018153666%2FFunctions%2F1809942881" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="test-overlap.html"><span>test</span><wbr><span><span>Overlap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2018153666%2FFunctions%2F1809942881"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":kbox2d:dokkaHtmlPartial/commonMain" data-filterable-set=":kbox2d:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":kbox2d:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":kbox2d:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="test-overlap.html"><span class="token function">testOverlap</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;shapeA<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-shape/index.html">Shape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;indexA<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;shapeB<span class="token operator">: </span><a href="../../org.jbox2d.collision.shapes/-shape/index.html">Shape</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;indexB<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfA<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;xfB<span class="token operator">: </span><a href="../../org.jbox2d.common/-transform/index.html">Transform</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Determine if two generic shapes overlap.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
