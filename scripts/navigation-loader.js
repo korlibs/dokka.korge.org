@@ -29,6 +29,7 @@ revealNavigationForCurrentPage = () => {
     let pageId = document.getElementById("content").attributes["pageIds"].value.toString();
     let parts = document.querySelectorAll(".sideMenuPart");
     let found = 0;
+    let foundNode = undefined;
     do {
         parts.forEach(part => {
             if (part.attributes['pageId'].value.indexOf(pageId) !== -1 && found === 0) {
@@ -36,12 +37,19 @@ revealNavigationForCurrentPage = () => {
                 if (part.classList.contains("hidden")) {
                     part.classList.remove("hidden");
                     part.setAttribute('data-active', "");
+                    foundNode = part
                 }
                 revealParents(part)
             }
         });
         pageId = pageId.substring(0, pageId.lastIndexOf("/"))
     } while (pageId.indexOf("/") !== -1 && found === 0)
+    if (foundNode) {
+        const overview = foundNode.querySelector(".overview");
+        if (overview) {
+            overview.scrollIntoView({block: "center"})
+        }
+    }
 };
 revealParents = (part) => {
     if (part.classList.contains("sideMenuPart")) {
