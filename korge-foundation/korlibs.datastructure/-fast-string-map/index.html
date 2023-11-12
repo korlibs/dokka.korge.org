@@ -1,0 +1,436 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FastStringMap</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/jsMain">js</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge-foundation::korlibs.datastructure/FastStringMap///PointingToDeclaration//2009035361">
+  <div class="breadcrumbs"><a href="../../index.html">korge-foundation</a><span class="delimiter">/</span><a href="../index.html">korlibs.datastructure</a><span class="delimiter">/</span><span class="current">FastStringMap</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Fast</span><wbr><span>String</span><wbr><span><span>Map</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1185959445%2FConstructors%2F-452323186" anchor-label="FastStringMap" id="-1185959445%2FConstructors%2F-452323186" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-fast-string-map.html"><span>Fast</span><wbr><span>String</span><wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1185959445%2FConstructors%2F-452323186"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dummy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dummy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="609820941%2FProperties%2F-1254146785" anchor-label="dummy" id="609820941%2FProperties%2F-1254146785" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dummy.html"><span><span>dummy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="609820941%2FProperties%2F-1254146785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="dummy.html">dummy</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1114669618%2FProperties%2F519833503" anchor-label="keys" id="-1114669618%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../keys.html"><span><span>keys</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1114669618%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../keys.html">keys</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1467666649%2FProperties%2F-1254146785" anchor-label="map" id="1467666649%2FProperties%2F-1254146785" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="map.html"><span><span>map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1467666649%2FProperties%2F-1254146785"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="map.html">map</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html">HashMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1995199775%2FProperties%2F2009035361" anchor-label="size" id="-1995199775%2FProperties%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1995199775%2FProperties%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../size.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../size.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../size.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../size.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../size.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../size.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="870356768%2FProperties%2F519833503" anchor-label="values" id="870356768%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="870356768%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../values.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../values.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../values.html">values</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../values.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-331043037%2FFunctions%2F2009035361" anchor-label="clear" id="-331043037%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../clear.html"><span><span>clear</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-331043037%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../clear.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../clear.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../clear.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../clear.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../clear.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../clear.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1313777439%2FFunctions%2F2009035361" anchor-label="contains" id="-1313777439%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../contains.html"><span><span>contains</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1313777439%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../contains.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../contains.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../contains.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../contains.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../contains.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../contains.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../contains.html"><span class="token function">contains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1193332628%2FFunctions%2F519833503" anchor-label="fastForEach" id="1193332628%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../fast-for-each.html"><span>fast</span><wbr><span>For</span><wbr><span><span>Each</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1193332628%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-for-each.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-for-each.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../fast-for-each.html"><span class="token function">fastForEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span>value<span class="token operator">: </span><a href="../fast-for-each.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="754907616%2FFunctions%2F519833503" anchor-label="fastForEachNullable" id="754907616%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../fast-for-each-nullable.html"><span>fast</span><wbr><span>For</span><wbr><span>Each</span><wbr><span><span>Nullable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="754907616%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-for-each-nullable.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-for-each-nullable.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../fast-for-each-nullable.html"><span class="token function">fastForEachNullable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span>value<span class="token operator">: </span><a href="../fast-for-each-nullable.html">T</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="575723294%2FFunctions%2F2009035361" anchor-label="fastKeyForEach" id="575723294%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../fast-key-for-each.html"><span>fast</span><wbr><span>Key</span><wbr><span>For</span><wbr><span><span>Each</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="575723294%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-key-for-each.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-key-for-each.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../fast-key-for-each.html"><span class="token function">fastKeyForEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-key-for-each.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-key-for-each.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../fast-key-for-each.html"><span class="token function">fastKeyForEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-key-for-each.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-key-for-each.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../fast-key-for-each.html"><span class="token function">fastKeyForEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1472011044%2FFunctions%2F519833503" anchor-label="fastValueForEach" id="-1472011044%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../fast-value-for-each.html"><span>fast</span><wbr><span>Value</span><wbr><span>For</span><wbr><span><span>Each</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1472011044%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-value-for-each.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-value-for-each.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../fast-value-for-each.html"><span class="token function">fastValueForEach</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="../fast-value-for-each.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1009407842%2FFunctions%2F519833503" anchor-label="fastValueForEachNullable" id="-1009407842%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../fast-value-for-each-nullable.html"><span>fast</span><wbr><span>Value</span><wbr><span>For</span><wbr><span>Each</span><wbr><span><span>Nullable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1009407842%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-value-for-each-nullable.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../fast-value-for-each-nullable.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../fast-value-for-each-nullable.html"><span class="token function">fastValueForEachNullable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="../fast-value-for-each-nullable.html">T</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1627339062%2FFunctions%2F2009035361" anchor-label="get" id="-1627339062%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1627339062%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get.html">T</a><span class="token operator">?</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get.html">T</a><span class="token operator">?</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get.html">T</a><span class="token operator">?</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="311467218%2FFunctions%2F519833503" anchor-label="getNull" id="311467218%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-null.html"><span>get</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="311467218%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get-null.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get-null.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../get-null.html"><span class="token function">getNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get-null.html">T</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1200558450%2FFunctions%2F519833503" anchor-label="getOrPut" id="1200558450%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-or-put.html"><span>get</span><wbr><span>Or</span><wbr><span><span>Put</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1200558450%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get-or-put.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../get-or-put.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../get-or-put.html"><span class="token function">getOrPut</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../get-or-put.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../get-or-put.html">T</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1114669618%2FFunctions%2F2009035361" anchor-label="keys" id="-1114669618%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../keys.html"><span><span>keys</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1114669618%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../keys.html"><span class="token function">keys</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../keys.html"><span class="token function">keys</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../keys.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../keys.html"><span class="token function">keys</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1816419636%2FFunctions%2F2009035361" anchor-label="putAll" id="1816419636%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../put-all.html"><span>put</span><wbr><span><span>All</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1816419636%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../put-all.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1350172358%2FFunctions%2F2009035361" anchor-label="remove" id="1350172358%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../remove.html"><span><span>remove</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1350172358%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../remove.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../remove.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../remove.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../remove.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../remove.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../remove.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1255097461%2FFunctions%2F2009035361" anchor-label="set" id="1255097461%2FFunctions%2F2009035361" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/concurrentMain,:korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1255097461%2FFunctions%2F2009035361"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/concurrentMain" data-toggle=":korge-foundation:dokkaHtmlPartial/concurrentMain">concurrent</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../set.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="../set.html">T</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/concurrentMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../set.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="../set.html">T</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">inline operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../set.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="../set.html">T</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="165885199%2FFunctions%2F519833503" anchor-label="toMap" id="165885199%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../to-map.html"><span>to</span><wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="165885199%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-map.html">T</a><span class="token operator">&gt; </span><a href="index.html">FastStringMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../to-map.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../to-map.html"><span class="token function">toMap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../to-map.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,858 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RectSlice</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge-foundation::korlibs.math.geom.slice/RectSlice///PointingToDeclaration//519833503">
+  <div class="breadcrumbs"><a href="../../index.html">korge-foundation</a><span class="delimiter">/</span><a href="../index.html">korlibs.math.geom.slice</a><span class="delimiter">/</span><span class="current">RectSlice</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Rect</span><wbr><span><span>Slice</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator"> : </span><a href="../../korlibs.math.geom/-sizeable-int/index.html">SizeableInt</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>base<span class="token operator">: </span><a href="index.html">T</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>rect<span class="token operator">: </span><a href="../../korlibs.math.geom/-rectangle-int/index.html">RectangleInt</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a><span class="token operator"> = </span>SliceOrientation.ROTATE_0<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>padding<span class="token operator">: </span><a href="../../korlibs.math.geom/-margin-int/index.html">MarginInt</a><span class="token operator"> = </span>MarginInt.ZERO<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../-slice-coords-with-base-and-rect/index.html">SliceCoordsWithBaseAndRect</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt; </span></div><p class="paragraph">Represents a 2D slice in an integral space inside a <a href="base.html">base</a> (or atlas) that has a <a href="width.html">width</a> and <a href="height.html">height</a>.</p><p class="paragraph">The <a href="rect.html">rect</a> property represents the slice inside that base/container, as it is stored without any kind of transformation.</p><p class="paragraph">Then there is a <a href="orientation.html">orientation</a> that described how that slice should be interpreted. Should it be rotated or flipped later?</p><p class="paragraph">The <a href="coords.html">coords</a> represents a ratio (0-1) coordinates inside the base/container with the swapped coordinates applying the <a href="orientation.html">orientation</a>. The <a href="unoriented-coords.html">unorientedCoords</a> represents a ratio (0-1) coordinates inside the base/container without applying the <a href="orientation.html">orientation</a>.</p><p class="paragraph">Then the <a href="padding.html">padding</a> describes, the padding that will have the <a href="rect.html">rect</a> after applying the orientation to represent the original sliced region. <a href="virt-frame.html">virtFrame</a> represents the region including the oriented <a href="width.html">width</a> and <a href="height.html">height</a> and the <a href="padding.html">padding</a>.</p><p class="paragraph">Typically, this slice represents a slice inside a Bitmap or a Texture atlas, that might have been stored rotated, flipped, etc. and sometimes it might have been cropped.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="749930369%2FConstructors%2F519833503" anchor-label="RectSlice" id="749930369%2FConstructors%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-rect-slice.html"><span>Rect</span><wbr><span><span>Slice</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="749930369%2FConstructors%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">base<span class="token operator">: </span><a href="index.html">T</a><span class="token punctuation">, </span></span><span class="parameter ">rect<span class="token operator">: </span><a href="../../korlibs.math.geom/-rectangle-int/index.html">RectangleInt</a><span class="token punctuation">, </span></span><span class="parameter ">orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a><span class="token operator"> = </span>SliceOrientation.ROTATE_0<span class="token punctuation">, </span></span><span class="parameter ">padding<span class="token operator">: </span><a href="../../korlibs.math.geom/-margin-int/index.html">MarginInt</a><span class="token operator"> = </span>MarginInt.ZERO<span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1674932784%2FProperties%2F519833503" anchor-label="area" id="-1674932784%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base-and-rect/area.html"><span><span>area</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1674932784%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base-and-rect/area.html">area</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="312919760%2FProperties%2F519833503" anchor-label="base" id="312919760%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="base.html"><span><span>base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="312919760%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="base.html">base</a><span class="token operator">: </span><a href="index.html">T</a></div><div class="brief "><p class="paragraph">Data containing <a href="width.html">width</a>&amp;<a href="height.html">height</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2104892713%2FProperties%2F519833503" anchor-label="baseHeight" id="2104892713%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="base-height.html"><span>base</span><wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2104892713%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="base-height.html">baseHeight</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1416512092%2FProperties%2F519833503" anchor-label="baseWidth" id="-1416512092%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="base-width.html"><span>base</span><wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1416512092%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="base-width.html">baseWidth</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-815799061%2FProperties%2F519833503" anchor-label="blX" id="-815799061%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bl-x.html"><span>bl</span><wbr><span><span>X</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-815799061%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="bl-x.html">blX</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-784779254%2FProperties%2F519833503" anchor-label="blY" id="-784779254%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bl-y.html"><span>bl</span><wbr><span><span>Y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-784779254%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="bl-y.html">blY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1423684082%2FProperties%2F519833503" anchor-label="bottom" id="1423684082%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base-and-rect/bottom.html"><span><span>bottom</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1423684082%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base-and-rect/bottom.html">bottom</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="658917745%2FProperties%2F519833503" anchor-label="brX" id="658917745%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="br-x.html"><span>br</span><wbr><span><span>X</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="658917745%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="br-x.html">brX</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="689937552%2FProperties%2F519833503" anchor-label="brY" id="689937552%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="br-y.html"><span>br</span><wbr><span><span>Y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="689937552%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="br-y.html">brY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="124594467%2FProperties%2F519833503" anchor-label="coords" id="124594467%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="coords.html"><span><span>coords</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="124594467%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="coords.html">coords</a><span class="token operator">: </span><a href="../-rect-coords/index.html">RectCoords</a></div><div class="brief "><p class="paragraph">Coordinates 0-1 based inside the container/base based on the <a href="rect.html">rect</a> after applying the <a href="orientation.html">orientation</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1764914171%2FProperties%2F519833503" anchor-label="frameHeight" id="-1764914171%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="frame-height.html"><span>frame</span><wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1764914171%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="frame-height.html">frameHeight</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="589046178%2FProperties%2F519833503" anchor-label="frameOffsetX" id="589046178%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base/frame-offset-x.html"><span>frame</span><wbr><span>Offset</span><wbr><span><span>X</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="589046178%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base/frame-offset-x.html">frameOffsetX</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="620065985%2FProperties%2F519833503" anchor-label="frameOffsetY" id="620065985%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base/frame-offset-y.html"><span>frame</span><wbr><span>Offset</span><wbr><span><span>Y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="620065985%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base/frame-offset-y.html">frameOffsetY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1402797240%2FProperties%2F519833503" anchor-label="frameWidth" id="-1402797240%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="frame-width.html"><span>frame</span><wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1402797240%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="frame-width.html">frameWidth</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-8566726%2FProperties%2F519833503" anchor-label="height" id="-8566726%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-8566726%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph"><a href="height.html">height</a> of the slice after applying the <a href="orientation.html">orientation</a> transformation. ie. if this is rotated by 90 or 270, this can be the <a href="width.html">width</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2099878078%2FProperties%2F519833503" anchor-label="invOrientation" id="-2099878078%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="inv-orientation.html"><span>inv</span><wbr><span><span>Orientation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2099878078%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="inv-orientation.html">invOrientation</a><span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2073150570%2FProperties%2F519833503" anchor-label="left" id="-2073150570%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base-and-rect/left.html"><span><span>left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2073150570%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base-and-rect/left.html">left</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1434511274%2FProperties%2F519833503" anchor-label="name" id="-1434511274%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1434511274%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Debug <a href="name.html">name</a> describing this slice</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="880354985%2FProperties%2F519833503" anchor-label="orientation" id="880354985%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="orientation.html"><span><span>orientation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="880354985%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="orientation.html">orientation</a><span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a></div><div class="brief "><p class="paragraph">An orientation describing how the slice is going to be rotated and flipped</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1053915528%2FProperties%2F519833503" anchor-label="padding" id="1053915528%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="padding.html"><span><span>padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1053915528%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="padding.html">padding</a><span class="token operator">: </span><a href="../../korlibs.math.geom/-margin-int/index.html">MarginInt</a></div><div class="brief "><p class="paragraph">Extra empty pixels that will be considered for this slice, for tightly packed images</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-241959139%2FProperties%2F519833503" anchor-label="rect" id="-241959139%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rect.html"><span><span>rect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-241959139%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="rect.html">rect</a><span class="token operator">: </span><a href="../../korlibs.math.geom/-rectangle-int/index.html">RectangleInt</a></div><div class="brief "><p class="paragraph"><a href="rect.html">rect</a> of the slice, without the <a href="orientation.html">orientation</a> applied</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1390249761%2FProperties%2F519833503" anchor-label="right" id="1390249761%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base-and-rect/right.html"><span><span>right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1390249761%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base-and-rect/right.html">right</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1449747112%2FProperties%2F519833503" anchor-label="sizeString" id="1449747112%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base/size-string.html"><span>size</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1449747112%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base/size-string.html">sizeString</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1106089575%2FProperties%2F519833503" anchor-label="tlX" id="-1106089575%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tl-x.html"><span>tl</span><wbr><span><span>X</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1106089575%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="tl-x.html">tlX</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1075069768%2FProperties%2F519833503" anchor-label="tlY" id="-1075069768%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tl-y.html"><span>tl</span><wbr><span><span>Y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1075069768%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="tl-y.html">tlY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-958436856%2FProperties%2F519833503" anchor-label="top" id="-958436856%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords-with-base-and-rect/top.html"><span><span>top</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-958436856%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-slice-coords-with-base-and-rect/top.html">top</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-199969457%2FProperties%2F519833503" anchor-label="trimmed" id="-199969457%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="trimmed.html"><span><span>trimmed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-199969457%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="trimmed.html">trimmed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="368627231%2FProperties%2F519833503" anchor-label="trX" id="368627231%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tr-x.html"><span>tr</span><wbr><span><span>X</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="368627231%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="tr-x.html">trX</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="399647038%2FProperties%2F519833503" anchor-label="trY" id="399647038%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tr-y.html"><span>tr</span><wbr><span><span>Y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="399647038%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="tr-y.html">trY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1735243558%2FProperties%2F519833503" anchor-label="unorientedCoords" id="1735243558%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unoriented-coords.html"><span>unoriented</span><wbr><span><span>Coords</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1735243558%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="unoriented-coords.html">unorientedCoords</a><span class="token operator">: </span><a href="../-rect-coords/index.html">RectCoords</a></div><div class="brief "><p class="paragraph">Coordinates 0-1 based inside the container/base based on the <a href="rect.html">rect</a> without applying the <a href="orientation.html">orientation</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1602082365%2FProperties%2F519833503" anchor-label="unorientedHeight" id="1602082365%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unoriented-height.html"><span>unoriented</span><wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1602082365%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="unoriented-height.html">unorientedHeight</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph"><a href="height.html">height</a> of the slice without applying the <a href="orientation.html">orientation</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739995120%2FProperties%2F519833503" anchor-label="unorientedWidth" id="-739995120%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unoriented-width.html"><span>unoriented</span><wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739995120%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="unoriented-width.html">unorientedWidth</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph"><a href="width.html">width</a> of the slice without applying the <a href="orientation.html">orientation</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="291473985%2FProperties%2F519833503" anchor-label="virtFrame" id="291473985%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="virt-frame.html"><span>virt</span><wbr><span><span>Frame</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="291473985%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="virt-frame.html">virtFrame</a><span class="token operator">: </span><a href="../../korlibs.math.geom/-rectangle-int/index.html">RectangleInt</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="593521779%2FProperties%2F519833503" anchor-label="width" id="593521779%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="593521779%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph"><a href="width.html">width</a> of the slice after applying the <a href="orientation.html">orientation</a> transformation. ie. if this is rotated by 90 or 270, this can be the <a href="height.html">height</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="620314667%2FFunctions%2F519833503" anchor-label="flippedX" id="620314667%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="flipped-x.html"><span>flipped</span><wbr><span><span>X</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="620314667%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="flipped-x.html"><span class="token function">flippedX</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="651334474%2FFunctions%2F519833503" anchor-label="flippedY" id="651334474%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="flipped-y.html"><span>flipped</span><wbr><span><span>Y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="651334474%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="flipped-y.html"><span class="token function">flippedY</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-452777785%2FFunctions%2F519833503" anchor-label="rotatedLeft" id="-452777785%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rotated-left.html"><span>rotated</span><wbr><span><span>Left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-452777785%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rotated-left.html"><span class="token function">rotatedLeft</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-985352500%2FFunctions%2F519833503" anchor-label="rotatedRight" id="-985352500%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rotated-right.html"><span>rotated</span><wbr><span><span>Right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-985352500%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="rotated-right.html"><span class="token function">rotatedRight</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1290857966%2FFunctions%2F519833503" anchor-label="slice" id="-1290857966%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="slice.html"><span><span>slice</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1290857966%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="slice.html"><span class="token function">slice</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rect<span class="token operator">: </span><a href="../../korlibs.math.geom/-rectangle-int/index.html">RectangleInt</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">clamped<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a><span class="token operator"> = </span>this.orientation</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1350771986%2FFunctions%2F519833503" anchor-label="sliceWithBounds" id="-1350771986%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="slice-with-bounds.html"><span>slice</span><wbr><span>With</span><wbr><span><span>Bounds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1350771986%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="slice-with-bounds.html"><span class="token function">sliceWithBounds</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">left<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">top<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">right<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">bottom<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">clamped<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a><span class="token operator"> = </span>this.orientation</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-933977310%2FFunctions%2F519833503" anchor-label="sliceWithSize" id="-933977310%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="slice-with-size.html"><span>slice</span><wbr><span>With</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-933977310%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="slice-with-size.html"><span class="token function">sliceWithSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">clamped<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a><span class="token operator"> = </span>this.orientation</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="127279110%2FFunctions%2F519833503" anchor-label="split" id="127279110%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../split.html"><span><span>split</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="127279110%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split.html">T</a><span class="token operator"> : </span><a href="../../korlibs.math.geom/-sizeable-int/index.html">SizeableInt</a><span class="token operator">&gt; </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../split.html"><span class="token function">split</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">inRows<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-134983914%2FFunctions%2F519833503" anchor-label="splitInCols" id="-134983914%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../split-in-cols.html"><span>split</span><wbr><span>In</span><wbr><span><span>Cols</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-134983914%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split-in-cols.html">T</a><span class="token operator"> : </span><a href="../../korlibs.math.geom/-sizeable-int/index.html">SizeableInt</a><span class="token operator">&gt; </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split-in-cols.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../split-in-cols.html"><span class="token function">splitInCols</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split-in-cols.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="60137596%2FFunctions%2F519833503" anchor-label="splitInRows" id="60137596%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../split-in-rows.html"><span>split</span><wbr><span>In</span><wbr><span><span>Rows</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="60137596%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split-in-rows.html">T</a><span class="token operator"> : </span><a href="../../korlibs.math.geom/-sizeable-int/index.html">SizeableInt</a><span class="token operator">&gt; </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split-in-rows.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../split-in-rows.html"><span class="token function">splitInRows</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../split-in-rows.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1154624917%2FFunctions%2F519833503" anchor-label="toString" id="1154624917%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1154624917%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-182382506%2FFunctions%2F519833503" anchor-label="transformed" id="-182382506%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="transformed.html"><span><span>transformed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-182382506%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="transformed.html"><span class="token function">transformed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1852271974%2FFunctions%2F519833503" anchor-label="transformed" id="-1852271974%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../transformed.html"><span><span>transformed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1852271974%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-slice-coords/index.html">SliceCoords</a><span class="token punctuation">.</span><a href="../transformed.html"><span class="token function">transformed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">m<span class="token operator">: </span><a href="../../korlibs.math.geom/-matrix/index.html">Matrix</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-rect-coords/index.html">RectCoords</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-slice-coords/index.html">SliceCoords</a><span class="token punctuation">.</span><a href="../transformed.html"><span class="token function">transformed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">m<span class="token operator">: </span><a href="../../korlibs.math.geom/-matrix4/index.html">Matrix4</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-rect-coords/index.html">RectCoords</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-slice-coords/index.html">SliceCoords</a><span class="token punctuation">.</span><a href="../transformed.html"><span class="token function">transformed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-rect-coords/index.html">RectCoords</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator"> : </span><a href="../../korlibs.math.geom/-sizeable-int/index.html">SizeableInt</a><span class="token operator">&gt; </span><a href="../-slice-coords-with-base/index.html">SliceCoordsWithBase</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../transformed.html"><span class="token function">transformed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">m<span class="token operator">: </span><a href="../../korlibs.math.geom/-matrix/index.html">Matrix</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-slice-coords-with-base/index.html">SliceCoordsWithBase</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator"> : </span><a href="../../korlibs.math.geom/-sizeable-int/index.html">SizeableInt</a><span class="token operator">&gt; </span><a href="../-slice-coords-with-base/index.html">SliceCoordsWithBase</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../transformed.html"><span class="token function">transformed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">m<span class="token operator">: </span><a href="../../korlibs.math.geom/-matrix4/index.html">Matrix4</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-slice-coords-with-base/index.html">SliceCoordsWithBase</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator"> : </span><a href="../../korlibs.math.geom/-sizeable-int/index.html">SizeableInt</a><span class="token operator">&gt; </span><a href="../-slice-coords-with-base-and-rect/index.html">SliceCoordsWithBaseAndRect</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../transformed.html"><span class="token function">transformed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">orientation<span class="token operator">: </span><a href="../-slice-orientation/index.html">SliceOrientation</a><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>this.name</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../transformed.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2102161872%2FFunctions%2F519833503" anchor-label="virtFrame" id="2102161872%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="virt-frame.html"><span>virt</span><wbr><span><span>Frame</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2102161872%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="virt-frame.html"><span class="token function">virtFrame</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">frame<span class="token operator">: </span><a href="../../korlibs.math.geom/-rectangle-int/index.html">RectangleInt</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="virt-frame.html"><span class="token function">virtFrame</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RectSlice</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="525299869%2FFunctions%2F519833503" anchor-label="x" id="525299869%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords/x.html"><span><span>x</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="525299869%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-slice-coords/x.html"><span class="token function">x</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1819367172%2FFunctions%2F519833503" anchor-label="y" id="-1819367172%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-slice-coords/y.html"><span><span>y</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1819367172%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-slice-coords/y.html"><span class="token function">y</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

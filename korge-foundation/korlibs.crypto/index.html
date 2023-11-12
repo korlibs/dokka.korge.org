@@ -1,0 +1,599 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>korlibs.crypto</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/androidMain">android</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/darwinMain">darwin</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="korge-foundation::korlibs.crypto////PointingToDeclaration//980949533">
+  <div class="breadcrumbs"><a href="../index.html">korge-foundation</a><span class="delimiter">/</span><span class="current">korlibs.crypto</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1655591650%2FClasslikes%2F519833503" anchor-label="AES" id="-1655591650%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-e-s/index.html"><span><span>AES</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1655591650%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-a-e-s/index.html">AES</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>keyWords<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a></span></span><span class="token punctuation">)</span> : <a href="-cipher/index.html">Cipher</a></div><div class="brief "><p class="paragraph">Based on CryptoJS v3.1.2 code.google.com/p/crypto-js (c) 2009-2013 by Jeff Mott. All rights reserved. code.google.com/p/crypto-js/wiki/License</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="360394794%2FClasslikes%2F519833503" anchor-label="Cipher" id="360394794%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cipher/index.html"><span><span>Cipher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="360394794%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-cipher/index.html">Cipher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1020407993%2FClasslikes%2F519833503" anchor-label="CipherMode" id="-1020407993%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cipher-mode/index.html"><span>Cipher</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1020407993%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-cipher-mode/index.html">CipherMode</a></div><div class="brief "><p class="paragraph">Symmetric Cipher Mode</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="475647815%2FClasslikes%2F519833503" anchor-label="CipherPadding" id="475647815%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cipher-padding/index.html"><span>Cipher</span><wbr><span><span>Padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="475647815%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-cipher-padding/index.html">CipherPadding</a></div><div class="brief "><p class="paragraph">Symmetric Cipher Padding</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1710285177%2FClasslikes%2F519833503" anchor-label="CipherWithModeAndPadding" id="-1710285177%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cipher-with-mode-and-padding/index.html"><span>Cipher</span><wbr><span>With</span><wbr><span>Mode</span><wbr><span>And</span><wbr><span><span>Padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1710285177%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-cipher-with-mode-and-padding/index.html">CipherWithModeAndPadding</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>cipher<span class="token operator">: </span><a href="-cipher/index.html">Cipher</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>mode<span class="token operator">: </span><a href="-cipher-mode/index.html">CipherMode</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>padding<span class="token operator">: </span><a href="-cipher-padding/index.html">CipherPadding</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>iv<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1780103289%2FClasslikes%2F519833503" anchor-label="Hash" id="-1780103289%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hash/index.html"><span><span>Hash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1780103289%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-hash/index.html">Hash</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>bytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-191796742%2FClasslikes%2F519833503" anchor-label="Hasher" id="-191796742%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hasher/index.html"><span><span>Hasher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-191796742%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-hasher/index.html">Hasher</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>chunkSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>digestSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph"><a href="-hasher/chunk-size.html">chunkSize</a> in bytes</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1336455010%2FClasslikes%2F519833503" anchor-label="HasherFactory" id="-1336455010%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hasher-factory/index.html"><span>Hasher</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1336455010%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-hasher-factory/index.html">HasherFactory</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>create<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="-hasher/index.html">Hasher</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1330834158%2FClasslikes%2F519833503" anchor-label="HMAC" id="1330834158%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-m-a-c/index.html"><span><span>HMAC</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1330834158%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-h-m-a-c/index.html">HMAC</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1954276368%2FClasslikes%2F519833503" anchor-label="MD4" id="1954276368%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-d4/index.html"><span><span>MD4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1954276368%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-m-d4/index.html">MD4</a> : <a href="-hasher/index.html">Hasher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1985296175%2FClasslikes%2F519833503" anchor-label="MD5" id="1985296175%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-d5/index.html"><span><span>MD5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1985296175%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-m-d5/index.html">MD5</a> : <a href="-hasher/index.html">Hasher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="147784838%2FClasslikes%2F519833503" anchor-label="NonCoreHasher" id="147784838%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-non-core-hasher/index.html"><span>Non</span><wbr><span>Core</span><wbr><span><span>Hasher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="147784838%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-non-core-hasher/index.html">NonCoreHasher</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>chunkSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>digestSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="-hasher/index.html">Hasher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-222665188%2FClasslikes%2F519833503" anchor-label="Padding" id="-222665188%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-padding/index.html"><span><span>Padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-222665188%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-padding/index.html">Padding</a><span class="token operator"> = </span><a href="-cipher-padding/index.html">CipherPadding</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-840411362%2FClasslikes%2F519833503" anchor-label="PBKDF2" id="-840411362%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-b-k-d-f2/index.html"><span><span>PBKDF2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-840411362%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-p-b-k-d-f2/index.html">PBKDF2</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="371223013%2FClasslikes%2F-1496225189" anchor-label="PRNGFixes" id="371223013%2FClasslikes%2F-1496225189" data-filterable-set=":korge-foundation:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-n-g-fixes/index.html"><span><span>PRNGFixes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="371223013%2FClasslikes%2F-1496225189"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-p-r-n-g-fixes/index.html">PRNGFixes</a></div><div class="brief "><p class="paragraph">Fixes for the output of the default PRNG having low entropy.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-202910981%2FClasslikes%2F519833503" anchor-label="SecureRandom" id="-202910981%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-secure-random/index.html"><span>Secure</span><wbr><span><span>Random</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-202910981%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-secure-random/index.html">SecureRandom</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="380603361%2FClasslikes%2F519833503" anchor-label="SHA" id="380603361%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-a/index.html"><span><span>SHA</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="380603361%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-s-h-a/index.html">SHA</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>chunkSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>digestSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"SHA"</span></span></span><span class="token punctuation">)</span> : <a href="-hasher/index.html">Hasher</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1080344432%2FClasslikes%2F519833503" anchor-label="SHA1" id="1080344432%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-a1/index.html"><span><span>SHA1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1080344432%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-s-h-a1/index.html">SHA1</a> : <a href="-s-h-a/index.html">SHA</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1109363826%2FClasslikes%2F519833503" anchor-label="SHA256" id="-1109363826%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-a256/index.html"><span><span>SHA256</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1109363826%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-s-h-a256/index.html">SHA256</a> : <a href="-s-h-a/index.html">SHA</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1549141461%2FClasslikes%2F519833503" anchor-label="SHA512" id="-1549141461%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-h-a512/index.html"><span><span>SHA512</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1549141461%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-s-h-a512/index.html">SHA512</a> : <a href="-s-h-a/index.html">SHA</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="699325298%2FProperties%2F-1263794751" anchor-label="REQ" id="699325298%2FProperties%2F-1263794751" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-q.html"><span><span>REQ</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="699325298%2FProperties%2F-1263794751"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-r-e-q.html">REQ</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1207073644%2FFunctions%2F519833503" anchor-label="decryptSafe" id="-1207073644%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="decrypt-safe.html"><span>decrypt</span><wbr><span><span>Safe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207073644%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-cipher-mode/index.html">CipherMode</a><span class="token punctuation">.</span><a href="decrypt-safe.html"><span class="token function">decryptSafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">cipher<span class="token operator">: </span><a href="-cipher/index.html">Cipher</a><span class="token punctuation">, </span></span><span class="parameter ">padding<span class="token operator">: </span><a href="-padding/index.html">Padding</a><span class="token punctuation">, </span></span><span class="parameter ">iv<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1922190148%2FFunctions%2F519833503" anchor-label="encryptSafe" id="-1922190148%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encrypt-safe.html"><span>encrypt</span><wbr><span><span>Safe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1922190148%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-cipher-mode/index.html">CipherMode</a><span class="token punctuation">.</span><a href="encrypt-safe.html"><span class="token function">encryptSafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">cipher<span class="token operator">: </span><a href="-cipher/index.html">Cipher</a><span class="token punctuation">, </span></span><span class="parameter ">padding<span class="token operator">: </span><a href="-padding/index.html">Padding</a><span class="token punctuation">, </span></span><span class="parameter ">iv<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1254364281%2FFunctions%2F980949533" anchor-label="fillRandomBytes" id="-1254364281%2FFunctions%2F980949533" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/androidMain,:korge-foundation:dokkaHtmlPartial/darwinMain,:korge-foundation:dokkaHtmlPartial/jsMain,:korge-foundation:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/androidMain,:korge-foundation:dokkaHtmlPartial/darwinMain,:korge-foundation:dokkaHtmlPartial/jsMain,:korge-foundation:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/androidMain,:korge-foundation:dokkaHtmlPartial/darwinMain,:korge-foundation:dokkaHtmlPartial/jsMain,:korge-foundation:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fill-random-bytes.html"><span>fill</span><wbr><span>Random</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1254364281%2FFunctions%2F980949533"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/darwinMain" data-toggle=":korge-foundation:dokkaHtmlPartial/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jvmMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="fill-random-bytes.html"><span class="token function">fillRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="fill-random-bytes.html"><span class="token function">fillRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="fill-random-bytes.html"><span class="token function">fillRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="fill-random-bytes.html"><span class="token function">fillRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="fill-random-bytes.html"><span class="token function">fillRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1356250699%2FFunctions%2F519833503" anchor-label="get" id="1356250699%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1356250699%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="-cipher/index.html">Cipher</a><span class="token punctuation">.</span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mode<span class="token operator">: </span><a href="-cipher-mode/index.html">CipherMode</a><span class="token punctuation">, </span></span><span class="parameter ">padding<span class="token operator">: </span><a href="-cipher-padding/index.html">CipherPadding</a><span class="token punctuation">, </span></span><span class="parameter ">iv<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-cipher-with-mode-and-padding/index.html">CipherWithModeAndPadding</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1510646124%2FFunctions%2F519833503" anchor-label="hash" id="1510646124%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hash.html"><span><span>hash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1510646124%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="hash.html"><span class="token function">hash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">algo<span class="token operator">: </span><a href="-hasher-factory/index.html">HasherFactory</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-hash/index.html">Hash</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-150622537%2FFunctions%2F519833503" anchor-label="md4" id="-150622537%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="md4.html"><span><span>md4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-150622537%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="md4.html"><span class="token function">md4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-hash/index.html">Hash</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-26549290%2FFunctions%2F519833503" anchor-label="md5" id="-26549290%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="md5.html"><span><span>md5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-26549290%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="md5.html"><span class="token function">md5</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-hash/index.html">Hash</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1991373853%2FFunctions%2F980949533" anchor-label="seedExtraRandomBytes" id="1991373853%2FFunctions%2F980949533" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/androidMain,:korge-foundation:dokkaHtmlPartial/darwinMain,:korge-foundation:dokkaHtmlPartial/jsMain,:korge-foundation:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/androidMain,:korge-foundation:dokkaHtmlPartial/darwinMain,:korge-foundation:dokkaHtmlPartial/jsMain,:korge-foundation:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain,:korge-foundation:dokkaHtmlPartial/androidMain,:korge-foundation:dokkaHtmlPartial/darwinMain,:korge-foundation:dokkaHtmlPartial/jsMain,:korge-foundation:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="seed-extra-random-bytes.html"><span>seed</span><wbr><span>Extra</span><wbr><span>Random</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1991373853%2FFunctions%2F980949533"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-foundation:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain" data-toggle=":korge-foundation:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/darwinMain" data-toggle=":korge-foundation:dokkaHtmlPartial/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jsMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":korge-foundation:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/jvmMain" data-toggle=":korge-foundation:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="seed-extra-random-bytes.html"><span class="token function">seedExtraRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="seed-extra-random-bytes.html"><span class="token function">seedExtraRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="seed-extra-random-bytes.html"><span class="token function">seedExtraRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="seed-extra-random-bytes.html"><span class="token function">seedExtraRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-foundation:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="seed-extra-random-bytes.html"><span class="token function">seedExtraRandomBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">array<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1648499113%2FFunctions%2F519833503" anchor-label="sha1" id="1648499113%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sha1.html"><span><span>sha1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1648499113%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="sha1.html"><span class="token function">sha1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-hash/index.html">Hash</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1786192775%2FFunctions%2F519833503" anchor-label="sha256" id="1786192775%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sha256.html"><span><span>sha256</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1786192775%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="sha256.html"><span class="token function">sha256</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-hash/index.html">Hash</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="10604580%2FFunctions%2F519833503" anchor-label="sha512" id="10604580%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sha512.html"><span><span>sha512</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="10604580%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="sha512.html"><span class="token function">sha512</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-hash/index.html">Hash</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="357428353%2FFunctions%2F519833503" anchor-label="with" id="357428353%2FFunctions%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with.html"><span><span>with</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="357428353%2FFunctions%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-cipher/index.html">Cipher</a><span class="token punctuation">.</span><a href="with.html"><span class="token function">with</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mode<span class="token operator">: </span><a href="-cipher-mode/index.html">CipherMode</a><span class="token punctuation">, </span></span><span class="parameter ">padding<span class="token operator">: </span><a href="-cipher-padding/index.html">CipherPadding</a><span class="token punctuation">, </span></span><span class="parameter ">iv<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-cipher-with-mode-and-padding/index.html">CipherWithModeAndPadding</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

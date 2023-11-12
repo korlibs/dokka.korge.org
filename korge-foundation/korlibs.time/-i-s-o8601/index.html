@@ -1,0 +1,989 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ISO8601</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-foundation:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge-foundation::korlibs.time/ISO8601///PointingToDeclaration//519833503">
+  <div class="breadcrumbs"><a href="../../index.html">korge-foundation</a><span class="delimiter">/</span><a href="../index.html">korlibs.time</a><span class="delimiter">/</span><span class="current">ISO8601</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>ISO8601</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">ISO8601</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1314109957%2FClasslikes%2F519833503" anchor-label="BaseIsoDateTimeFormat" id="1314109957%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-iso-date-time-format/index.html"><span>Base</span><wbr><span>Iso</span><wbr><span>Date</span><wbr><span>Time</span><wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1314109957%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-base-iso-date-time-format/index.html">BaseIsoDateTimeFormat</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>format<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>twoDigitBaseYear<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1900</span></span></span><span class="token punctuation">)</span> : <a href="../-date-format/index.html">DateFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-202431597%2FClasslikes%2F519833503" anchor-label="BaseIsoTimeFormat" id="-202431597%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-iso-time-format/index.html"><span>Base</span><wbr><span>Iso</span><wbr><span>Time</span><wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-202431597%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-base-iso-time-format/index.html">BaseIsoTimeFormat</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>format<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="../-time-format/index.html">TimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1850558804%2FClasslikes%2F519833503" anchor-label="IsoDateTimeFormat" id="1850558804%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-iso-date-time-format/index.html"><span>Iso</span><wbr><span>Date</span><wbr><span>Time</span><wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1850558804%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-iso-date-time-format/index.html">IsoDateTimeFormat</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>basicFormat<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>extendedFormat<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="../-date-format/index.html">DateFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1203531498%2FClasslikes%2F519833503" anchor-label="IsoIntervalFormat" id="1203531498%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-iso-interval-format/index.html"><span>Iso</span><wbr><span>Interval</span><wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1203531498%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-iso-interval-format/index.html">IsoIntervalFormat</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>format<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="../-date-time-span-format/index.html">DateTimeSpanFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1258638750%2FClasslikes%2F519833503" anchor-label="IsoTimeFormat" id="-1258638750%2FClasslikes%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-iso-time-format/index.html"><span>Iso</span><wbr><span>Time</span><wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1258638750%2FClasslikes%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-iso-time-format/index.html">IsoTimeFormat</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>basicFormat<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>extendedFormat<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="../-time-format/index.html">TimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-720828748%2FProperties%2F519833503" anchor-label="DATE" id="-720828748%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e.html"><span><span>DATE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-720828748%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e.html">DATE</a><span class="token operator">: </span><a href="../-date-format/index.html">DateFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1366230194%2FProperties%2F519833503" anchor-label="DATE_ALL" id="1366230194%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-a-l-l.html"><span><span>DATE_ALL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1366230194%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-a-l-l.html">DATE_ALL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="700634297%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_COMPLETE" id="700634297%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-c-o-m-p-l-e-t-e.html"><span><span>DATE_CALENDAR_COMPLETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="700634297%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-c-o-m-p-l-e-t-e.html">DATE_CALENDAR_COMPLETE</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1202895983%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_EXPANDED0" id="-1202895983%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d0.html"><span><span>DATE_CALENDAR_EXPANDED0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1202895983%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d0.html">DATE_CALENDAR_EXPANDED0</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1171876176%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_EXPANDED1" id="-1171876176%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d1.html"><span><span>DATE_CALENDAR_EXPANDED1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1171876176%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d1.html">DATE_CALENDAR_EXPANDED1</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1140856369%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_EXPANDED2" id="-1140856369%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d2.html"><span><span>DATE_CALENDAR_EXPANDED2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1140856369%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d2.html">DATE_CALENDAR_EXPANDED2</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1109836562%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_EXPANDED3" id="-1109836562%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d3.html"><span><span>DATE_CALENDAR_EXPANDED3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1109836562%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-e-x-p-a-n-d-e-d3.html">DATE_CALENDAR_EXPANDED3</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1325450176%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_REDUCED0" id="1325450176%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-r-e-d-u-c-e-d0.html"><span><span>DATE_CALENDAR_REDUCED0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1325450176%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-r-e-d-u-c-e-d0.html">DATE_CALENDAR_REDUCED0</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1356469983%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_REDUCED1" id="1356469983%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-r-e-d-u-c-e-d1.html"><span><span>DATE_CALENDAR_REDUCED1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1356469983%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-r-e-d-u-c-e-d1.html">DATE_CALENDAR_REDUCED1</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1387489790%2FProperties%2F519833503" anchor-label="DATE_CALENDAR_REDUCED2" id="1387489790%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-r-e-d-u-c-e-d2.html"><span><span>DATE_CALENDAR_REDUCED2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1387489790%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-c-a-l-e-n-d-a-r_-r-e-d-u-c-e-d2.html">DATE_CALENDAR_REDUCED2</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-245555552%2FProperties%2F519833503" anchor-label="DATE_ORDINAL_COMPLETE" id="-245555552%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-o-r-d-i-n-a-l_-c-o-m-p-l-e-t-e.html"><span><span>DATE_ORDINAL_COMPLETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-245555552%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-o-r-d-i-n-a-l_-c-o-m-p-l-e-t-e.html">DATE_ORDINAL_COMPLETE</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-275737824%2FProperties%2F519833503" anchor-label="DATE_ORDINAL_EXPANDED" id="-275737824%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-o-r-d-i-n-a-l_-e-x-p-a-n-d-e-d.html"><span><span>DATE_ORDINAL_EXPANDED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-275737824%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-o-r-d-i-n-a-l_-e-x-p-a-n-d-e-d.html">DATE_ORDINAL_EXPANDED</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1455968529%2FProperties%2F519833503" anchor-label="DATE_WEEK_COMPLETE" id="-1455968529%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-w-e-e-k_-c-o-m-p-l-e-t-e.html"><span><span>DATE_WEEK_COMPLETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1455968529%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-w-e-e-k_-c-o-m-p-l-e-t-e.html">DATE_WEEK_COMPLETE</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="661893147%2FProperties%2F519833503" anchor-label="DATE_WEEK_EXPANDED0" id="661893147%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-w-e-e-k_-e-x-p-a-n-d-e-d0.html"><span><span>DATE_WEEK_EXPANDED0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="661893147%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-w-e-e-k_-e-x-p-a-n-d-e-d0.html">DATE_WEEK_EXPANDED0</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="692912954%2FProperties%2F519833503" anchor-label="DATE_WEEK_EXPANDED1" id="692912954%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-w-e-e-k_-e-x-p-a-n-d-e-d1.html"><span><span>DATE_WEEK_EXPANDED1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="692912954%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-w-e-e-k_-e-x-p-a-n-d-e-d1.html">DATE_WEEK_EXPANDED1</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-841576908%2FProperties%2F519833503" anchor-label="DATE_WEEK_REDUCED" id="-841576908%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e_-w-e-e-k_-r-e-d-u-c-e-d.html"><span><span>DATE_WEEK_REDUCED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-841576908%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e_-w-e-e-k_-r-e-d-u-c-e-d.html">DATE_WEEK_REDUCED</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="322087451%2FProperties%2F519833503" anchor-label="DATETIME_COMPLETE" id="322087451%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e-t-i-m-e_-c-o-m-p-l-e-t-e.html"><span><span>DATETIME_COMPLETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="322087451%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e-t-i-m-e_-c-o-m-p-l-e-t-e.html">DATETIME_COMPLETE</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1399899808%2FProperties%2F519833503" anchor-label="DATETIME_UTC_COMPLETE" id="1399899808%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e-t-i-m-e_-u-t-c_-c-o-m-p-l-e-t-e.html"><span><span>DATETIME_UTC_COMPLETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1399899808%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e-t-i-m-e_-u-t-c_-c-o-m-p-l-e-t-e.html">DATETIME_UTC_COMPLETE</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="941165561%2FProperties%2F519833503" anchor-label="DATETIME_UTC_COMPLETE_FRACTION" id="941165561%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-d-a-t-e-t-i-m-e_-u-t-c_-c-o-m-p-l-e-t-e_-f-r-a-c-t-i-o-n.html"><span><span>DATETIME_UTC_COMPLETE_FRACTION</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="941165561%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-t-e-t-i-m-e_-u-t-c_-c-o-m-p-l-e-t-e_-f-r-a-c-t-i-o-n.html">DATETIME_UTC_COMPLETE_FRACTION</a><span class="token operator">: </span><a href="-iso-date-time-format/index.html">ISO8601.IsoDateTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-491505923%2FProperties%2F519833503" anchor-label="INTERVAL" id="-491505923%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l.html"><span><span>INTERVAL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-491505923%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l.html">INTERVAL</a><span class="token operator">: </span><a href="../-date-time-span-format/index.html">DateTimeSpanFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="973531259%2FProperties%2F519833503" anchor-label="INTERVAL_ALL" id="973531259%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-a-l-l.html"><span><span>INTERVAL_ALL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="973531259%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-a-l-l.html">INTERVAL_ALL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1340833435%2FProperties%2F519833503" anchor-label="INTERVAL_COMPLETE0" id="-1340833435%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-c-o-m-p-l-e-t-e0.html"><span><span>INTERVAL_COMPLETE0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1340833435%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-c-o-m-p-l-e-t-e0.html">INTERVAL_COMPLETE0</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1309813628%2FProperties%2F519833503" anchor-label="INTERVAL_COMPLETE1" id="-1309813628%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-c-o-m-p-l-e-t-e1.html"><span><span>INTERVAL_COMPLETE1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1309813628%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-c-o-m-p-l-e-t-e1.html">INTERVAL_COMPLETE1</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1057347137%2FProperties%2F519833503" anchor-label="INTERVAL_DECIMAL0" id="-1057347137%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l0.html"><span><span>INTERVAL_DECIMAL0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1057347137%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l0.html">INTERVAL_DECIMAL0</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1026327330%2FProperties%2F519833503" anchor-label="INTERVAL_DECIMAL1" id="-1026327330%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l1.html"><span><span>INTERVAL_DECIMAL1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1026327330%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l1.html">INTERVAL_DECIMAL1</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-995307523%2FProperties%2F519833503" anchor-label="INTERVAL_DECIMAL2" id="-995307523%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l2.html"><span><span>INTERVAL_DECIMAL2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-995307523%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l2.html">INTERVAL_DECIMAL2</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-964287716%2FProperties%2F519833503" anchor-label="INTERVAL_DECIMAL3" id="-964287716%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l3.html"><span><span>INTERVAL_DECIMAL3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-964287716%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l3.html">INTERVAL_DECIMAL3</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-933267909%2FProperties%2F519833503" anchor-label="INTERVAL_DECIMAL4" id="-933267909%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l4.html"><span><span>INTERVAL_DECIMAL4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-933267909%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l4.html">INTERVAL_DECIMAL4</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-902248102%2FProperties%2F519833503" anchor-label="INTERVAL_DECIMAL5" id="-902248102%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l5.html"><span><span>INTERVAL_DECIMAL5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-902248102%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l5.html">INTERVAL_DECIMAL5</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-871228295%2FProperties%2F519833503" anchor-label="INTERVAL_DECIMAL6" id="-871228295%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l6.html"><span><span>INTERVAL_DECIMAL6</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-871228295%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-d-e-c-i-m-a-l6.html">INTERVAL_DECIMAL6</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="459534316%2FProperties%2F519833503" anchor-label="INTERVAL_REDUCED0" id="459534316%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d0.html"><span><span>INTERVAL_REDUCED0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="459534316%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d0.html">INTERVAL_REDUCED0</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="490554123%2FProperties%2F519833503" anchor-label="INTERVAL_REDUCED1" id="490554123%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d1.html"><span><span>INTERVAL_REDUCED1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="490554123%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d1.html">INTERVAL_REDUCED1</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="521573930%2FProperties%2F519833503" anchor-label="INTERVAL_REDUCED2" id="521573930%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d2.html"><span><span>INTERVAL_REDUCED2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="521573930%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d2.html">INTERVAL_REDUCED2</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="552593737%2FProperties%2F519833503" anchor-label="INTERVAL_REDUCED3" id="552593737%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d3.html"><span><span>INTERVAL_REDUCED3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="552593737%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d3.html">INTERVAL_REDUCED3</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="583613544%2FProperties%2F519833503" anchor-label="INTERVAL_REDUCED4" id="583613544%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d4.html"><span><span>INTERVAL_REDUCED4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="583613544%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-r-e-d-u-c-e-d4.html">INTERVAL_REDUCED4</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1085855822%2FProperties%2F519833503" anchor-label="INTERVAL_ZERO_OMIT0" id="1085855822%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t0.html"><span><span>INTERVAL_ZERO_OMIT0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1085855822%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t0.html">INTERVAL_ZERO_OMIT0</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1116875629%2FProperties%2F519833503" anchor-label="INTERVAL_ZERO_OMIT1" id="1116875629%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t1.html"><span><span>INTERVAL_ZERO_OMIT1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1116875629%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t1.html">INTERVAL_ZERO_OMIT1</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1147895436%2FProperties%2F519833503" anchor-label="INTERVAL_ZERO_OMIT2" id="1147895436%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t2.html"><span><span>INTERVAL_ZERO_OMIT2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1147895436%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t2.html">INTERVAL_ZERO_OMIT2</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1178915243%2FProperties%2F519833503" anchor-label="INTERVAL_ZERO_OMIT3" id="1178915243%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t3.html"><span><span>INTERVAL_ZERO_OMIT3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1178915243%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-t-e-r-v-a-l_-z-e-r-o_-o-m-i-t3.html">INTERVAL_ZERO_OMIT3</a><span class="token operator">: </span><a href="-iso-interval-format/index.html">ISO8601.IsoIntervalFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1599607925%2FProperties%2F519833503" anchor-label="TIME" id="1599607925%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e.html"><span><span>TIME</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1599607925%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e.html">TIME</a><span class="token operator">: </span><a href="../-time-format/index.html">TimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-569423373%2FProperties%2F519833503" anchor-label="TIME_ALL" id="-569423373%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-a-l-l.html"><span><span>TIME_ALL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-569423373%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-a-l-l.html">TIME_ALL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2144381881%2FProperties%2F519833503" anchor-label="TIME_LOCAL_COMPLETE" id="2144381881%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-l-o-c-a-l_-c-o-m-p-l-e-t-e.html"><span><span>TIME_LOCAL_COMPLETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2144381881%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-l-o-c-a-l_-c-o-m-p-l-e-t-e.html">TIME_LOCAL_COMPLETE</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="351922330%2FProperties%2F519833503" anchor-label="TIME_LOCAL_FRACTION0" id="351922330%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-l-o-c-a-l_-f-r-a-c-t-i-o-n0.html"><span><span>TIME_LOCAL_FRACTION0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="351922330%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-l-o-c-a-l_-f-r-a-c-t-i-o-n0.html">TIME_LOCAL_FRACTION0</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="382942137%2FProperties%2F519833503" anchor-label="TIME_LOCAL_FRACTION1" id="382942137%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-l-o-c-a-l_-f-r-a-c-t-i-o-n1.html"><span><span>TIME_LOCAL_FRACTION1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="382942137%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-l-o-c-a-l_-f-r-a-c-t-i-o-n1.html">TIME_LOCAL_FRACTION1</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="413961944%2FProperties%2F519833503" anchor-label="TIME_LOCAL_FRACTION2" id="413961944%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-l-o-c-a-l_-f-r-a-c-t-i-o-n2.html"><span><span>TIME_LOCAL_FRACTION2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="413961944%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-l-o-c-a-l_-f-r-a-c-t-i-o-n2.html">TIME_LOCAL_FRACTION2</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1525769536%2FProperties%2F519833503" anchor-label="TIME_LOCAL_REDUCED0" id="-1525769536%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-l-o-c-a-l_-r-e-d-u-c-e-d0.html"><span><span>TIME_LOCAL_REDUCED0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1525769536%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-l-o-c-a-l_-r-e-d-u-c-e-d0.html">TIME_LOCAL_REDUCED0</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1494749729%2FProperties%2F519833503" anchor-label="TIME_LOCAL_REDUCED1" id="-1494749729%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-l-o-c-a-l_-r-e-d-u-c-e-d1.html"><span><span>TIME_LOCAL_REDUCED1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1494749729%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-l-o-c-a-l_-r-e-d-u-c-e-d1.html">TIME_LOCAL_REDUCED1</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1419898704%2FProperties%2F519833503" anchor-label="TIME_RELATIVE0" id="-1419898704%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-r-e-l-a-t-i-v-e0.html"><span><span>TIME_RELATIVE0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1419898704%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-r-e-l-a-t-i-v-e0.html">TIME_RELATIVE0</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1388878897%2FProperties%2F519833503" anchor-label="TIME_RELATIVE1" id="-1388878897%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-r-e-l-a-t-i-v-e1.html"><span><span>TIME_RELATIVE1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1388878897%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-r-e-l-a-t-i-v-e1.html">TIME_RELATIVE1</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="120155634%2FProperties%2F519833503" anchor-label="TIME_UTC_COMPLETE" id="120155634%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-u-t-c_-c-o-m-p-l-e-t-e.html"><span><span>TIME_UTC_COMPLETE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="120155634%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-u-t-c_-c-o-m-p-l-e-t-e.html">TIME_UTC_COMPLETE</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2025418113%2FProperties%2F519833503" anchor-label="TIME_UTC_FRACTION0" id="2025418113%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-u-t-c_-f-r-a-c-t-i-o-n0.html"><span><span>TIME_UTC_FRACTION0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2025418113%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-u-t-c_-f-r-a-c-t-i-o-n0.html">TIME_UTC_FRACTION0</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2056437920%2FProperties%2F519833503" anchor-label="TIME_UTC_FRACTION1" id="2056437920%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-u-t-c_-f-r-a-c-t-i-o-n1.html"><span><span>TIME_UTC_FRACTION1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2056437920%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-u-t-c_-f-r-a-c-t-i-o-n1.html">TIME_UTC_FRACTION1</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2087457727%2FProperties%2F519833503" anchor-label="TIME_UTC_FRACTION2" id="2087457727%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-u-t-c_-f-r-a-c-t-i-o-n2.html"><span><span>TIME_UTC_FRACTION2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2087457727%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-u-t-c_-f-r-a-c-t-i-o-n2.html">TIME_UTC_FRACTION2</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="744971513%2FProperties%2F519833503" anchor-label="TIME_UTC_REDUCED0" id="744971513%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-u-t-c_-r-e-d-u-c-e-d0.html"><span><span>TIME_UTC_REDUCED0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="744971513%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-u-t-c_-r-e-d-u-c-e-d0.html">TIME_UTC_REDUCED0</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="775991320%2FProperties%2F519833503" anchor-label="TIME_UTC_REDUCED1" id="775991320%2FProperties%2F519833503" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge-foundation:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-foundation:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-t-i-m-e_-u-t-c_-r-e-d-u-c-e-d1.html"><span><span>TIME_UTC_REDUCED1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="775991320%2FProperties%2F519833503"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-foundation:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-i-m-e_-u-t-c_-r-e-d-u-c-e-d1.html">TIME_UTC_REDUCED1</a><span class="token operator">: </span><a href="-iso-time-format/index.html">ISO8601.IsoTimeFormat</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

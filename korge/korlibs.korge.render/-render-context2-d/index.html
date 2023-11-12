@@ -1,0 +1,633 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RenderContext2D</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge::korlibs.korge.render/RenderContext2D///PointingToDeclaration//2031266617">
+  <div class="breadcrumbs"><a href="../../index.html">korge</a><span class="delimiter">/</span><a href="../index.html">korlibs.korge.render</a><span class="delimiter">/</span><span class="current">RenderContext2D</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Render</span><wbr><span><span>Context2D</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">RenderContext2D</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>batch<span class="token operator">: </span><a href="../-batch-builder2-d/index.html">BatchBuilder2D</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>agBitmapTextureManager<span class="token operator">: </span><a href="../-ag-bitmap-texture-manager/index.html">AgBitmapTextureManager</a></span></span><span class="token punctuation">)</span> : <a href="../../../korge-foundation/korlibs.datastructure/-extra/index.html">Extra</a></div><p class="paragraph">Helper class using <a href="../-batch-builder2-d/index.html">BatchBuilder2D</a> that keeps a chain of affine transforms <a href="../../../korge-foundation/korlibs.math.geom/-m-matrix/index.html">MMatrix</a>, <a href="../../../korge-core/korlibs.image.color/-color-transform/index.html">ColorTransform</a> and <a href="blend-mode.html">blendMode</a> and allows to draw images and scissors with that transform.</p><p class="paragraph"><a href="keep-matrix.html">keepMatrix</a>, <a href="keep-blend-mode.html">keepBlendMode</a>, <a href="keep-color.html">keepColor</a> and <a href="keep.html">keep</a> block methods allow to do transformations inside its blocks while restoring its initial state at the end of the block.</p><p class="paragraph"><a href="set-matrix.html">setMatrix</a>, <a href="translate.html">translate</a>, <a href="scale.html">scale</a>, and <a href="rotate.html">rotate</a> allows to control the transform matrix.</p><p class="paragraph"><a href="rect.html">rect</a> and <a href="image-scale.html">imageScale</a> allows to render color quads and images.</p><p class="paragraph">blendFactors property allow to specify the blending mode to be used. <a href="multiply-color.html">multiplyColor</a> will set the multiplicative color to be usd when drawing rects and images.</p><p class="paragraph"><a href="scissor.html">scissor</a> methods allow to specify a scissor rectangle limiting the area where the pixels will be renderer.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1481218408%2FConstructors%2F2031266617" anchor-label="RenderContext2D" id="1481218408%2FConstructors%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-render-context2-d.html"><span>Render</span><wbr><span><span>Context2D</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1481218408%2FConstructors%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">batch<span class="token operator">: </span><a href="../-batch-builder2-d/index.html">BatchBuilder2D</a><span class="token punctuation">, </span></span><span class="parameter ">agBitmapTextureManager<span class="token operator">: </span><a href="../-ag-bitmap-texture-manager/index.html">AgBitmapTextureManager</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1786821459%2FProperties%2F2031266617" anchor-label="agBitmapTextureManager" id="-1786821459%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ag-bitmap-texture-manager.html"><span>ag</span><wbr><span>Bitmap</span><wbr><span>Texture</span><wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1786821459%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ag-bitmap-texture-manager.html">agBitmapTextureManager</a><span class="token operator">: </span><a href="../-ag-bitmap-texture-manager/index.html">AgBitmapTextureManager</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-932226196%2FProperties%2F2031266617" anchor-label="batch" id="-932226196%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="batch.html"><span><span>batch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-932226196%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="batch.html">batch</a><span class="token operator">: </span><a href="../-batch-builder2-d/index.html">BatchBuilder2D</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="137327058%2FProperties%2F2031266617" anchor-label="blendMode" id="137327058%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blend-mode.html"><span>blend</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="137327058%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="blend-mode.html">blendMode</a><span class="token operator">: </span><a href="../../korlibs.korge.view/-blend-mode/index.html">BlendMode</a></div><div class="brief "><p class="paragraph">Blending mode to be used in the renders</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1896727713%2FProperties%2F2031266617" anchor-label="ctx" id="-1896727713%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ctx.html"><span><span>ctx</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1896727713%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ctx.html">ctx</a><span class="token operator">: </span><a href="../-render-context/index.html">RenderContext</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1941593852%2FProperties%2F2031266617" anchor-label="extra" id="-1941593852%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../korlibs.korge.scene/-log-scene/index.html#-1941593852%2FProperties%2F2031266617"><span><span>extra</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1941593852%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="../../korlibs.korge.scene/-log-scene/index.html#-1941593852%2FProperties%2F2031266617">extra</a><span class="token operator">: </span><a href="../../../korge-foundation/korlibs.datastructure/-extra-type/index.html">ExtraType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1327338172%2FProperties%2F2031266617" anchor-label="filtering" id="1327338172%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="filtering.html"><span><span>filtering</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1327338172%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="filtering.html">filtering</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="565000173%2FProperties%2F2031266617" anchor-label="height" id="565000173%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="565000173%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-898163175%2FProperties%2F2031266617" anchor-label="m" id="-898163175%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="m.html"><span><span>m</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-898163175%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="m.html">m</a><span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-matrix/index.html">Matrix</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1051070333%2FProperties%2F2031266617" anchor-label="mpool" id="1051070333%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mpool.html"><span><span>mpool</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1051070333%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="mpool.html">mpool</a><span class="token operator">: </span><a href="../../../korge-foundation/korlibs.datastructure/-pool/index.html">Pool</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../korge-foundation/korlibs.math.geom/-m-matrix/index.html">MMatrix</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1870230951%2FProperties%2F2031266617" anchor-label="multiplyColor" id="1870230951%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="multiply-color.html"><span>multiply</span><wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1870230951%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="multiply-color.html">multiplyColor</a><span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a></div><div class="brief "><p class="paragraph">Multiplicative color to be used in the renders</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1098048531%2FProperties%2F2031266617" anchor-label="size" id="1098048531%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1098048531%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="size.html">size</a><span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-size/index.html">Size</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-496354720%2FProperties%2F2031266617" anchor-label="width" id="-496354720%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-496354720%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-327892737%2FFunctions%2F2031266617" anchor-label="drawText" id="-327892737%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../draw-text.html"><span>draw</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-327892737%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">RenderContext2D</a><span class="token punctuation">.</span><a href="../draw-text.html"><span class="token function">drawText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">placements<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.text/-rich-text-data-placements/index.html">RichTextDataPlacements</a><span class="token punctuation">, </span></span><span class="parameter ">textRangeStart<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">textRangeEnd<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>Int.MAX_VALUE</span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">RenderContext2D</a><span class="token punctuation">.</span><a href="../draw-text.html"><span class="token function">drawText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">font<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.font/-bitmap-font/index.html">BitmapFont</a><span class="token punctuation">, </span></span><span class="parameter ">textSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">16.0</span><span class="token punctuation">, </span></span><span class="parameter ">pos<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a><span class="token operator"> = </span>Point.ZERO<span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>Colors.WHITE<span class="token punctuation">, </span></span><span class="parameter ">baseline<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">textRangeStart<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">textRangeEnd<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>Int.MAX_VALUE</span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">RenderContext2D</a><span class="token punctuation">.</span><a href="../draw-text.html"><span class="token function">drawText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.text/-rich-text-data/index.html">RichTextData</a><span class="token punctuation">, </span></span><span class="parameter ">pos<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a><span class="token operator"> = </span>Point.ZERO<span class="token punctuation">, </span></span><span class="parameter ">size<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-size/index.html">Size</a><span class="token operator"> = </span>Size(10000, 10000)<span class="token punctuation">, </span></span><span class="parameter ">wordWrap<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">includePartialLines<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">ellipsis<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fill<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.paint/-paint/index.html">Paint</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">stroke<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.paint/-stroke/index.html">Stroke</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">align<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.text/-text-alignment/index.html">TextAlignment</a><span class="token operator"> = </span>TextAlignment.TOP_LEFT<span class="token punctuation">, </span></span><span class="parameter ">includeFirstLineAlways<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-44844958%2FFunctions%2F2031266617" anchor-label="ellipse" id="-44844958%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ellipse.html"><span><span>ellipse</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-44844958%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="ellipse.html"><span class="token function">ellipse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">center<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a><span class="token punctuation">, </span></span><span class="parameter ">radius<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-size/index.html">Size</a><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>this.multiplyColor<span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1417050977%2FFunctions%2F2031266617" anchor-label="ellipseOutline" id="-1417050977%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ellipse-outline.html"><span>ellipse</span><wbr><span><span>Outline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1417050977%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="ellipse-outline.html"><span class="token function">ellipseOutline</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">center<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a><span class="token punctuation">, </span></span><span class="parameter ">radius<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-size/index.html">Size</a><span class="token punctuation">, </span></span><span class="parameter ">lineWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">1.0</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>this.multiplyColor<span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-967153100%2FFunctions%2F2031266617" anchor-label="getTexture" id="-967153100%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-texture.html"><span>get</span><wbr><span><span>Texture</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-967153100%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="get-texture.html"><span class="token function">getTexture</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">slice<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.bitmap/-bmp-slice/index.html">BmpSlice</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-texture-coords/index.html">TextureCoords</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1806834707%2FFunctions%2F2031266617" anchor-label="imageScale" id="1806834707%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image-scale.html"><span>image</span><wbr><span><span>Scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1806834707%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="image-scale.html"><span class="token function">imageScale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">texture<span class="token operator">: </span><a href="../-texture/index.html">Texture</a><span class="token punctuation">, </span></span><span class="parameter ">pos<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a><span class="token punctuation">, </span></span><span class="parameter ">scale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">1.0</span><span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Renders a <a href="image-scale.html">texture</a> with the <a href="../../korlibs.korge.view/blend-mode.html">blendMode</a> at x, y scaling it by <a href="image-scale.html">scale</a>. The texture colors will be multiplied by <a href="multiply-color.html">multiplyColor</a>. Since it is multiplicative, white won't cause any effect.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="image-scale.html"><span class="token function">imageScale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">texture<span class="token operator">: </span><a href="../-texture/index.html">Texture</a><span class="token punctuation">, </span></span><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">scale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">1.0</span><span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="image-scale.html"><span class="token function">imageScale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">texture<span class="token operator">: </span><a href="../-texture/index.html">Texture</a><span class="token punctuation">, </span></span><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">scale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-609828758%2FFunctions%2F2031266617" anchor-label="keep" id="-609828758%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="keep.html"><span><span>keep</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-609828758%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="keep.html">T</a><span class="token operator">&gt; </span><a href="keep.html"><span class="token function">keep</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="keep.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="keep.html">T</a></div><div class="brief "><p class="paragraph">Executes <a href="keep.html">callback</a> restoring the transform matrix, the <a href="../../korlibs.korge.view/blend-mode.html">blendMode</a> and the <a href="multiply-color.html">multiplyColor</a> at the end</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-102293822%2FFunctions%2F2031266617" anchor-label="keepBlendMode" id="-102293822%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="keep-blend-mode.html"><span>keep</span><wbr><span>Blend</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-102293822%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="keep-blend-mode.html">T</a><span class="token operator">&gt; </span><a href="keep-blend-mode.html"><span class="token function">keepBlendMode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="keep-blend-mode.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="keep-blend-mode.html">T</a></div><div class="brief "><p class="paragraph">Executes <a href="keep-blend-mode.html">callback</a> restoring the initial blendFactors at the end</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1008268591%2FFunctions%2F2031266617" anchor-label="keepColor" id="-1008268591%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="keep-color.html"><span>keep</span><wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1008268591%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="keep-color.html">T</a><span class="token operator">&gt; </span><a href="keep-color.html"><span class="token function">keepColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="keep-color.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="keep-color.html">T</a></div><div class="brief "><p class="paragraph">Executes <a href="keep-color.html">callback</a> restoring the initial <a href="multiply-color.html">multiplyColor</a> at the end</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-24193256%2FFunctions%2F2031266617" anchor-label="keepFiltering" id="-24193256%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="keep-filtering.html"><span>keep</span><wbr><span><span>Filtering</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-24193256%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="keep-filtering.html">T</a><span class="token operator">&gt; </span><a href="keep-filtering.html"><span class="token function">keepFiltering</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="keep-filtering.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="keep-filtering.html">T</a></div><div class="brief "><p class="paragraph">Executes <a href="keep-filtering.html">callback</a> restoring the initial <a href="filtering.html">filtering</a> at the end</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2010305397%2FFunctions%2F2031266617" anchor-label="keepMatrix" id="-2010305397%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="keep-matrix.html"><span>keep</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2010305397%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="keep-matrix.html">T</a><span class="token operator">&gt; </span><a href="keep-matrix.html"><span class="token function">keepMatrix</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="keep-matrix.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="keep-matrix.html">T</a></div><div class="brief "><p class="paragraph">Executes <a href="keep-matrix.html">callback</a> restoring the initial transformation <a href="../../../korge-foundation/korlibs.math.geom/-m-matrix/index.html">MMatrix</a> at the end</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-244289461%2FFunctions%2F2031266617" anchor-label="keepSize" id="-244289461%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="keep-size.html"><span>keep</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-244289461%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="keep-size.html">T</a><span class="token operator">&gt; </span><a href="keep-size.html"><span class="token function">keepSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">crossinline </span>callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="keep-size.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="keep-size.html">T</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-604950074%2FFunctions%2F2031266617" anchor-label="materialRoundRect" id="-604950074%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../material-round-rect.html"><span>material</span><wbr><span>Round</span><wbr><span><span>Rect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-604950074%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">RenderContext2D</a><span class="token punctuation">.</span><a href="../material-round-rect.html"><span class="token function">materialRoundRect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>Colors.RED<span class="token punctuation">, </span></span><span class="parameter ">radius<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-rect-corners/index.html">RectCorners</a><span class="token operator"> = </span>RectCorners.EMPTY<span class="token punctuation">, </span></span><span class="parameter ">shadowOffset<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a><span class="token operator"> = </span>Point.ZERO<span class="token punctuation">, </span></span><span class="parameter ">shadowColor<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>Colors.BLACK<span class="token punctuation">, </span></span><span class="parameter ">shadowRadius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">highlightPos<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a><span class="token operator"> = </span>Point.ZERO<span class="token punctuation">, </span></span><span class="parameter ">highlightRadius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">highlightColor<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>Colors.WHITE<span class="token punctuation">, </span></span><span class="parameter ">borderSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">borderColor<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>Colors.WHITE</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-945394521%2FFunctions%2F2031266617" anchor-label="quadPaddedCustomProgram" id="-945394521%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="quad-padded-custom-program.html"><span>quad</span><wbr><span>Padded</span><wbr><span>Custom</span><wbr><span><span>Program</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-945394521%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="quad-padded-custom-program.html"><span class="token function">quadPaddedCustomProgram</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">program<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program/index.html">Program</a><span class="token punctuation">, </span></span><span class="parameter ">padding<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-margin/index.html">Margin</a><span class="token operator"> = </span>Margin.ZERO</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1856134354%2FFunctions%2F2031266617" anchor-label="rect" id="-1856134354%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rect.html"><span><span>rect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1856134354%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="rect.html"><span class="token function">rect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rect<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-rectangle/index.html">Rectangle</a><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>this.multiplyColor<span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering<span class="token punctuation">, </span></span><span class="parameter ">bmp<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.bitmap/-bmp-slice/index.html">BmpSlice</a><span class="token operator"> = </span>Bitmaps.white<span class="token punctuation">, </span></span><span class="parameter ">program<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program/index.html">Program</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Renders a colored rectangle with the <a href="multiply-color.html">multiplyColor</a> with the <a href="../../korlibs.korge.view/blend-mode.html">blendMode</a> at x, y of size <a href="width.html">width</a>x<a href="height.html">height</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="699435364%2FFunctions%2F2031266617" anchor-label="rectOutline" id="699435364%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rect-outline.html"><span>rect</span><wbr><span><span>Outline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="699435364%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="rect-outline.html"><span class="token function">rectOutline</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rect<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-rectangle/index.html">Rectangle</a><span class="token punctuation">, </span></span><span class="parameter ">border<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>this.multiplyColor<span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Renders a colored rectangle with the <a href="multiply-color.html">multiplyColor</a> with the <a href="../../korlibs.korge.view/blend-mode.html">blendMode</a> at x, y of size <a href="width.html">width</a>x<a href="height.html">height</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1670312436%2FFunctions%2F2031266617" anchor-label="rotate" id="1670312436%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rotate.html"><span><span>rotate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1670312436%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="rotate.html"><span class="token function">rotate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">angle<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-angle/index.html">Angle</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Rotates the current transform matrix by <a href="rotate.html">angle</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-841469045%2FFunctions%2F2031266617" anchor-label="scale" id="-841469045%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scale.html"><span><span>scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-841469045%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="scale.html"><span class="token function">scale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">s<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-scale/index.html">Scale</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Scales the current transform matrix by sx and sy</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="scale.html"><span class="token function">scale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="scale.html"><span class="token function">scale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">sy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="scale.html"><span class="token function">scale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">sy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="scale.html"><span class="token function">scale</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scale<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Scales the current transform matrix by <a href="scale.html">scale</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1952522583%2FFunctions%2F2031266617" anchor-label="scissor" id="1952522583%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scissor.html"><span><span>scissor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1952522583%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="scissor.html"><span class="token function">scissor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scissor<span class="token operator">: </span><a href="../../korlibs.graphics/-a-g-scissor/index.html">AGScissor</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Temporarily sets the <a href="scissor.html">scissor</a> (visible rendering area) to <a href="scissor.html">scissor</a> is executed.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="scissor.html"><span class="token function">scissor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rect<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-rectangle/index.html">Rectangle</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Temporarily sets the <a href="scissor.html">scissor</a> (visible rendering area) to <a href="scissor.html">rect</a> is executed.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="scissor.html"><span class="token function">scissor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="scissor.html"><span class="token function">scissor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="scissor.html"><span class="token function">scissor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Temporarily sets the <a href="scissor.html">scissor</a> (visible rendering area) to <a href="scissor.html">x</a>, <a href="scissor.html">y</a>, <a href="scissor.html">width</a> and <a href="scissor.html">height</a> while <a href="scissor.html">block</a> is executed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1808129756%2FFunctions%2F2031266617" anchor-label="setMatrix" id="-1808129756%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-matrix.html"><span>set</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1808129756%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-matrix.html"><span class="token function">setMatrix</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">matrix<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-matrix/index.html">Matrix</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the current transform <a href="set-matrix.html">matrix</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1241081063%2FFunctions%2F2031266617" anchor-label="simplePath" id="-1241081063%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-path.html"><span>simple</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1241081063%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="simple-path.html"><span class="token function">simplePath</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom.vector/-vector-path/index.html">VectorPath</a><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>this.multiplyColor<span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2033893330%2FFunctions%2F2031266617" anchor-label="texturedVertexArray" id="2033893330%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="textured-vertex-array.html"><span>textured</span><wbr><span>Vertex</span><wbr><span><span>Array</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2033893330%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="textured-vertex-array.html"><span class="token function">texturedVertexArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">texturedVertexArray<span class="token operator">: </span><a href="../-textured-vertex-array/index.html">TexturedVertexArray</a><span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2036508471%2FFunctions%2F2031266617" anchor-label="texturedVertexArrayNoTransform" id="-2036508471%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="textured-vertex-array-no-transform.html"><span>textured</span><wbr><span>Vertex</span><wbr><span>Array</span><wbr><span>No</span><wbr><span><span>Transform</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2036508471%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="textured-vertex-array-no-transform.html"><span class="token function">texturedVertexArrayNoTransform</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">texturedVertexArray<span class="token operator">: </span><a href="../-textured-vertex-array/index.html">TexturedVertexArray</a><span class="token punctuation">, </span></span><span class="parameter ">filtering<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>this.filtering<span class="token punctuation">, </span></span><span class="parameter ">matrix<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-matrix/index.html">Matrix</a><span class="token operator"> = </span>Matrix.NIL</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1097796453%2FFunctions%2F2031266617" anchor-label="translate" id="1097796453%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="translate.html"><span><span>translate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1097796453%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="translate.html"><span class="token function">translate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-point/index.html">Point</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Translates the current transform matrix by dx and dy</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="translate.html"><span class="token function">translate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">dy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="translate.html"><span class="token function">translate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">dx<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">dy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

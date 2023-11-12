@@ -1,0 +1,350 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CoreAudioGenerator</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge-core::korlibs.audio.sound/CoreAudioGenerator///PointingToDeclaration//-1912875213">
+  <div class="breadcrumbs"><a href="../../index.html">korge-core</a><span class="delimiter">/</span><a href="../index.html">korlibs.audio.sound</a><span class="delimiter">/</span><span class="current">CoreAudioGenerator</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Core</span><wbr><span>Audio</span><wbr><span><span>Generator</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">CoreAudioGenerator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>sampleRate<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nchannels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>numBuffers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bufferSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4096</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>generatorCore<span class="token operator">: </span><span class="token keyword"></span><a href="index.html">CoreAudioGenerator</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-short-var/index.html">ShortVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span>dataSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span> : <a href="../-my-core-audio-output-callback/index.html">MyCoreAudioOutputCallback</a></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="2030358673%2FConstructors%2F-1912875213" anchor-label="CoreAudioGenerator" id="2030358673%2FConstructors%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-core-audio-generator.html"><span>Core</span><wbr><span>Audio</span><wbr><span><span>Generator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2030358673%2FConstructors%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sampleRate<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">nchannels<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">numBuffers<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span><span class="token punctuation">, </span></span><span class="parameter ">bufferSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4096</span><span class="token punctuation">, </span></span><span class="parameter ">coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token punctuation">, </span></span><span class="parameter ">generatorCore<span class="token operator">: </span><span class="token keyword"></span><a href="index.html">CoreAudioGenerator</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-short-var/index.html">ShortVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span>dataSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="53675871%2FProperties%2F-1912875213" anchor-label="arena" id="53675871%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="arena.html"><span><span>arena</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="53675871%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="arena.html">arena</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-arena/index.html">Arena</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1258376845%2FProperties%2F-1912875213" anchor-label="buffers" id="-1258376845%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="buffers.html"><span><span>buffers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1258376845%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="buffers.html">buffers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer-var-of/index.html">CPointerVarOf</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="platform.AudioToolbox/AudioQueueBuffer///PointingToDeclaration/">AudioQueueBuffer</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">?</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1767149741%2FProperties%2F-1912875213" anchor-label="bufferSize" id="-1767149741%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="buffer-size.html"><span>buffer</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1767149741%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="buffer-size.html">bufferSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4096</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-493674627%2FProperties%2F-1912875213" anchor-label="coroutineContext" id="-493674627%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="coroutine-context.html"><span>coroutine</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-493674627%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="coroutine-context.html">coroutineContext</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-799070540%2FProperties%2F-1912875213" anchor-label="generatorCore" id="-799070540%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generator-core.html"><span>generator</span><wbr><span><span>Core</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-799070540%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="generator-core.html">generatorCore</a><span class="token operator">: </span><span class="token keyword"></span><a href="index.html">CoreAudioGenerator</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-short-var/index.html">ShortVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span>dataSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1808802696%2FProperties%2F-1912875213" anchor-label="nchannels" id="1808802696%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nchannels.html"><span><span>nchannels</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1808802696%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="nchannels.html">nchannels</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1771443353%2FProperties%2F-1912875213" anchor-label="numBuffers" id="-1771443353%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="num-buffers.html"><span>num</span><wbr><span><span>Buffers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1771443353%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="num-buffers.html">numBuffers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="579481749%2FProperties%2F-1912875213" anchor-label="queue" id="579481749%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="queue.html"><span><span>queue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="579481749%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="queue.html">queue</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer-var-of/index.html">CPointerVarOf</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">?</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1337402727%2FProperties%2F-1912875213" anchor-label="running" id="1337402727%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="running.html"><span><span>running</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1337402727%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="running.html">running</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-382223830%2FProperties%2F-1912875213" anchor-label="sampleRate" id="-382223830%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sample-rate.html"><span>sample</span><wbr><span><span>Rate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-382223830%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="sample-rate.html">sampleRate</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1703426668%2FProperties%2F-1912875213" anchor-label="thisStableRef" id="1703426668%2FProperties%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="this-stable-ref.html"><span>this</span><wbr><span>Stable</span><wbr><span><span>Ref</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1703426668%2FProperties%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="this-stable-ref.html">thisStableRef</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-stable-ref/index.html">StableRef</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-my-core-audio-output-callback/index.html">MyCoreAudioOutputCallback</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-135118585%2FFunctions%2F-1912875213" anchor-label="dispose" id="-135118585%2FFunctions%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dispose.html"><span><span>dispose</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-135118585%2FFunctions%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="dispose.html"><span class="token function">dispose</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1065604722%2FFunctions%2F-1912875213" anchor-label="generateOutput" id="-1065604722%2FFunctions%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="generate-output.html"><span>generate</span><wbr><span><span>Output</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1065604722%2FFunctions%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="generate-output.html"><span class="token function">generateOutput</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-c-pointer/index.html">CPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlinx.cinterop/-short-var/index.html">ShortVar</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">dataSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1491586460%2FFunctions%2F-1912875213" anchor-label="start" id="-1491586460%2FFunctions%2F-1912875213" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start.html"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1491586460%2FFunctions%2F-1912875213"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

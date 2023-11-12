@@ -1,0 +1,408 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AGBatch</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge::korlibs.graphics/AGBatch///PointingToDeclaration//2031266617">
+  <div class="breadcrumbs"><a href="../../index.html">korge</a><span class="delimiter">/</span><a href="../index.html">korlibs.graphics</a><span class="delimiter">/</span><span class="current">AGBatch</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>AGBatch</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">AGBatch</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>frameBuffer<span class="token operator">: </span><a href="../-a-g-frame-buffer-base/index.html">AGFrameBufferBase</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>frameBufferInfo<span class="token operator">: </span><a href="../-a-g-frame-buffer-info/index.html">AGFrameBufferInfo</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>vertexData<span class="token operator">: </span><a href="../-a-g-vertex-array-object/index.html">AGVertexArrayObject</a><span class="token operator"> = </span>AGVertexArrayObject(AGVertexData(), isDynamic = true)<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>indices<span class="token operator">: </span><a href="../-a-g-buffer/index.html">AGBuffer</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>indexType<span class="token operator">: </span><a href="../-a-g-index-type/index.html">AGIndexType</a><span class="token operator"> = </span>AGIndexType.USHORT<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>program<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program/index.html">Program</a><span class="token operator"> = </span>DefaultShaders.PROGRAM_DEBUG<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>uniformBlocks<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform-blocks-buffers-ref/index.html">UniformBlocksBuffersRef</a><span class="token operator"> = </span>UniformBlocksBuffersRef.EMPTY<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>textureUnits<span class="token operator">: </span><a href="../-a-g-texture-units/index.html">AGTextureUnits</a><span class="token operator"> = </span>AGTextureUnits.EMPTY<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>blending<span class="token operator">: </span><a href="../-a-g-blending/index.html">AGBlending</a><span class="token operator"> = </span>AGBlending.NORMAL<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>stencilOpFunc<span class="token operator">: </span><a href="../-a-g-stencil-op-func/index.html">AGStencilOpFunc</a><span class="token operator"> = </span>AGStencilOpFunc.DEFAULT<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>stencilRef<span class="token operator">: </span><a href="../-a-g-stencil-reference/index.html">AGStencilReference</a><span class="token operator"> = </span>AGStencilReference.DEFAULT<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>colorMask<span class="token operator">: </span><a href="../-a-g-color-mask/index.html">AGColorMask</a><span class="token operator"> = </span>AGColorMask.DEFAULT<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>depthAndFrontFace<span class="token operator">: </span><a href="../-a-g-depth-and-front-face/index.html">AGDepthAndFrontFace</a><span class="token operator"> = </span>AGDepthAndFrontFace.DEFAULT<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>scissor<span class="token operator">: </span><a href="../-a-g-scissor/index.html">AGScissor</a><span class="token operator"> = </span>AGScissor.NIL<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>cullFace<span class="token operator">: </span><a href="../-a-g-cull-face/index.html">AGCullFace</a><span class="token operator"> = </span>AGCullFace.NONE<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>drawType<span class="token operator">: </span><a href="../-a-g-draw-type/index.html">AGDrawType</a><span class="token operator"> = </span>AGDrawType.TRIANGLES<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>drawOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>vertexCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>instances<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></span></span><span class="token punctuation">)</span> : <a href="../-a-g-command/index.html">AGCommand</a></div><p class="paragraph">Incrementally sets a new state diffing with the previous state, and renders primitives.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-985857453%2FConstructors%2F2031266617" anchor-label="AGBatch" id="-985857453%2FConstructors%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-g-batch.html"><span><span>AGBatch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-985857453%2FConstructors%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">frameBuffer<span class="token operator">: </span><a href="../-a-g-frame-buffer-base/index.html">AGFrameBufferBase</a><span class="token punctuation">, </span></span><span class="parameter ">frameBufferInfo<span class="token operator">: </span><a href="../-a-g-frame-buffer-info/index.html">AGFrameBufferInfo</a><span class="token punctuation">, </span></span><span class="parameter ">vertexData<span class="token operator">: </span><a href="../-a-g-vertex-array-object/index.html">AGVertexArrayObject</a><span class="token operator"> = </span>AGVertexArrayObject(AGVertexData(), isDynamic = true)<span class="token punctuation">, </span></span><span class="parameter ">indices<span class="token operator">: </span><a href="../-a-g-buffer/index.html">AGBuffer</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">indexType<span class="token operator">: </span><a href="../-a-g-index-type/index.html">AGIndexType</a><span class="token operator"> = </span>AGIndexType.USHORT<span class="token punctuation">, </span></span><span class="parameter ">program<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program/index.html">Program</a><span class="token operator"> = </span>DefaultShaders.PROGRAM_DEBUG<span class="token punctuation">, </span></span><span class="parameter ">uniformBlocks<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform-blocks-buffers-ref/index.html">UniformBlocksBuffersRef</a><span class="token operator"> = </span>UniformBlocksBuffersRef.EMPTY<span class="token punctuation">, </span></span><span class="parameter ">textureUnits<span class="token operator">: </span><a href="../-a-g-texture-units/index.html">AGTextureUnits</a><span class="token operator"> = </span>AGTextureUnits.EMPTY<span class="token punctuation">, </span></span><span class="parameter ">blending<span class="token operator">: </span><a href="../-a-g-blending/index.html">AGBlending</a><span class="token operator"> = </span>AGBlending.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">stencilOpFunc<span class="token operator">: </span><a href="../-a-g-stencil-op-func/index.html">AGStencilOpFunc</a><span class="token operator"> = </span>AGStencilOpFunc.DEFAULT<span class="token punctuation">, </span></span><span class="parameter ">stencilRef<span class="token operator">: </span><a href="../-a-g-stencil-reference/index.html">AGStencilReference</a><span class="token operator"> = </span>AGStencilReference.DEFAULT<span class="token punctuation">, </span></span><span class="parameter ">colorMask<span class="token operator">: </span><a href="../-a-g-color-mask/index.html">AGColorMask</a><span class="token operator"> = </span>AGColorMask.DEFAULT<span class="token punctuation">, </span></span><span class="parameter ">depthAndFrontFace<span class="token operator">: </span><a href="../-a-g-depth-and-front-face/index.html">AGDepthAndFrontFace</a><span class="token operator"> = </span>AGDepthAndFrontFace.DEFAULT<span class="token punctuation">, </span></span><span class="parameter ">scissor<span class="token operator">: </span><a href="../-a-g-scissor/index.html">AGScissor</a><span class="token operator"> = </span>AGScissor.NIL<span class="token punctuation">, </span></span><span class="parameter ">cullFace<span class="token operator">: </span><a href="../-a-g-cull-face/index.html">AGCullFace</a><span class="token operator"> = </span>AGCullFace.NONE<span class="token punctuation">, </span></span><span class="parameter ">drawType<span class="token operator">: </span><a href="../-a-g-draw-type/index.html">AGDrawType</a><span class="token operator"> = </span>AGDrawType.TRIANGLES<span class="token punctuation">, </span></span><span class="parameter ">drawOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">vertexCount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter ">instances<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1078941729%2FProperties%2F2031266617" anchor-label="blending" id="-1078941729%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blending.html"><span><span>blending</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1078941729%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="blending.html">blending</a><span class="token operator">: </span><a href="../-a-g-blending/index.html">AGBlending</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="62533403%2FProperties%2F2031266617" anchor-label="colorMask" id="62533403%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="color-mask.html"><span>color</span><wbr><span><span>Mask</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="62533403%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="color-mask.html">colorMask</a><span class="token operator">: </span><a href="../-a-g-color-mask/index.html">AGColorMask</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1070898015%2FProperties%2F2031266617" anchor-label="cullFace" id="-1070898015%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cull-face.html"><span>cull</span><wbr><span><span>Face</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1070898015%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="cull-face.html">cullFace</a><span class="token operator">: </span><a href="../-a-g-cull-face/index.html">AGCullFace</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1862789640%2FProperties%2F2031266617" anchor-label="depthAndFrontFace" id="-1862789640%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="depth-and-front-face.html"><span>depth</span><wbr><span>And</span><wbr><span>Front</span><wbr><span><span>Face</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1862789640%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="depth-and-front-face.html">depthAndFrontFace</a><span class="token operator">: </span><a href="../-a-g-depth-and-front-face/index.html">AGDepthAndFrontFace</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1978112217%2FProperties%2F2031266617" anchor-label="drawOffset" id="1978112217%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="draw-offset.html"><span>draw</span><wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1978112217%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="draw-offset.html">drawOffset</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2047725614%2FProperties%2F2031266617" anchor-label="drawType" id="-2047725614%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="draw-type.html"><span>draw</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2047725614%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="draw-type.html">drawType</a><span class="token operator">: </span><a href="../-a-g-draw-type/index.html">AGDrawType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-366460291%2FProperties%2F2031266617" anchor-label="frameBuffer" id="-366460291%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="frame-buffer.html"><span>frame</span><wbr><span><span>Buffer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-366460291%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="frame-buffer.html">frameBuffer</a><span class="token operator">: </span><a href="../-a-g-frame-buffer-base/index.html">AGFrameBufferBase</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-463737489%2FProperties%2F2031266617" anchor-label="frameBufferInfo" id="-463737489%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="frame-buffer-info.html"><span>frame</span><wbr><span>Buffer</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-463737489%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="frame-buffer-info.html">frameBufferInfo</a><span class="token operator">: </span><a href="../-a-g-frame-buffer-info/index.html">AGFrameBufferInfo</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-472904834%2FProperties%2F2031266617" anchor-label="indexType" id="-472904834%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index-type.html"><span>index</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-472904834%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="index-type.html">indexType</a><span class="token operator">: </span><a href="../-a-g-index-type/index.html">AGIndexType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1950227107%2FProperties%2F2031266617" anchor-label="indices" id="1950227107%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="indices.html"><span><span>indices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1950227107%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="indices.html">indices</a><span class="token operator">: </span><a href="../-a-g-buffer/index.html">AGBuffer</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="743538796%2FProperties%2F2031266617" anchor-label="instances" id="743538796%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="instances.html"><span><span>instances</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="743538796%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="instances.html">instances</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1642187366%2FProperties%2F2031266617" anchor-label="program" id="1642187366%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="program.html"><span><span>program</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1642187366%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="program.html">program</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program/index.html">Program</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-922742770%2FProperties%2F2031266617" anchor-label="scissor" id="-922742770%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scissor.html"><span><span>scissor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-922742770%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="scissor.html">scissor</a><span class="token operator">: </span><a href="../-a-g-scissor/index.html">AGScissor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1606802263%2FProperties%2F2031266617" anchor-label="stencilOpFunc" id="-1606802263%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stencil-op-func.html"><span>stencil</span><wbr><span>Op</span><wbr><span><span>Func</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1606802263%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="stencil-op-func.html">stencilOpFunc</a><span class="token operator">: </span><a href="../-a-g-stencil-op-func/index.html">AGStencilOpFunc</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1681419623%2FProperties%2F2031266617" anchor-label="stencilRef" id="-1681419623%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stencil-ref.html"><span>stencil</span><wbr><span><span>Ref</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1681419623%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="stencil-ref.html">stencilRef</a><span class="token operator">: </span><a href="../-a-g-stencil-reference/index.html">AGStencilReference</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1517531804%2FProperties%2F2031266617" anchor-label="textureUnits" id="1517531804%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="texture-units.html"><span>texture</span><wbr><span><span>Units</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1517531804%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="texture-units.html">textureUnits</a><span class="token operator">: </span><a href="../-a-g-texture-units/index.html">AGTextureUnits</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1738576784%2FProperties%2F2031266617" anchor-label="uniformBlocks" id="1738576784%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="uniform-blocks.html"><span>uniform</span><wbr><span><span>Blocks</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1738576784%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="uniform-blocks.html">uniformBlocks</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform-blocks-buffers-ref/index.html">UniformBlocksBuffersRef</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1410835071%2FProperties%2F2031266617" anchor-label="vertexCount" id="1410835071%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="vertex-count.html"><span>vertex</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1410835071%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="vertex-count.html">vertexCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-20966334%2FProperties%2F2031266617" anchor-label="vertexData" id="-20966334%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="vertex-data.html"><span>vertex</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-20966334%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="vertex-data.html">vertexData</a><span class="token operator">: </span><a href="../-a-g-vertex-array-object/index.html">AGVertexArrayObject</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1511181974%2FFunctions%2F2031266617" anchor-label="execute" id="1511181974%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="execute.html"><span><span>execute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1511181974%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">ag<span class="token operator">: </span><a href="../-a-g/index.html">AG</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

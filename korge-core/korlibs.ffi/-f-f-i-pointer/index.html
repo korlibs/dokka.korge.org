@@ -1,0 +1,709 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FFIPointer</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge-core:dokkaHtmlPartial/androidMain">android</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-core:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":korge-core:dokkaHtmlPartial/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge-core::korlibs.ffi/FFIPointer///PointingToDeclaration//875298865">
+  <div class="breadcrumbs"><a href="../../index.html">korge-core</a><span class="delimiter">/</span><a href="../index.html">korlibs.ffi</a><span class="delimiter">/</span><span class="current">FFIPointer</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>FFIPointer</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jsMain" data-toggle=":korge-core:dokkaHtmlPartial/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="index.html">FFIPointer</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="index.html">FFIPointer</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="index.html">FFIPointer</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">typealias </span><a href="index.html">FFIPointer</a><span class="token operator"> = </span><a href="../../../korge-foundation/korlibs.js/-deno-pointer/index.html">DenoPointer</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">typealias </span><a href="index.html">FFIPointer</a><span class="token operator"> = </span><span data-unresolved-link="com.sun.jna/Pointer///PointingToDeclaration/">Pointer</span></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="2035595494%2FConstructors%2F1843029400" anchor-label="FFIPointer" id="2035595494%2FConstructors%2F1843029400" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-f-i-pointer.html"><span><span>FFIPointer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2035595494%2FConstructors%2F1843029400"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1546077360%2FProperties%2F-518576089" anchor-label="address" id="-1546077360%2FProperties%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../address.html"><span><span>address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1546077360%2FProperties%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../address.html">address</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../address.html">address</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../address.html">address</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-134804467%2FProperties%2F-518576089" anchor-label="str" id="-134804467%2FProperties%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../str.html"><span><span>str</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-134804467%2FProperties%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../str.html">str</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../str.html">str</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">.</span><a href="../str.html">str</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1427451294%2FFunctions%2F-518576089" anchor-label="castToFunc" id="1427451294%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../cast-to-func.html"><span>cast</span><wbr><span>To</span><wbr><span><span>Func</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1427451294%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../cast-to-func.html">T</a><span class="token operator">&gt; </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../cast-to-func.html"><span class="token function">castToFunc</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">config<span class="token operator">: </span><a href="../-f-f-i-func-config/index.html">FFIFuncConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../cast-to-func.html">T</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../cast-to-func.html">T</a><span class="token operator">&gt; </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../cast-to-func.html"><span class="token function">castToFunc</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../cast-to-func.html">T</a></div><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../cast-to-func.html">T</a><span class="token operator">&gt; </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../cast-to-func.html"><span class="token function">castToFunc</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">config<span class="token operator">: </span><a href="../-f-f-i-func-config/index.html">FFIFuncConfig</a><span class="token operator"> = </span>FFIFuncConfig.DEFAULT</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../cast-to-func.html">T</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../cast-to-func.html">T</a><span class="token operator">&gt; </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../cast-to-func.html"><span class="token function">castToFunc</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">config<span class="token operator">: </span><a href="../../../korge-core/korlibs.ffi/-f-f-i-func-config/index.html">FFIFuncConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../cast-to-func.html">T</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1849404518%2FFunctions%2F31881395" anchor-label="getAlignedF32" id="1849404518%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-aligned-f32.html"><span>get</span><wbr><span>Aligned</span><wbr><span><span>F32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1849404518%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-aligned-f32.html"><span class="token function">getAlignedF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1170784025%2FFunctions%2F31881395" anchor-label="getAlignedF64" id="-1170784025%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-aligned-f64.html"><span>get</span><wbr><span>Aligned</span><wbr><span><span>F64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1170784025%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-aligned-f64.html"><span class="token function">getAlignedF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1667959437%2FFunctions%2F31881395" anchor-label="getAlignedFFIPointer" id="1667959437%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-aligned-f-f-i-pointer.html"><span>get</span><wbr><span>Aligned</span><wbr><span><span>FFIPointer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1667959437%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-aligned-f-f-i-pointer.html"><span class="token function">getAlignedFFIPointer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FFIPointer</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-826948813%2FFunctions%2F31881395" anchor-label="getAlignedS16" id="-826948813%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-aligned-s16.html"><span>get</span><wbr><span>Aligned</span><wbr><span><span>S16</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-826948813%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-aligned-s16.html"><span class="token function">getAlignedS16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1133707207%2FFunctions%2F31881395" anchor-label="getAlignedS32" id="-1133707207%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-aligned-s32.html"><span>get</span><wbr><span>Aligned</span><wbr><span><span>S32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1133707207%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-aligned-s32.html"><span class="token function">getAlignedS32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="141071546%2FFunctions%2F31881395" anchor-label="getAlignedS64" id="141071546%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-aligned-s64.html"><span>get</span><wbr><span>Aligned</span><wbr><span><span>S64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="141071546%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-aligned-s64.html"><span class="token function">getAlignedS64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1495560073%2FFunctions%2F31881395" anchor-label="getByteArray" id="1495560073%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-byte-array.html"><span>get</span><wbr><span>Byte</span><wbr><span><span>Array</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1495560073%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-byte-array.html"><span class="token function">getByteArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1588647816%2FFunctions%2F-1886882603" anchor-label="getDataView" id="1588647816%2FFunctions%2F-1886882603" data-filterable-set=":korge-core:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-data-view.html"><span>get</span><wbr><span>Data</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1588647816%2FFunctions%2F-1886882603"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jsMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-data-view.html"><span class="token function">getDataView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.khronos.webgl/-data-view/index.html">DataView</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="616002560%2FFunctions%2F-518576089" anchor-label="getF32" id="616002560%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-f32.html"><span>get</span><wbr><span><span>F32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="616002560%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-f32.html"><span class="token function">getF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-f32.html"><span class="token function">getF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-f32.html"><span class="token function">getF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1890781313%2FFunctions%2F-518576089" anchor-label="getF64" id="1890781313%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-f64.html"><span>get</span><wbr><span><span>F64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1890781313%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-f64.html"><span class="token function">getF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-f64.html"><span class="token function">getF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-f64.html"><span class="token function">getF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="65429939%2FFunctions%2F31881395" anchor-label="getFFIPointer" id="65429939%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-f-f-i-pointer.html"><span>get</span><wbr><span><span>FFIPointer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="65429939%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-f-f-i-pointer.html"><span class="token function">getFFIPointer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FFIPointer</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1162881056%2FFunctions%2F-518576089" anchor-label="getIntArray" id="-1162881056%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-int-array.html"><span>get</span><wbr><span>Int</span><wbr><span><span>Array</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1162881056%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-int-array.html"><span class="token function">getIntArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-int-array.html"><span class="token function">getIntArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-int-array.html"><span class="token function">getIntArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2060350771%2FFunctions%2F-518576089" anchor-label="getS16" id="-2060350771%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-s16.html"><span>get</span><wbr><span><span>S16</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2060350771%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s16.html"><span class="token function">getS16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s16.html"><span class="token function">getS16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s16.html"><span class="token function">getS16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1927858131%2FFunctions%2F-518576089" anchor-label="getS32" id="1927858131%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-s32.html"><span>get</span><wbr><span><span>S32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1927858131%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s32.html"><span class="token function">getS32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s32.html"><span class="token function">getS32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s32.html"><span class="token function">getS32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1092330412%2FFunctions%2F-518576089" anchor-label="getS64" id="-1092330412%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-s64.html"><span>get</span><wbr><span><span>S64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1092330412%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s64.html"><span class="token function">getS64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s64.html"><span class="token function">getS64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s64.html"><span class="token function">getS64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1504168958%2FFunctions%2F-518576089" anchor-label="getS8" id="-1504168958%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-s8.html"><span>get</span><wbr><span><span>S8</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1504168958%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s8.html"><span class="token function">getS8</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s8.html"><span class="token function">getS8</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-s8.html"><span class="token function">getS8</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="894187059%2FFunctions%2F31881395" anchor-label="getShortArray" id="894187059%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-short-array.html"><span>get</span><wbr><span>Short</span><wbr><span><span>Array</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="894187059%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-short-array.html"><span class="token function">getShortArray</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short-array/index.html">ShortArray</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-354703458%2FFunctions%2F-518576089" anchor-label="getStringz" id="-354703458%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-stringz.html"><span>get</span><wbr><span><span>Stringz</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-354703458%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-stringz.html"><span class="token function">getStringz</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-stringz.html"><span class="token function">getStringz</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-stringz.html"><span class="token function">getStringz</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-69484847%2FFunctions%2F-518576089" anchor-label="getWideStringz" id="-69484847%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-wide-stringz.html"><span>get</span><wbr><span>Wide</span><wbr><span><span>Stringz</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-69484847%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-wide-stringz.html"><span class="token function">getWideStringz</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-wide-stringz.html"><span class="token function">getWideStringz</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../get-wide-stringz.html"><span class="token function">getWideStringz</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-889224620%2FFunctions%2F-518576089" anchor-label="set16" id="-889224620%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set16.html"><span><span>set16</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-889224620%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set16.html"><span class="token function">set16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set16.html"><span class="token function">set16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set16.html"><span class="token function">set16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1940351167%2FFunctions%2F-518576089" anchor-label="set32" id="-1940351167%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set32.html"><span><span>set32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1940351167%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set32.html"><span class="token function">set32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set32.html"><span class="token function">set32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set32.html"><span class="token function">set32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="674813315%2FFunctions%2F-518576089" anchor-label="set64" id="674813315%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set64.html"><span><span>set64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="674813315%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set64.html"><span class="token function">set64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set64.html"><span class="token function">set64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set64.html"><span class="token function">set64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-89406453%2FFunctions%2F-518576089" anchor-label="set8" id="-89406453%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set8.html"><span><span>set8</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-89406453%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set8.html"><span class="token function">set8</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set8.html"><span class="token function">set8</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set8.html"><span class="token function">set8</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1682655778%2FFunctions%2F31881395" anchor-label="setAligned16" id="1682655778%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-aligned16.html"><span>set</span><wbr><span><span>Aligned16</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682655778%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-aligned16.html"><span class="token function">setAligned16</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="770701967%2FFunctions%2F31881395" anchor-label="setAligned32" id="770701967%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-aligned32.html"><span>set</span><wbr><span><span>Aligned32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="770701967%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-aligned32.html"><span class="token function">setAligned32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1181885451%2FFunctions%2F31881395" anchor-label="setAligned64" id="-1181885451%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-aligned64.html"><span>set</span><wbr><span><span>Aligned64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1181885451%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-aligned64.html"><span class="token function">setAligned64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1997836912%2FFunctions%2F31881395" anchor-label="setAlignedF32" id="1997836912%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-aligned-f32.html"><span>set</span><wbr><span>Aligned</span><wbr><span><span>F32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1997836912%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-aligned-f32.html"><span class="token function">setAlignedF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-301961834%2FFunctions%2F31881395" anchor-label="setAlignedF64" id="-301961834%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-aligned-f64.html"><span>set</span><wbr><span>Aligned</span><wbr><span><span>F64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-301961834%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-aligned-f64.html"><span class="token function">setAlignedF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1715678346%2FFunctions%2F31881395" anchor-label="setAlignedFFIPointer" id="1715678346%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-aligned-f-f-i-pointer.html"><span>set</span><wbr><span>Aligned</span><wbr><span><span>FFIPointer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1715678346%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-aligned-f-f-i-pointer.html"><span class="token function">setAlignedFFIPointer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-421044098%2FFunctions%2F-518576089" anchor-label="setF32" id="-421044098%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-f32.html"><span>set</span><wbr><span><span>F32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-421044098%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-f32.html"><span class="token function">setF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-f32.html"><span class="token function">setF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-f32.html"><span class="token function">setF32</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2022138184%2FFunctions%2F-518576089" anchor-label="setF64" id="2022138184%2FFunctions%2F-518576089" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain,:korge-core:dokkaHtmlPartial/androidMain,:korge-core:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-f64.html"><span>set</span><wbr><span><span>F64</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2022138184%2FFunctions%2F-518576089"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/androidMain" data-filterable-set=":korge-core:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain" data-toggle=":korge-core:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge-core:dokkaHtmlPartial/darwinMain" data-toggle=":korge-core:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-f64.html"><span class="token function">setF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-f64.html"><span class="token function">setF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":korge-core:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-f64.html"><span class="token function">setF64</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1617964264%2FFunctions%2F31881395" anchor-label="setFFIPointer" id="-1617964264%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../set-f-f-i-pointer.html"><span>set</span><wbr><span><span>FFIPointer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1617964264%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../set-f-f-i-pointer.html"><span class="token function">setFFIPointer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="index.html">FFIPointer</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">byteOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1184456501%2FFunctions%2F31881395" anchor-label="typed" id="1184456501%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../typed.html"><span><span>typed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1184456501%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../typed.html">T</a><span class="token operator">&gt; </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../typed.html"><span class="token function">typed</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-f-f-i-typed-pointer/index.html">FFITypedPointer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../typed.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1171979222%2FFunctions%2F31881395" anchor-label="withOffset" id="1171979222%2FFunctions%2F31881395" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/commonMain" data-filterable-set=":korge-core:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../with-offset.html"><span>with</span><wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1171979222%2FFunctions%2F31881395"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">FFIPointer</a><span class="token punctuation">.</span><a href="../with-offset.html"><span class="token function">withOffset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">offset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FFIPointer</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

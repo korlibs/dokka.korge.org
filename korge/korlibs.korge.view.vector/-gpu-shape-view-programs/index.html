@@ -1,0 +1,543 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GpuShapeViewPrograms</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="korge::korlibs.korge.view.vector/GpuShapeViewPrograms///PointingToDeclaration//2031266617">
+  <div class="breadcrumbs"><a href="../../index.html">korge</a><span class="delimiter">/</span><a href="../index.html">korlibs.korge.view.vector</a><span class="delimiter">/</span><span class="current">GpuShapeViewPrograms</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Gpu</span><wbr><span>Shape</span><wbr><span>View</span><wbr><span><span>Programs</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">GpuShapeViewPrograms</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1484759460%2FClasslikes%2F2031266617" anchor-label="PaintShader" id="-1484759460%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-paint-shader/index.html"><span>Paint</span><wbr><span><span>Shader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1484759460%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-paint-shader/index.html">PaintShader</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>uniforms<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform-block-buffer/index.html">UniformBlockBuffer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-shape-view-u-b/index.html">GpuShapeViewPrograms.ShapeViewUB</a><span class="token operator">&gt;</span><span class="token operator"> = </span>UniformBlockBuffer(ShapeViewUB)<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>texture<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.bitmap/-bitmap/index.html">Bitmap</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>program<span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program/index.html">Program</a><span class="token operator"> = </span>PROGRAM_COMBINED</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1033740468%2FClasslikes%2F2031266617" anchor-label="ShapeViewUB" id="-1033740468%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-shape-view-u-b/index.html"><span>Shape</span><wbr><span>View</span><wbr><span><span>UB</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1033740468%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-shape-view-u-b/index.html">ShapeViewUB</a> : <a href="../../korlibs.graphics.shader/-uniform-block/index.html">UniformBlock</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1939251222%2FProperties%2F2031266617" anchor-label="a_Dist" id="-1939251222%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="a_-dist.html"><span><span>a_Dist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1939251222%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="a_-dist.html">a_Dist</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-106851872%2FProperties%2F2031266617" anchor-label="a_MaxDist" id="-106851872%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="a_-max-dist.html"><span>a_Max</span><wbr><span><span>Dist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-106851872%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="a_-max-dist.html">a_MaxDist</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1128433052%2FProperties%2F2031266617" anchor-label="LAYOUT" id="-1128433052%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-y-o-u-t.html"><span><span>LAYOUT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1128433052%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-l-a-y-o-u-t.html">LAYOUT</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program-layout/index.html">ProgramLayout</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1839206033%2FProperties%2F2031266617" anchor-label="LAYOUT_DIST" id="1839206033%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-y-o-u-t_-d-i-s-t.html"><span><span>LAYOUT_DIST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1839206033%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-l-a-y-o-u-t_-d-i-s-t.html">LAYOUT_DIST</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program-layout/index.html">ProgramLayout</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="540920148%2FProperties%2F2031266617" anchor-label="LAYOUT_FILL" id="540920148%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-y-o-u-t_-f-i-l-l.html"><span><span>LAYOUT_FILL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="540920148%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-l-a-y-o-u-t_-f-i-l-l.html">LAYOUT_FILL</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program-layout/index.html">ProgramLayout</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="521909446%2FProperties%2F2031266617" anchor-label="LAYOUT_POS_DIST" id="521909446%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-y-o-u-t_-p-o-s_-d-i-s-t.html"><span><span>LAYOUT_POS_DIST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="521909446%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-l-a-y-o-u-t_-p-o-s_-d-i-s-t.html">LAYOUT_POS_DIST</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program-layout/index.html">ProgramLayout</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1855695036%2FProperties%2F2031266617" anchor-label="LAYOUT_POS_TEX_FILL_DIST" id="-1855695036%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-y-o-u-t_-p-o-s_-t-e-x_-f-i-l-l_-d-i-s-t.html"><span><span>LAYOUT_POS_TEX_FILL_DIST</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1855695036%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-l-a-y-o-u-t_-p-o-s_-t-e-x_-f-i-l-l_-d-i-s-t.html">LAYOUT_POS_TEX_FILL_DIST</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program-layout/index.html">ProgramLayout</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="31333532%2FProperties%2F2031266617" anchor-label="LAYOUT_TEX" id="31333532%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-a-y-o-u-t_-t-e-x.html"><span><span>LAYOUT_TEX</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="31333532%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-l-a-y-o-u-t_-t-e-x.html">LAYOUT_TEX</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program-layout/index.html">ProgramLayout</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korlibs.graphics.shader/-attribute/index.html">Attribute</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1765266169%2FProperties%2F2031266617" anchor-label="pow2" id="1765266169%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pow2.html"><span><span>pow2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1765266169%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../../korlibs.graphics.shader/-operand/index.html">Operand</a><span class="token punctuation">.</span><a href="pow2.html">pow2</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-operand/index.html">Operand</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-818224498%2FProperties%2F2031266617" anchor-label="PROGRAM_COMBINED" id="-818224498%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-g-r-a-m_-c-o-m-b-i-n-e-d.html"><span><span>PROGRAM_COMBINED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818224498%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-p-r-o-g-r-a-m_-c-o-m-b-i-n-e-d.html">PROGRAM_COMBINED</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-program/index.html">Program</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1057036685%2FProperties%2F2031266617" anchor-label="PROGRAM_TYPE_BITMAP" id="-1057036685%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-g-r-a-m_-t-y-p-e_-b-i-t-m-a-p.html"><span><span>PROGRAM_TYPE_BITMAP</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1057036685%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-g-r-a-m_-t-y-p-e_-b-i-t-m-a-p.html">PROGRAM_TYPE_BITMAP</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2097058869%2FProperties%2F2031266617" anchor-label="PROGRAM_TYPE_COLOR" id="2097058869%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-g-r-a-m_-t-y-p-e_-c-o-l-o-r.html"><span><span>PROGRAM_TYPE_COLOR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2097058869%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-g-r-a-m_-t-y-p-e_-c-o-l-o-r.html">PROGRAM_TYPE_COLOR</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1237905348%2FProperties%2F2031266617" anchor-label="PROGRAM_TYPE_GRADIENT_LINEAR" id="1237905348%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-g-r-a-m_-t-y-p-e_-g-r-a-d-i-e-n-t_-l-i-n-e-a-r.html"><span><span>PROGRAM_TYPE_GRADIENT_LINEAR</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1237905348%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-g-r-a-m_-t-y-p-e_-g-r-a-d-i-e-n-t_-l-i-n-e-a-r.html">PROGRAM_TYPE_GRADIENT_LINEAR</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">2</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-588938742%2FProperties%2F2031266617" anchor-label="PROGRAM_TYPE_GRADIENT_RADIAL" id="-588938742%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-g-r-a-m_-t-y-p-e_-g-r-a-d-i-e-n-t_-r-a-d-i-a-l.html"><span><span>PROGRAM_TYPE_GRADIENT_RADIAL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-588938742%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-g-r-a-m_-t-y-p-e_-g-r-a-d-i-e-n-t_-r-a-d-i-a-l.html">PROGRAM_TYPE_GRADIENT_RADIAL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="370826597%2FProperties%2F2031266617" anchor-label="PROGRAM_TYPE_GRADIENT_SWEEP" id="370826597%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-g-r-a-m_-t-y-p-e_-g-r-a-d-i-e-n-t_-s-w-e-e-p.html"><span><span>PROGRAM_TYPE_GRADIENT_SWEEP</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="370826597%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-g-r-a-m_-t-y-p-e_-g-r-a-d-i-e-n-t_-s-w-e-e-p.html">PROGRAM_TYPE_GRADIENT_SWEEP</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-722555588%2FProperties%2F2031266617" anchor-label="PROGRAM_TYPE_STENCIL" id="-722555588%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-p-r-o-g-r-a-m_-t-y-p-e_-s-t-e-n-c-i-l.html"><span><span>PROGRAM_TYPE_STENCIL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-722555588%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-p-r-o-g-r-a-m_-t-y-p-e_-s-t-e-n-c-i-l.html">PROGRAM_TYPE_STENCIL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">5</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-674095065%2FProperties%2F2031266617" anchor-label="stencilPaintShader" id="-674095065%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stencil-paint-shader.html"><span>stencil</span><wbr><span>Paint</span><wbr><span><span>Shader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-674095065%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="stencil-paint-shader.html">stencilPaintShader</a><span class="token operator">: </span><a href="-paint-shader/index.html">GpuShapeViewPrograms.PaintShader</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1122997875%2FProperties%2F2031266617" anchor-label="u_Color" id="1122997875%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-color.html"><span><span>u_Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1122997875%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-color.html">u_Color</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="743448099%2FProperties%2F2031266617" anchor-label="u_ColorMul" id="743448099%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-color-mul.html"><span>u_Color</span><wbr><span><span>Mul</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="743448099%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-color-mul.html">u_ColorMul</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1115400549%2FProperties%2F2031266617" anchor-label="u_GlobalAlpha" id="-1115400549%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-global-alpha.html"><span>u_Global</span><wbr><span><span>Alpha</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1115400549%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-global-alpha.html">u_GlobalAlpha</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1868209955%2FProperties%2F2031266617" anchor-label="u_GlobalPixelScale" id="-1868209955%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-global-pixel-scale.html"><span>u_Global</span><wbr><span>Pixel</span><wbr><span><span>Scale</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1868209955%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-global-pixel-scale.html">u_GlobalPixelScale</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1508472908%2FProperties%2F2031266617" anchor-label="u_Gradientp0" id="-1508472908%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-gradientp0.html"><span><span>u_Gradientp0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1508472908%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-gradientp0.html">u_Gradientp0</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1477453101%2FProperties%2F2031266617" anchor-label="u_Gradientp1" id="-1477453101%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-gradientp1.html"><span><span>u_Gradientp1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1477453101%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-gradientp1.html">u_Gradientp1</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1588807576%2FProperties%2F2031266617" anchor-label="u_ProgramType" id="1588807576%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-program-type.html"><span>u_Program</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1588807576%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-program-type.html">u_ProgramType</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="102285834%2FProperties%2F2031266617" anchor-label="u_Transform" id="102285834%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="u_-transform.html"><span><span>u_Transform</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="102285834%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="u_-transform.html">u_Transform</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-uniform/index.html">Uniform</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1132580159%2FProperties%2F2031266617" anchor-label="v_Dist" id="1132580159%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="v_-dist.html"><span><span>v_Dist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1132580159%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="v_-dist.html">v_Dist</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-varying/index.html">Varying</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-46356373%2FProperties%2F2031266617" anchor-label="v_MaxDist" id="-46356373%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="v_-max-dist.html"><span>v_Max</span><wbr><span><span>Dist</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-46356373%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="v_-max-dist.html">v_MaxDist</a><span class="token operator">: </span><a href="../../korlibs.graphics.shader/-varying/index.html">Varying</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1065356261%2FFunctions%2F2031266617" anchor-label="paintToShaderInfo" id="-1065356261%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="paint-to-shader-info.html"><span>paint</span><wbr><span>To</span><wbr><span>Shader</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1065356261%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="paint-to-shader-info.html"><span class="token function">paintToShaderInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stateTransform<span class="token operator">: </span><a href="../../../korge-foundation/korlibs.math.geom/-matrix/index.html">Matrix</a><span class="token punctuation">, </span></span><span class="parameter ">paint<span class="token operator">: </span><a href="../../../korge-core/korlibs.image.paint/-paint/index.html">Paint</a><span class="token punctuation">, </span></span><span class="parameter ">globalAlpha<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">lineWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-paint-shader/index.html">GpuShapeViewPrograms.PaintShader</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

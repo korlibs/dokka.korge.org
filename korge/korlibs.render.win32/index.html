@@ -1,0 +1,360 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>korlibs.render.win32</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="korge::korlibs.render.win32////PointingToDeclaration//67533725">
+  <div class="breadcrumbs"><a href="../index.html">korge</a><span class="delimiter">/</span><span class="current">korlibs.render.win32</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1493550884%2FClasslikes%2F67533725" anchor-label="BITMAPV5HEADER" id="-1493550884%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-b-i-t-m-a-p-v5-h-e-a-d-e-r/index.html"><span><span>BITMAPV5HEADER</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1493550884%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="com.sun.jna/Structure.FieldOrder///PointingToDeclaration/"><span class="token annotation builtin">Structure.FieldOrder</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="token punctuation">[</span><span><span class="breakable-word"><span class="token string">"bV5Size"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5Width"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5Height"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5Planes"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5BitCount"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5Compression"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5SizeImage"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5XPelsPerMeter"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5YPelsPerMeter"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5ClrUsed"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5ClrImportant"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5RedMask"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5GreenMask"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5BlueMask"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5AlphaMask"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5CSType"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5Endpoints"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5GammaRed"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5GammaGreen"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5GammaBlue"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5Intent"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5ProfileData"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5ProfileSize"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"bV5Reserved"</span></span></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">class </span><a href="-b-i-t-m-a-p-v5-h-e-a-d-e-r/index.html">BITMAPV5HEADER</a> : <span data-unresolved-link="com.sun.jna/Structure///PointingToDeclaration/">Structure</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2107159389%2FClasslikes%2F67533725" anchor-label="CIEXYZ" id="2107159389%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-i-e-x-y-z/index.html"><span><span>CIEXYZ</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2107159389%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="com.sun.jna/Structure.FieldOrder///PointingToDeclaration/"><span class="token annotation builtin">Structure.FieldOrder</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="token punctuation">[</span><span><span class="breakable-word"><span class="token string">"ciexyzX"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"ciexyzY"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"ciexyzZ"</span></span></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">class </span><a href="-c-i-e-x-y-z/index.html">CIEXYZ</a> : <span data-unresolved-link="com.sun.jna/Structure///PointingToDeclaration/">Structure</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-559896641%2FClasslikes%2F67533725" anchor-label="CIEXYZTRIPLE" id="-559896641%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-i-e-x-y-z-t-r-i-p-l-e/index.html"><span><span>CIEXYZTRIPLE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-559896641%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="com.sun.jna/Structure.FieldOrder///PointingToDeclaration/"><span class="token annotation builtin">Structure.FieldOrder</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="token punctuation">[</span><span><span class="breakable-word"><span class="token string">"ciexyzRed"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"ciexyzGreen"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"ciexyzBlue"</span></span></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">class </span><a href="-c-i-e-x-y-z-t-r-i-p-l-e/index.html">CIEXYZTRIPLE</a> : <span data-unresolved-link="com.sun.jna/Structure///PointingToDeclaration/">Structure</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="953211724%2FClasslikes%2F67533725" anchor-label="MyGdi32" id="953211724%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-my-gdi32/index.html"><span>My</span><wbr><span><span>Gdi32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="953211724%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-my-gdi32/index.html">MyGdi32</a> : <span data-unresolved-link="com.sun.jna.platform.win32/GDI32///PointingToDeclaration/">GDI32</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="872543055%2FClasslikes%2F67533725" anchor-label="MyKernel32" id="872543055%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-my-kernel32/index.html"><span>My</span><wbr><span><span>Kernel32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="872543055%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-my-kernel32/index.html">MyKernel32</a> : <span data-unresolved-link="com.sun.jna.platform.win32/Kernel32///PointingToDeclaration/">Kernel32</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="69452701%2FClasslikes%2F67533725" anchor-label="MyOpenGL32" id="69452701%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-my-open-g-l32/index.html"><span>My</span><wbr><span>Open</span><wbr><span><span>GL32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="69452701%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-my-open-g-l32/index.html">MyOpenGL32</a> : <span data-unresolved-link="com.sun.jna.platform.win32/OpenGL32///PointingToDeclaration/">OpenGL32</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1789002113%2FClasslikes%2F67533725" anchor-label="MyUser32" id="1789002113%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-my-user32/index.html"><span>My</span><wbr><span><span>User32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1789002113%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-my-user32/index.html">MyUser32</a> : <span data-unresolved-link="com.sun.jna.platform.win32/User32///PointingToDeclaration/">User32</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="286235535%2FClasslikes%2F67533725" anchor-label="WGL" id="286235535%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-g-l/index.html"><span><span>WGL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="286235535%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-w-g-l/index.html">WGL</a> : <span data-unresolved-link="com.sun.jna.win32/StdCallLibrary///PointingToDeclaration/">StdCallLibrary</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="483107408%2FClasslikes%2F67533725" anchor-label="Win32" id="483107408%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-win32/index.html"><span><span>Win32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="483107408%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-win32/index.html">Win32</a> : <a href="-my-kernel32/index.html">MyKernel32</a>, <a href="-my-user32/index.html">MyUser32</a>, <a href="-my-gdi32/index.html">MyGdi32</a>, <a href="-my-open-g-l32/index.html">MyOpenGL32</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1537829195%2FClasslikes%2F67533725" anchor-label="Win32GL" id="1537829195%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-win32-g-l/index.html"><span><span>Win32GL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1537829195%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-win32-g-l/index.html">Win32GL</a> : <span data-unresolved-link="com.sun.jna.win32/StdCallLibrary///PointingToDeclaration/">StdCallLibrary</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-539809117%2FClasslikes%2F67533725" anchor-label="Win32KmlGl" id="-539809117%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-win32-kml-gl/index.html"><span>Win32Kml</span><wbr><span><span>Gl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-539809117%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-win32-kml-gl/index.html">Win32KmlGl</a> : <a href="../korlibs.render.platform/-native-kgl/index.html">NativeKgl</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1139806574%2FClasslikes%2F67533725" anchor-label="Win32OpenglContext" id="-1139806574%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-win32-opengl-context/index.html"><span>Win32Opengl</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1139806574%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-win32-opengl-context/index.html">Win32OpenglContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>gwconfig<span class="token operator">: </span><a href="../korlibs.render/-game-window-config/index.html">GameWindowConfig</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hWnd<span class="token operator">: </span><span data-unresolved-link="com.sun.jna.platform.win32/WinDef.HWND///PointingToDeclaration/">WinDef.HWND</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hDC<span class="token operator">: </span><span data-unresolved-link="com.sun.jna.platform.win32/WinDef.HDC///PointingToDeclaration/">WinDef.HDC</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>doubleBuffered<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>component<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html">Component</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../korlibs.render.platform/-base-opengl-context/index.html">BaseOpenglContext</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="495243342%2FClasslikes%2F67533725" anchor-label="Win32OpenglLoader" id="495243342%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-win32-opengl-loader/index.html"><span>Win32Opengl</span><wbr><span><span>Loader</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="495243342%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-win32-opengl-loader/index.html">Win32OpenglLoader</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1127171332%2FProperties%2F67533725" anchor-label="height" id="-1127171332%2FProperties%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1127171332%2FProperties%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><span data-unresolved-link="com.sun.jna.platform.win32/WinDef.RECT///PointingToDeclaration/">WinDef.RECT</span><span class="token punctuation">.</span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1746400804%2FProperties%2F67533725" anchor-label="VK_TABLE" id="1746400804%2FProperties%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v-k_-t-a-b-l-e.html"><span><span>VK_TABLE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1746400804%2FProperties%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-v-k_-t-a-b-l-e.html">VK_TABLE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../korlibs.event/-key/index.html">Key</a><span class="token operator">&gt;</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-719463161%2FProperties%2F67533725" anchor-label="width" id="-719463161%2FProperties%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-719463161%2FProperties%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><span data-unresolved-link="com.sun.jna.platform.win32/WinDef.RECT///PointingToDeclaration/">WinDef.RECT</span><span class="token punctuation">.</span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

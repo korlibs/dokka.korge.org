@@ -1,0 +1,525 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>korlibs.image.awt</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="korge-core::korlibs.image.awt////PointingToDeclaration//-834618141">
+  <div class="breadcrumbs"><a href="../index.html">korge-core</a><span class="delimiter">/</span><span class="current">korlibs.image.awt</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1585500094%2FClasslikes%2F-834618141" anchor-label="AwtContext2dRender" id="-1585500094%2FClasslikes%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-awt-context2d-render/index.html"><span>Awt</span><wbr><span>Context2d</span><wbr><span><span>Render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1585500094%2FClasslikes%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-awt-context2d-render/index.html">AwtContext2dRender</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>awtImage<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>antialiasing<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>warningProcessor<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../korlibs.image.vector.renderer/-renderer/index.html">Renderer</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1782406837%2FClasslikes%2F-834618141" anchor-label="AwtNativeImage" id="1782406837%2FClasslikes%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-awt-native-image/index.html"><span>Awt</span><wbr><span>Native</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1782406837%2FClasslikes%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-awt-native-image/index.html">AwtNativeImage</a> : <a href="-base-awt-native-image/index.html">BaseAwtNativeImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-34369116%2FClasslikes%2F-834618141" anchor-label="BaseAwtNativeImage" id="-34369116%2FClasslikes%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-awt-native-image/index.html"><span>Base</span><wbr><span>Awt</span><wbr><span>Native</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-34369116%2FClasslikes%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-base-awt-native-image/index.html">BaseAwtNativeImage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">premultiplied<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span> : <a href="../korlibs.image.bitmap/-native-image/index.html">NativeImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1874054711%2FProperties%2F-834618141" anchor-label="AWT_INTERNAL_IMAGE_TYPE" id="1874054711%2FProperties%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-w-t_-i-n-t-e-r-n-a-l_-i-m-a-g-e_-t-y-p-e.html"><span><span>AWT_INTERNAL_IMAGE_TYPE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1874054711%2FProperties%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-a-w-t_-i-n-t-e-r-n-a-l_-i-m-a-g-e_-t-y-p-e.html">AWT_INTERNAL_IMAGE_TYPE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372711437%2FProperties%2F-834618141" anchor-label="AWT_INTERNAL_IMAGE_TYPE_PRE" id="-372711437%2FProperties%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-w-t_-i-n-t-e-r-n-a-l_-i-m-a-g-e_-t-y-p-e_-p-r-e.html"><span><span>AWT_INTERNAL_IMAGE_TYPE_PRE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372711437%2FProperties%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-a-w-t_-i-n-t-e-r-n-a-l_-i-m-a-g-e_-t-y-p-e_-p-r-e.html">AWT_INTERNAL_IMAGE_TYPE_PRE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1847819245%2FProperties%2F-834618141" anchor-label="premultiplied" id="1847819245%2FProperties%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="premultiplied.html"><span><span>premultiplied</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1847819245%2FProperties%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token punctuation">.</span><a href="premultiplied.html">premultiplied</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="763751043%2FFunctions%2F-834618141" anchor-label="awtConvertImage" id="763751043%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="awt-convert-image.html"><span>awt</span><wbr><span>Convert</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="763751043%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="awt-convert-image.html"><span class="token function">awtConvertImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1862135737%2FFunctions%2F-834618141" anchor-label="awtConvertImageIfRequired" id="-1862135737%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="awt-convert-image-if-required.html"><span>awt</span><wbr><span>Convert</span><wbr><span>Image</span><wbr><span>If</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1862135737%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="awt-convert-image-if-required.html"><span class="token function">awtConvertImageIfRequired</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="125274137%2FFunctions%2F-834618141" anchor-label="awtReadImage" id="125274137%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="awt-read-image.html"><span>awt</span><wbr><span>Read</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="125274137%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="awt-read-image.html"><span class="token function">awtReadImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1299991302%2FFunctions%2F-834618141" anchor-label="awtReadImageInWorker" id="-1299991302%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="awt-read-image-in-worker.html"><span>awt</span><wbr><span>Read</span><wbr><span>Image</span><wbr><span>In</span><wbr><span><span>Worker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1299991302%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="awt-read-image-in-worker.html"><span class="token function">awtReadImageInWorker</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/File.html">File</a><span class="token punctuation">, </span></span><span class="parameter ">props<span class="token operator">: </span><a href="../korlibs.image.format/-image-decoding-props/index.html">ImageDecodingProps</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="awt-read-image-in-worker.html"><span class="token function">awtReadImageInWorker</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">, </span></span><span class="parameter ">props<span class="token operator">: </span><a href="../korlibs.image.format/-image-decoding-props/index.html">ImageDecodingProps</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="378630954%2FFunctions%2F-834618141" anchor-label="awtShowImage" id="378630954%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="awt-show-image.html"><span>awt</span><wbr><span>Show</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="378630954%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="awt-show-image.html"><span class="token function">awtShowImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="awt-show-image.html"><span class="token function">awtShowImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bitmap<span class="token operator">: </span><a href="../korlibs.image.bitmap/-bitmap/index.html">Bitmap</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JFrame.html">JFrame</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1928931360%2FFunctions%2F-834618141" anchor-label="awtShowImageAndWait" id="-1928931360%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="awt-show-image-and-wait.html"><span>awt</span><wbr><span>Show</span><wbr><span>Image</span><wbr><span>And</span><wbr><span><span>Wait</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1928931360%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="awt-show-image-and-wait.html"><span class="token function">awtShowImageAndWait</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="awt-show-image-and-wait.html"><span class="token function">awtShowImageAndWait</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="../korlibs.image.bitmap/-bitmap/index.html">Bitmap</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1713159804%2FFunctions%2F-834618141" anchor-label="clone" id="-1713159804%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clone.html"><span><span>clone</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1713159804%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token punctuation">.</span><a href="clone.html"><span class="token function">clone</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.width<span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.height<span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>AWT_INTERNAL_IMAGE_TYPE_PRE</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1689317384%2FFunctions%2F-834618141" anchor-label="cloneIfRequired" id="1689317384%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clone-if-required.html"><span>clone</span><wbr><span>If</span><wbr><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1689317384%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token punctuation">.</span><a href="clone-if-required.html"><span class="token function">cloneIfRequired</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.width<span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>this.height<span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>AWT_INTERNAL_IMAGE_TYPE_PRE</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1731175600%2FFunctions%2F-834618141" anchor-label="convertColor" id="-1731175600%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="convert-color.html"><span>convert</span><wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1731175600%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="convert-color.html"><span class="token function">convertColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">c<span class="token operator">: </span><a href="../korlibs.image.color/-r-g-b-a/index.html">RGBA</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html">Color</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-348060561%2FFunctions%2F-834618141" anchor-label="createGraphics" id="-348060561%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-graphics.html"><span>create</span><wbr><span><span>Graphics</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-348060561%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token punctuation">.</span><a href="create-graphics.html"><span class="token function">createGraphics</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">antialiasing<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html">Graphics2D</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="127299117%2FFunctions%2F-834618141" anchor-label="createRenderingHints" id="127299117%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-rendering-hints.html"><span>create</span><wbr><span>Rendering</span><wbr><span><span>Hints</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="127299117%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="create-rendering-hints.html"><span class="token function">createRenderingHints</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">antialiasing<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/RenderingHints.html">RenderingHints</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1794223562%2FFunctions%2F-834618141" anchor-label="ImageIOReadFormat" id="1794223562%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-image-i-o-read-format.html"><span>Image</span><wbr><span>IORead</span><wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1794223562%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-image-i-o-read-format.html"><span class="token function">ImageIOReadFormat</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">s<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/InputStream.html">InputStream</a><span class="token punctuation">, </span></span><span class="parameter ">props<span class="token operator">: </span><a href="../korlibs.image.format/-image-decoding-props/index.html">ImageDecodingProps</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-image-i-o-read-format.html"><span class="token function">ImageIOReadFormat</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">s<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/io/InputStream.html">InputStream</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>AWT_INTERNAL_IMAGE_TYPE_PRE</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-488280676%2FFunctions%2F-834618141" anchor-label="setToMatrix" id="-488280676%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-to-matrix.html"><span>set</span><wbr><span>To</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-488280676%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/AffineTransform.html">AffineTransform</a><span class="token punctuation">.</span><a href="set-to-matrix.html"><span class="token function">setToMatrix</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">t<span class="token operator">: </span><a href="../../korge-foundation/korlibs.math.geom/-matrix/index.html">Matrix</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1178229852%2FFunctions%2F-834618141" anchor-label="toAwt" id="-1178229852%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-awt.html"><span>to</span><wbr><span><span>Awt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1178229852%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../korlibs.image.paint/-gradient-interpolation-method/index.html">GradientInterpolationMethod</a><span class="token punctuation">.</span><a href="to-awt.html"><span class="token function">toAwt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/MultipleGradientPaint.ColorSpaceType.html">MultipleGradientPaint.ColorSpaceType</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../korlibs.image.vector/-cycle-method/index.html">CycleMethod</a><span class="token punctuation">.</span><a href="to-awt.html"><span class="token function">toAwt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/MultipleGradientPaint.CycleMethod.html">MultipleGradientPaint.CycleMethod</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../korge-foundation/korlibs.math.geom/-m-point/index.html">MPoint</a><span class="token punctuation">.</span><a href="to-awt.html"><span class="token function">toAwt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html">Point</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../korge-foundation/korlibs.math.geom/-matrix/index.html">Matrix</a><span class="token punctuation">.</span><a href="to-awt.html"><span class="token function">toAwt</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/AffineTransform.html">AffineTransform</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../korlibs.image.bitmap/-bitmap/index.html">Bitmap</a><span class="token punctuation">.</span><a href="to-awt.html"><span class="token function">toAwt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">out<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token operator"> = </span>BufferedImage(
+		width.coerceAtLeast(1),
+		height.coerceAtLeast(1),
+		if (this.premultiplied) BufferedImage.TYPE_INT_ARGB_PRE else BufferedImage.TYPE_INT_ARGB
+	)</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../korlibs.image.bitmap/-bitmap32/index.html">Bitmap32</a><span class="token punctuation">.</span><a href="to-awt.html"><span class="token function">toAwt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">out<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token operator"> = </span>BufferedImage(
+		width.coerceAtLeast(1),
+		height.coerceAtLeast(1),
+		if (this.premultiplied) BufferedImage.TYPE_INT_ARGB_PRE else BufferedImage.TYPE_INT_ARGB
+	)</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="488533968%2FFunctions%2F-834618141" anchor-label="toAwtNativeImage" id="488533968%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-awt-native-image.html"><span>to</span><wbr><span>Awt</span><wbr><span>Native</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="488533968%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token punctuation">.</span><a href="to-awt-native-image.html"><span class="token function">toAwtNativeImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-awt-native-image/index.html">AwtNativeImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1234014150%2FFunctions%2F-834618141" anchor-label="toBMP32" id="-1234014150%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-b-m-p32.html"><span>to</span><wbr><span><span>BMP32</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1234014150%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a><span class="token punctuation">.</span><a href="to-b-m-p32.html"><span class="token function">toBMP32</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../korlibs.image.bitmap/-bitmap32/index.html">Bitmap32</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1900369049%2FFunctions%2F-834618141" anchor-label="toBufferedImage" id="1900369049%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-buffered-image.html"><span>to</span><wbr><span>Buffered</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1900369049%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html">Image</a><span class="token punctuation">.</span><a href="to-buffered-image.html"><span class="token function">toBufferedImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">premultiplied<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1075398517%2FFunctions%2F-834618141" anchor-label="toMatrix" id="-1075398517%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-matrix.html"><span>to</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1075398517%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/AffineTransform.html">AffineTransform</a><span class="token punctuation">.</span><a href="to-matrix.html"><span class="token function">toMatrix</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../korge-foundation/korlibs.math.geom/-matrix/index.html">Matrix</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="972489337%2FFunctions%2F-834618141" anchor-label="transferTo" id="972489337%2FFunctions%2F-834618141" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="transfer-to.html"><span>transfer</span><wbr><span><span>To</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="972489337%2FFunctions%2F-834618141"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge-core:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge-core:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge-core:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge-core:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../korlibs.image.bitmap/-bitmap32/index.html">Bitmap32</a><span class="token punctuation">.</span><a href="transfer-to.html"><span class="token function">transferTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">out<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html">BufferedImage</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

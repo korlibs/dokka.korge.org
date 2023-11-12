@@ -1,0 +1,1090 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>korlibs.render</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            korge-root
+                    </a>            </div>
+            <div class="library-version">5.1.0
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge:dokkaHtmlPartial/androidMain">android</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge:dokkaHtmlPartial/darwinMain">darwin</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge:dokkaHtmlPartial/iosMain">ios</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":korge:dokkaHtmlPartial/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":korge:dokkaHtmlPartial/jvmMain">jvm</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":korge:dokkaHtmlPartial/tvosMain">tvos</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="korge::korlibs.render////PointingToDeclaration//1634691287">
+  <div class="breadcrumbs"><a href="../index.html">korge</a><span class="delimiter">/</span><span class="current">korlibs.render</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button><button class="section-tab" data-togglable="PROPERTY,EXTENSION_PROPERTY">Properties</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1048811912%2FClasslikes%2F1877666689" anchor-label="ActivityWithResult" id="-1048811912%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-activity-with-result/index.html"><span>Activity</span><wbr><span>With</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1048811912%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-activity-with-result/index.html">ActivityWithResult</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1957164352%2FClasslikes%2F1877666689" anchor-label="AndroidConfigChooser" id="-1957164352%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-config-chooser/index.html"><span>Android</span><wbr><span>Config</span><wbr><span><span>Chooser</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1957164352%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-android-config-chooser/index.html">AndroidConfigChooser</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.EGLConfigChooser.html">GLSurfaceView.EGLConfigChooser</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1845168222%2FClasslikes%2F1877666689" anchor-label="AndroidContextHolder" id="1845168222%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-context-holder/index.html"><span>Android</span><wbr><span>Context</span><wbr><span><span>Holder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1845168222%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-android-context-holder/index.html">AndroidContextHolder</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="386410427%2FClasslikes%2F1877666689" anchor-label="AndroidGameController" id="386410427%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-game-controller/index.html"><span>Android</span><wbr><span>Game</span><wbr><span><span>Controller</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="386410427%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-android-game-controller/index.html">AndroidGameController</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-306857753%2FClasslikes%2F1877666689" anchor-label="AndroidGameWindow" id="-306857753%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-game-window/index.html"><span>Android</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-306857753%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-android-game-window/index.html">AndroidGameWindow</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>activity<span class="token operator">: </span><a href="-korgw-activity/index.html">KorgwActivity</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a><span class="token operator"> = </span>activity.config</span></span><span class="token punctuation">)</span> : <a href="-base-android-game-window/index.html">BaseAndroidGameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="831164247%2FClasslikes%2F1877666689" anchor-label="AndroidGameWindowNoActivity" id="831164247%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-game-window-no-activity/index.html"><span>Android</span><wbr><span>Game</span><wbr><span>Window</span><wbr><span>No</span><wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="831164247%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-android-game-window-no-activity/index.html">AndroidGameWindowNoActivity</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>ag<span class="token operator">: </span><a href="../korlibs.graphics/-a-g/index.html">AG</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>androidContext<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a><span class="token operator"> = </span>GameWindowCreationConfig()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>getView<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a></span></span><span class="token punctuation">)</span> : <a href="-base-android-game-window/index.html">BaseAndroidGameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="262090060%2FClasslikes%2F1877666689" anchor-label="AndroidKeyMap" id="262090060%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-android-key-map/index.html"><span>Android</span><wbr><span>Key</span><wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262090060%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-android-key-map/index.html">AndroidKeyMap</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="545307416%2FClasslikes%2F1877666689" anchor-label="BaseAndroidGameWindow" id="545307416%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-android-game-window/index.html"><span>Base</span><wbr><span>Android</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="545307416%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-base-android-game-window/index.html">BaseAndroidGameWindow</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a><span class="token operator"> = </span>GameWindowCreationConfig()</span></span><span class="token punctuation">)</span> : <a href="-game-window/index.html">GameWindow</a>, <a href="-android-context-holder/index.html">AndroidContextHolder</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1000214003%2FClasslikes%2F-1716010917" anchor-label="BrowserCanvasJsGameWindow" id="-1000214003%2FClasslikes%2F-1716010917" data-filterable-set=":korge:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-browser-canvas-js-game-window/index.html"><span>Browser</span><wbr><span>Canvas</span><wbr><span>Js</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1000214003%2FClasslikes%2F-1716010917"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-browser-canvas-js-game-window/index.html">BrowserCanvasJsGameWindow</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>canvas<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-canvas-element/index.html">HTMLCanvasElement</a><span class="token operator"> = </span>AGDefaultCanvas()</span></span><span class="token punctuation">)</span> : <a href="-js-game-window/index.html">JsGameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-113473736%2FClasslikes%2F2031266617" anchor-label="ClipboardData" id="-113473736%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-clipboard-data/index.html"><span>Clipboard</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-113473736%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-clipboard-data/index.html">ClipboardData</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-831210988%2FClasslikes%2F2031266617" anchor-label="Cursor" id="-831210988%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cursor/index.html"><span><span>Cursor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-831210988%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-cursor/index.html">Cursor</a><span class="token operator"> = </span><a href="-game-window/-cursor/index.html">GameWindow.Cursor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1286964829%2FClasslikes%2F2031266617" anchor-label="CustomCursor" id="-1286964829%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-custom-cursor/index.html"><span>Custom</span><wbr><span><span>Cursor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1286964829%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-custom-cursor/index.html">CustomCursor</a><span class="token operator"> = </span><a href="-game-window/-custom-cursor/index.html">GameWindow.CustomCursor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1366318590%2FClasslikes%2F86510009" anchor-label="DarwinGameControllerNative" id="1366318590%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-darwin-game-controller-native/index.html"><span>Darwin</span><wbr><span>Game</span><wbr><span>Controller</span><wbr><span><span>Native</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1366318590%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-darwin-game-controller-native/index.html">DarwinGameControllerNative</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1005064938%2FClasslikes%2F2031266617" anchor-label="DeviceDimensionsProvider" id="-1005064938%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-device-dimensions-provider/index.html"><span>Device</span><wbr><span>Dimensions</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1005064938%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-device-dimensions-provider/index.html">DeviceDimensionsProvider</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-240664537%2FClasslikes%2F2031266617" anchor-label="DialogInterface" id="-240664537%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dialog-interface/index.html"><span>Dialog</span><wbr><span><span>Interface</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-240664537%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-dialog-interface/index.html">DialogInterface</a> : <a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a></div><div class="brief "><p class="paragraph">Provides an interface with typical window dialogs and functionality.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1066826740%2FClasslikes%2F1877666689" anchor-label="DialogInterfaceAndroid" id="-1066826740%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dialog-interface-android/index.html"><span>Dialog</span><wbr><span>Interface</span><wbr><span><span>Android</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1066826740%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-dialog-interface-android/index.html">DialogInterfaceAndroid</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>contextProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span> : <a href="-dialog-interface/index.html">DialogInterface</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2019961554%2FClasslikes%2F86510009" anchor-label="DialogInterfaceIos" id="-2019961554%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dialog-interface-ios/index.html"><span>Dialog</span><wbr><span>Interface</span><wbr><span><span>Ios</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2019961554%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-dialog-interface-ios/index.html">DialogInterfaceIos</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>gameWindow<span class="token operator">: </span><a href="-ios-game-window/index.html">IosGameWindow</a></span></span><span class="token punctuation">)</span> : <a href="../../korge/korlibs.render/-dialog-interface/index.html">DialogInterface</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1577339230%2FClasslikes%2F-1716010917" anchor-label="DialogInterfaceJs" id="1577339230%2FClasslikes%2F-1716010917" data-filterable-set=":korge:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dialog-interface-js/index.html"><span>Dialog</span><wbr><span>Interface</span><wbr><span><span>Js</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1577339230%2FClasslikes%2F-1716010917"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-dialog-interface-js/index.html">DialogInterfaceJs</a> : <a href="-dialog-interface/index.html">DialogInterface</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1015858486%2FClasslikes%2F2031266617" anchor-label="DialogInterfaceProvider" id="1015858486%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dialog-interface-provider/index.html"><span>Dialog</span><wbr><span>Interface</span><wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1015858486%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a></div><div class="brief "><p class="paragraph">Represents a class that have a reference to a <a href="-dialog-interface-provider/dialog-interface.html">dialogInterface</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2028520152%2FClasslikes%2F2031266617" anchor-label="EventLoopGameWindow" id="2028520152%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-loop-game-window/index.html"><span>Event</span><wbr><span>Loop</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2028520152%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-event-loop-game-window/index.html">EventLoopGameWindow</a> : <a href="-game-window/index.html">GameWindow</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2026276202%2FClasslikes%2F2031266617" anchor-label="FileFilter" id="-2026276202%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-file-filter/index.html"><span>File</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2026276202%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-file-filter/index.html">FileFilter</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>entries<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1918483432%2FClasslikes%2F2031266617" anchor-label="GameWindow" id="1918483432%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-game-window/index.html"><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1918483432%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-game-window/index.html">GameWindow</a> : <a href="../korlibs.event/-base-event-listener/index.html">BaseEventListener</a>, <a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a>, <a href="-device-dimensions-provider/index.html">DeviceDimensionsProvider</a>, <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/-element/index.html">CoroutineContext.Element</a>, <a href="../korlibs.graphics/-a-g-window/index.html">AGWindow</a>, <a href="-game-window-config/index.html">GameWindowConfig</a>, <a href="../../korge-foundation/korlibs.datastructure/-extra/index.html">Extra</a></div><div class="brief "><p class="paragraph">A <a href="-game-window/index.html">GameWindow</a> represents a window, canvas or headless virtual frame where a game is displayed and can receive user events, it provides:</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2128176762%2FClasslikes%2F2031266617" anchor-label="GameWindowConfig" id="-2128176762%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-game-window-config/index.html"><span>Game</span><wbr><span>Window</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2128176762%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-game-window-config/index.html">GameWindowConfig</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="466999419%2FClasslikes%2F2031266617" anchor-label="GameWindowCoroutineDispatcher" id="466999419%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-game-window-coroutine-dispatcher/index.html"><span>Game</span><wbr><span>Window</span><wbr><span>Coroutine</span><wbr><span><span>Dispatcher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="466999419%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-game-window-coroutine-dispatcher/index.html">GameWindowCoroutineDispatcher</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>nowProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../korge-foundation/korlibs.time/-time-span/index.html">TimeSpan</a><span class="token operator"> = </span>{ PerformanceCounter.reference }<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>fast<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="kotlinx.coroutines/CoroutineDispatcher///PointingToDeclaration/">CoroutineDispatcher</span>, <span data-unresolved-link="kotlinx.coroutines/Delay///PointingToDeclaration/">Delay</span>, <a href="../../korge-foundation/korlibs.datastructure.closeable/-closeable/index.html">Closeable</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1984970841%2FClasslikes%2F2031266617" anchor-label="GameWindowCreationConfig" id="-1984970841%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-game-window-creation-config/index.html"><span>Game</span><wbr><span>Window</span><wbr><span>Creation</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1984970841%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>multithreaded<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>hdr<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>msaa<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>checkGl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>logGl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cacheGl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fullscreen<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>decorated<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>transparent<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resizable<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1916761243%2FClasslikes%2F2031266617" anchor-label="GameWindowQuality" id="1916761243%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-game-window-quality/index.html"><span>Game</span><wbr><span>Window</span><wbr><span><span>Quality</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1916761243%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-game-window-quality/index.html">GameWindowQuality</a><span class="token operator"> = </span><a href="-game-window/-quality/index.html">GameWindow.Quality</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="86302361%2FClasslikes%2F2031266617" anchor-label="ICursor" id="86302361%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-cursor/index.html"><span><span>ICursor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="86302361%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-i-cursor/index.html">ICursor</a><span class="token operator"> = </span><a href="-game-window/-i-cursor/index.html">GameWindow.ICursor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-397439479%2FClasslikes%2F86510009" anchor-label="IosGameWindow" id="-397439479%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ios-game-window/index.html"><span>Ios</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-397439479%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-ios-game-window/index.html">IosGameWindow</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>windowProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="platform.UIKit/UIWindow///PointingToDeclaration/">UIWindow</span><span class="token operator">?</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>glXViewControllerProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="-my-g-l-k-view-controller/index.html">MyGLKViewController</a><span class="token operator">?</span><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../../korge/korlibs.render/-game-window/index.html">GameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-836443282%2FClasslikes%2F86510009" anchor-label="IosKeyMap" id="-836443282%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ios-key-map/index.html"><span>Ios</span><wbr><span>Key</span><wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-836443282%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-ios-key-map/index.html">IosKeyMap</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="985329698%2FClasslikes%2F86510009" anchor-label="IosTvosToolsImpl" id="985329698%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ios-tvos-tools-impl/index.html"><span>Ios</span><wbr><span>Tvos</span><wbr><span>Tools</span><wbr><span><span>Impl</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="985329698%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-ios-tvos-tools-impl/index.html">IosTvosToolsImpl</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1033105505%2FClasslikes%2F-1716010917" anchor-label="JsGameWindow" id="-1033105505%2FClasslikes%2F-1716010917" data-filterable-set=":korge:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-js-game-window/index.html"><span>Js</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1033105505%2FClasslikes%2F-1716010917"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-js-game-window/index.html">JsGameWindow</a> : <a href="-game-window/index.html">GameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1628199111%2FClasslikes%2F67533725" anchor-label="JvmAGFactory" id="1628199111%2FClasslikes%2F67533725" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jvm-a-g-factory/index.html"><span>Jvm</span><wbr><span><span>AGFactory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1628199111%2FClasslikes%2F67533725"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-jvm-a-g-factory/index.html">JvmAGFactory</a> : <a href="../korlibs.graphics/-a-g-factory/index.html">AGFactory</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1935929690%2FClasslikes%2F2031266617" anchor-label="Korgw" id="1935929690%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-korgw/index.html"><span><span>Korgw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1935929690%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-korgw/index.html">Korgw</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="542016523%2FClasslikes%2F1877666689" anchor-label="KorgwActivity" id="542016523%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-korgw-activity/index.html"><span>Korgw</span><wbr><span><span>Activity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="542016523%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-korgw-activity/index.html">KorgwActivity</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activityWithResult<span class="token operator">: </span><a href="-activity-with-result/-mixin/index.html">ActivityWithResult.Mixin</a><span class="token operator"> = </span>ActivityWithResult.Mixin()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a><span class="token operator"> = </span>GameWindowCreationConfig()</span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a>, <a href="-activity-with-result/index.html">ActivityWithResult</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-876427613%2FClasslikes%2F86510009" anchor-label="KorgwBaseNewAppDelegate" id="-876427613%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-korgw-base-new-app-delegate/index.html"><span>Korgw</span><wbr><span>Base</span><wbr><span>New</span><wbr><span>App</span><wbr><span><span>Delegate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-876427613%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-korgw-base-new-app-delegate/index.html">KorgwBaseNewAppDelegate</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1729094358%2FClasslikes%2F1877666689" anchor-label="KorgwSurfaceView" id="1729094358%2FClasslikes%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-korgw-surface-view/index.html"><span>Korgw</span><wbr><span>Surface</span><wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1729094358%2FClasslikes%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-korgw-surface-view/index.html">KorgwSurfaceView</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>viewOrActivity<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gameWindow<span class="token operator">: </span><a href="-base-android-game-window/index.html">BaseAndroidGameWindow</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a><span class="token operator"> = </span>gameWindow.config</span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.html">GLSurfaceView</a>, <a href="https://developer.android.com/reference/kotlin/android/opengl/GLSurfaceView.Renderer.html">GLSurfaceView.Renderer</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="394698525%2FClasslikes%2F86510009" anchor-label="MyGLKViewController" id="394698525%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-my-g-l-k-view-controller/index.html"><span>My</span><wbr><span>GLKView</span><wbr><span><span>Controller</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="394698525%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-my-g-l-k-view-controller/index.html">MyGLKViewController</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>gameWindowProvider<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="-ios-game-window/index.html">IosGameWindow</a><span class="token operator"> = </span>{ MyIosGameWindow }<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>entry<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="platform.GLKit/GLKViewController///PointingToDeclaration/">GLKViewController</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-677812675%2FClasslikes%2F-1716010917" anchor-label="NodeJsGameWindow" id="-677812675%2FClasslikes%2F-1716010917" data-filterable-set=":korge:dokkaHtmlPartial/jsMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-node-js-game-window/index.html"><span>Node</span><wbr><span>Js</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-677812675%2FClasslikes%2F-1716010917"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-node-js-game-window/index.html">NodeJsGameWindow</a> : <a href="-js-game-window/index.html">JsGameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-570060722%2FClasslikes%2F2031266617" anchor-label="SyncEventLoopCoroutineDispatcher" id="-570060722%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sync-event-loop-coroutine-dispatcher/index.html"><span>Sync</span><wbr><span>Event</span><wbr><span>Loop</span><wbr><span>Coroutine</span><wbr><span><span>Dispatcher</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-570060722%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-sync-event-loop-coroutine-dispatcher/index.html">SyncEventLoopCoroutineDispatcher</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>eventLoop<span class="token operator">: </span><a href="../../korge-foundation/korlibs.datastructure.event/-sync-event-loop/index.html">SyncEventLoop</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="kotlinx.coroutines/CoroutineDispatcher///PointingToDeclaration/">CoroutineDispatcher</span>, <span data-unresolved-link="kotlinx.coroutines/Delay///PointingToDeclaration/">Delay</span>, <a href="../../korge-foundation/korlibs.datastructure.closeable/-closeable/index.html">Closeable</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-851647675%2FClasslikes%2F2031266617" anchor-label="TextClipboardData" id="-851647675%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text-clipboard-data/index.html"><span>Text</span><wbr><span>Clipboard</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-851647675%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-text-clipboard-data/index.html">TextClipboardData</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>contentType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="-clipboard-data/index.html">ClipboardData</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1799803081%2FClasslikes%2F2031266617" anchor-label="TouchEventHandler" id="1799803081%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-touch-event-handler/index.html"><span>Touch</span><wbr><span>Event</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1799803081%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-touch-event-handler/index.html">TouchEventHandler</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="886537897%2FClasslikes%2F86510009" anchor-label="ViewController" id="886537897%2FClasslikes%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-view-controller/index.html"><span>View</span><wbr><span><span>Controller</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="886537897%2FClasslikes%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-view-controller/index.html">ViewController</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>entry<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="-view-controller/index.html">ViewController</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="platform.GameController/GCEventViewController///PointingToDeclaration/">GCEventViewController</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2039374056%2FClasslikes%2F2031266617" anchor-label="ZenityDialogs" id="-2039374056%2FClasslikes%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-zenity-dialogs/index.html"><span>Zenity</span><wbr><span><span>Dialogs</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2039374056%2FClasslikes%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-zenity-dialogs/index.html">ZenityDialogs</a> : <a href="-dialog-interface/index.html">DialogInterface</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="371726673%2FProperties%2F1877666689" anchor-label="gameWindowAndroidContext" id="371726673%2FProperties%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="game-window-android-context.html"><span>game</span><wbr><span>Window</span><wbr><span>Android</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="371726673%2FProperties%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-game-window/index.html">GameWindow</a><span class="token punctuation">.</span><a href="game-window-android-context.html">gameWindowAndroidContext</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-606941829%2FProperties%2F1877666689" anchor-label="gameWindowAndroidContextOrNull" id="-606941829%2FProperties%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="game-window-android-context-or-null.html"><span>game</span><wbr><span>Window</span><wbr><span>Android</span><wbr><span>Context</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-606941829%2FProperties%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-game-window/index.html">GameWindow</a><span class="token punctuation">.</span><a href="game-window-android-context-or-null.html">gameWindowAndroidContextOrNull</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token operator">?</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="564082317%2FProperties%2F2031266617" anchor-label="GLOBAL_CHECK_GL" id="564082317%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-l-o-b-a-l_-c-h-e-c-k_-g-l.html"><span><span>GLOBAL_CHECK_GL</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="564082317%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="-g-l-o-b-a-l_-c-h-e-c-k_-g-l.html">GLOBAL_CHECK_GL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1246216493%2FProperties%2F-901405157" anchor-label="iosTvosTools" id="1246216493%2FProperties%2F-901405157" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain,:korge:dokkaHtmlPartial/iosMain,:korge:dokkaHtmlPartial/tvosMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain,:korge:dokkaHtmlPartial/iosMain,:korge:dokkaHtmlPartial/tvosMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain,:korge:dokkaHtmlPartial/iosMain,:korge:dokkaHtmlPartial/tvosMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ios-tvos-tools.html"><span>ios</span><wbr><span>Tvos</span><wbr><span><span>Tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1246216493%2FProperties%2F-901405157"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/iosMain" data-filterable-set=":korge:dokkaHtmlPartial/iosMain" data-toggle=":korge:dokkaHtmlPartial/iosMain">ios</button><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/tvosMain" data-filterable-set=":korge:dokkaHtmlPartial/tvosMain" data-toggle=":korge:dokkaHtmlPartial/tvosMain">tvos</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">val </span><a href="ios-tvos-tools.html">iosTvosTools</a><span class="token operator">: </span><a href="-ios-tvos-tools-impl/index.html">IosTvosToolsImpl</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge:dokkaHtmlPartial/iosMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><a href="ios-tvos-tools.html">iosTvosTools</a><span class="token operator">: </span><a href="../../korge/korlibs.render/-ios-tvos-tools-impl/index.html">IosTvosToolsImpl</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge:dokkaHtmlPartial/tvosMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">val </span><a href="ios-tvos-tools.html">iosTvosTools</a><span class="token operator">: </span><a href="../../korge/korlibs.render/-ios-tvos-tools-impl/index.html">IosTvosToolsImpl</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="456916720%2FProperties%2F2031266617" anchor-label="korgwJvmEngine" id="456916720%2FProperties%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="korgw-jvm-engine.html"><span>korgw</span><wbr><span>Jvm</span><wbr><span><span>Engine</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="456916720%2FProperties%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="korgw-jvm-engine.html">korgwJvmEngine</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1471805055%2FFunctions%2F2031266617" anchor-label="alert" id="1471805055%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="alert.html"><span><span>alert</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1471805055%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a><span class="token punctuation">.</span><a href="alert.html"><span class="token function">alert</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-311930350%2FFunctions%2F2031266617" anchor-label="alertError" id="-311930350%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="alert-error.html"><span>alert</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-311930350%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a><span class="token punctuation">.</span><a href="alert-error.html"><span class="token function">alertError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2136653407%2FFunctions%2F2031266617" anchor-label="browse" id="2136653407%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="browse.html"><span><span>browse</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2136653407%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a><span class="token punctuation">.</span><a href="browse.html"><span class="token function">browse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="../../korge-core/korlibs.io.net/-u-r-l/index.html">URL</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-873284131%2FFunctions%2F2031266617" anchor-label="configure" id="-873284131%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configure.html"><span><span>configure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-873284131%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-game-window/index.html">GameWindow</a><span class="token punctuation">.</span><a href="configure.html"><span class="token function">configure</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">size<span class="token operator">: </span><a href="../../korge-foundation/korlibs.math.geom/-size/index.html">Size</a><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token string">"GameWindow"</span><span class="token punctuation">, </span></span><span class="parameter ">icon<span class="token operator">: </span><a href="../../korge-core/korlibs.image.bitmap/-bitmap/index.html">Bitmap</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fullscreen<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">bgcolor<span class="token operator">: </span><a href="../../korge-core/korlibs.image.color/-r-g-b-a/index.html">RGBA</a><span class="token operator"> = </span>Colors.BLACK</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1373503459%2FFunctions%2F2031266617" anchor-label="confirm" id="1373503459%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="confirm.html"><span><span>confirm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1373503459%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a><span class="token punctuation">.</span><a href="confirm.html"><span class="token function">confirm</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-335117847%2FFunctions%2F-1785951809" anchor-label="CreateDefaultGameWindow" id="-335117847%2FFunctions%2F-1785951809" data-filterable-set=":korge:dokkaHtmlPartial/commonMain,:korge:dokkaHtmlPartial/androidMain,:korge:dokkaHtmlPartial/darwinMain,:korge:dokkaHtmlPartial/jsMain,:korge:dokkaHtmlPartial/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/commonMain,:korge:dokkaHtmlPartial/androidMain,:korge:dokkaHtmlPartial/darwinMain,:korge:dokkaHtmlPartial/jsMain,:korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain,:korge:dokkaHtmlPartial/androidMain,:korge:dokkaHtmlPartial/darwinMain,:korge:dokkaHtmlPartial/jsMain,:korge:dokkaHtmlPartial/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-create-default-game-window.html"><span>Create</span><wbr><span>Default</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-335117847%2FFunctions%2F-1785951809"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain" data-toggle=":korge:dokkaHtmlPartial/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jsMain" data-filterable-set=":korge:dokkaHtmlPartial/jsMain" data-toggle=":korge:dokkaHtmlPartial/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/jvmMain" data-filterable-set=":korge:dokkaHtmlPartial/jvmMain" data-toggle=":korge:dokkaHtmlPartial/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-create-default-game-window.html"><span class="token function">CreateDefaultGameWindow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-game-window/index.html">GameWindow</a></div></div><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-create-default-game-window.html"><span class="token function">CreateDefaultGameWindow</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-game-window/index.html">GameWindow</a></div><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-create-default-game-window.html"><span class="token function">CreateDefaultGameWindow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-game-window/index.html">GameWindow</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-create-default-game-window.html"><span class="token function">CreateDefaultGameWindow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../../korge/korlibs.render/-game-window-creation-config/index.html">GameWindowCreationConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../korge/korlibs.render/-game-window/index.html">GameWindow</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-create-default-game-window.html"><span class="token function">CreateDefaultGameWindow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-game-window/index.html">GameWindow</a></div></div><div class="content sourceset-dependent-content" data-togglable=":korge:dokkaHtmlPartial/jvmMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="-create-default-game-window.html"><span class="token function">CreateDefaultGameWindow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="-game-window-creation-config/index.html">GameWindowCreationConfig</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-game-window/index.html">GameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-710250962%2FFunctions%2F2031266617" anchor-label="mainLoop" id="-710250962%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="main-loop.html"><span>main</span><wbr><span><span>Loop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-710250962%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-game-window/index.html">GameWindow</a><span class="token punctuation">.</span><a href="main-loop.html"><span class="token function">mainLoop</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">entry<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="-game-window/index.html">GameWindow</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../korge-core/korlibs.io.async/-async-entry-point-result/index.html">AsyncEntryPointResult</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2104341503%2FFunctions%2F2031266617" anchor-label="onDragAndDropFileEvent" id="-2104341503%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-drag-and-drop-file-event.html"><span>on</span><wbr><span>Drag</span><wbr><span>And</span><wbr><span>Drop</span><wbr><span>File</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2104341503%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-game-window/index.html">GameWindow</a><span class="token punctuation">.</span><a href="on-drag-and-drop-file-event.html"><span class="token function">onDragAndDropFileEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../korlibs.event/-drop-file-event/index.html">DropFileEvent</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-838003447%2FFunctions%2F2031266617" anchor-label="openFileDialog" id="-838003447%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-file-dialog.html"><span>open</span><wbr><span>File</span><wbr><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-838003447%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a><span class="token punctuation">.</span><a href="open-file-dialog.html"><span class="token function">openFileDialog</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">write<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">multi<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korge-core/korlibs.io.file/-vfs-file/index.html">VfsFile</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a><span class="token punctuation">.</span><a href="open-file-dialog.html"><span class="token function">openFileDialog</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><a href="-file-filter/index.html">FileFilter</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">write<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">multi<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">currentDir<span class="token operator">: </span><a href="../../korge-core/korlibs.io.file/-vfs-file/index.html">VfsFile</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../korge-core/korlibs.io.file/-vfs-file/index.html">VfsFile</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1228520764%2FFunctions%2F2031266617" anchor-label="prompt" id="1228520764%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prompt.html"><span><span>prompt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1228520764%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="-dialog-interface-provider/index.html">DialogInterfaceProvider</a><span class="token punctuation">.</span><a href="prompt.html"><span class="token function">prompt</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="111990327%2FFunctions%2F1877666689" anchor-label="runAndroidOnUiThread" id="111990327%2FFunctions%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-android-on-ui-thread.html"><span>run</span><wbr><span>Android</span><wbr><span>On</span><wbr><span>Ui</span><wbr><span><span>Thread</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="111990327%2FFunctions%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="run-android-on-ui-thread.html"><span class="token function">runAndroidOnUiThread</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2032656160%2FFunctions%2F1877666689" anchor-label="runAndroidOnUiThreadSuspend" id="-2032656160%2FFunctions%2F1877666689" data-filterable-set=":korge:dokkaHtmlPartial/androidMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-android-on-ui-thread-suspend.html"><span>run</span><wbr><span>Android</span><wbr><span>On</span><wbr><span>Ui</span><wbr><span>Thread</span><wbr><span><span>Suspend</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2032656160%2FFunctions%2F1877666689"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/androidMain" data-filterable-set=":korge:dokkaHtmlPartial/androidMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/androidMain">android</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/androidMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="run-android-on-ui-thread-suspend.html">T</a><span class="token operator">&gt; </span><a href="run-android-on-ui-thread-suspend.html"><span class="token function">runAndroidOnUiThreadSuspend</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="run-android-on-ui-thread-suspend.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="run-android-on-ui-thread-suspend.html">T</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-631751217%2FFunctions%2F86510009" anchor-label="SetInitialIosGameWindow" id="-631751217%2FFunctions%2F86510009" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain"></a>
+          <div class="table-row" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-set-initial-ios-game-window.html"><span>Set</span><wbr><span>Initial</span><wbr><span>Ios</span><wbr><span>Game</span><wbr><span><span>Window</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-631751217%2FFunctions%2F86510009"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":korge:dokkaHtmlPartial/darwinMain" data-filterable-set=":korge:dokkaHtmlPartial/darwinMain" data-active="" data-toggle=":korge:dokkaHtmlPartial/darwinMain">darwin</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/darwinMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-set-initial-ios-game-window.html"><span class="token function">SetInitialIosGameWindow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">gameWindow<span class="token operator">: </span><a href="-ios-game-window/index.html">IosGameWindow</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-ios-game-window/index.html">IosGameWindow</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="989900542%2FFunctions%2F2031266617" anchor-label="toggleFullScreen" id="989900542%2FFunctions%2F2031266617" data-filterable-set=":korge:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":korge:dokkaHtmlPartial/commonMain" data-filterable-set=":korge:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="toggle-full-screen.html"><span>toggle</span><wbr><span>Full</span><wbr><span><span>Screen</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="989900542%2FFunctions%2F2031266617"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":korge:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-game-window/index.html">GameWindow</a><span class="token punctuation">.</span><a href="toggle-full-screen.html"><span class="token function">toggleFullScreen</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
